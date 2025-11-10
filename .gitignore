@@ -56,3 +56,4 @@ coverage/
 # data/relationships.json (demo output)
 # .env.example (template)
 
+.vercel

@@ -91,6 +91,21 @@ export const formatUrl = (url) => {
 };
 
 /**
+ * Ensure URL has proper protocol
+ * @param {string} url - URL string
+ * @returns {string} URL with protocol
+ */
+export const ensureHttps = (url) => {
+  if (!url) return '';
+  // If already has protocol, return as is
+  if (url.startsWith('http://') || url.startsWith('https://')) {
+    return url;
+  }
+  // Add https:// prefix
+  return `https://${url}`;
+};
+
+/**
  * Get initials from business name
  * @param {string} name - Business name
  * @returns {string} Initials (max 2 characters)

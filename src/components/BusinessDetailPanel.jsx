@@ -5,6 +5,7 @@ import {
   getConfidenceLevelColor, 
   formatContact,
   formatUrl,
+  ensureHttps,
   sortByConfidence
 } from '../utils/formatters';
 import { RELATIONSHIP_LABELS, RELATIONSHIP_COLORS } from '../utils/constants';
@@ -105,7 +106,7 @@ const BusinessDetailPanel = ({ business, relationships, businesses, onClose }) =
                 }
                 label="Website"
                 value={
-                  <a href={business.website} target="_blank" rel="noopener noreferrer" className="text-jax-cyan hover:underline">
+                  <a href={ensureHttps(business.website)} target="_blank" rel="noopener noreferrer" className="text-jax-cyan hover:underline">
                     {formatUrl(business.website)}
                   </a>
                 }
