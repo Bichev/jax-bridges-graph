@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useCallback } from 'react';
 import ForceGraph3D from 'react-force-graph-3d';
 import * as THREE from 'three';
+import SpriteText from 'three-spritetext';
 import { GRAPH_CONFIG } from '../utils/constants';
 
 /**
@@ -67,54 +68,16 @@ const BusinessGraph3D = ({ graphData, onNodeClick, selectedNodeId, width, height
       mesh.add(glow);
     }
     
-    // Create text label
-    const canvas = document.createElement('canvas');
-    const context = canvas.getContext('2d');
-    canvas.width = 512;
-    canvas.height = 128;
-    
-    // Draw text background
-    context.fillStyle = 'rgba(10, 22, 40, 0.9)';
-    context.roundRect = function(x, y, w, h, r) {
-      if (w < 2 * r) r = w / 2;
-      if (h < 2 * r) r = h / 2;
-      this.beginPath();
-      this.moveTo(x+r, y);
-      this.arcTo(x+w, y, x+w, y+h, r);
-      this.arcTo(x+w, y+h, x, y+h, r);
-      this.arcTo(x, y+h, x, y, r);
-      this.arcTo(x, y, x+w, y, r);
-      this.closePath();
-      this.fill();
-    };
-    
+    // Create text label using SpriteText
     const text = node.name.length > 20 ? node.name.substring(0, 18) + '...' : node.name;
-    context.font = 'bold 48px Inter, Arial, sans-serif';
-    const textWidth = context.measureText(text).width;
-    const padding = 20;
-    const bgWidth = textWidth + padding * 2;
-    const bgHeight = 80;
-    const bgX = (canvas.width - bgWidth) / 2;
-    const bgY = (canvas.height - bgHeight) / 2;
-    
-    context.roundRect(bgX, bgY, bgWidth, bgHeight, 12);
-    
-    // Draw text
-    context.fillStyle = isSelected ? '#00D9FF' : '#FFFFFF';
-    context.textAlign = 'center';
-    context.textBaseline = 'middle';
-    context.fillText(text, canvas.width / 2, canvas.height / 2);
-    
-    // Create sprite
-    const texture = new THREE.CanvasTexture(canvas);
-    const spriteMaterial = new THREE.SpriteMaterial({ 
-      map: texture,
-      transparent: true,
-      opacity: 0.9,
-      depthTest: false
-    });
-    const sprite = new THREE.Sprite(spriteMaterial);
-    sprite.scale.set(40, 10, 1);
+    const sprite = new SpriteText(text);
+    sprite.color = isSelected ? '#00D9FF' : '#FFFFFF';
+    sprite.textHeight = 8;
+    sprite.backgroundColor = 'rgba(10, 22, 40, 0.8)';
+    sprite.padding = 2;
+    sprite.borderRadius = 4;
+    sprite.fontFace = 'Inter, Arial, sans-serif';
+    sprite.fontWeight = 'bold';
     sprite.position.set(0, isSelected ? 20 : 16, 0);
     
     // Add sprite to mesh
