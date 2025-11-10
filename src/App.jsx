@@ -139,8 +139,9 @@ function App() {
   
   // Calculate layout dimensions
   const headerHeight = 73; // Header height
-  const sidebarWidth = selectedBusiness ? 480 : 320;
-  const graphWidth = dimensions.width - sidebarWidth;
+  const sidebarWidth = 320; // Fixed sidebar width
+  const detailPanelWidth = selectedBusiness ? 480 : 0;
+  const graphWidth = dimensions.width - sidebarWidth - detailPanelWidth;
   const graphHeight = dimensions.height - headerHeight;
   
   return (
@@ -209,8 +210,30 @@ function App() {
         </aside>
         
         {/* Graph Area */}
-        <main className="flex-1" style={{ width: graphWidth, height: graphHeight }}>
+        <main className="flex-1 relative" style={{ width: graphWidth, height: graphHeight }}>
+          {/* Business Search/Selector */}
+          <div className="absolute top-6 left-6 right-6 z-20">
+            <div className="max-w-md">
+              <select
+                value={selectedBusiness?.id || ''}
+                onChange={(e) => {
+                  const business = businesses.find(b => b.id === e.target.value);
+                  if (business) handleBusinessSelect(business);
+                }}
+                className="w-full px-4 py-3 bg-jax-navy/95 backdrop-blur-sm border border-jax-gray-800 rounded-lg text-white font-medium text-sm focus:border-jax-cyan focus:outline-none focus:ring-2 focus:ring-jax-cyan/20 transition-all shadow-xl cursor-pointer hover:border-jax-cyan/50"
+              >
+                <option value="" className="bg-jax-navy">🔍 Select a business to explore...</option>
+                {businesses.map(business => (
+                  <option key={business.id} value={business.id} className="bg-jax-navy">
+                    {business.name} • {business.industry}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+          
           <BusinessGraph3D
+            key={`${graphWidth}-${graphHeight}`}
             graphData={graphData}
             onNodeClick={handleBusinessSelect}
             selectedNodeId={selectedBusiness?.id}
@@ -220,10 +243,10 @@ function App() {
           
           {/* Overlay hint */}
           {!selectedBusiness && graphData.nodes.length > 0 && (
-            <div className="absolute top-8 left-1/2 transform -translate-x-1/2 pointer-events-none">
+            <div className="absolute top-24 left-1/2 transform -translate-x-1/2 pointer-events-none">
               <div className="glass px-6 py-3 rounded-full shadow-xl animate-fade-in">
                 <p className="text-sm text-white font-medium">
-                  👆 Click on any business to explore partnerships
+                  💡 Select from dropdown above or click any node to explore partnerships
                 </p>
               </div>
             </div>

@@ -39,9 +39,11 @@ const BusinessGraph3D = ({ graphData, onNodeClick, selectedNodeId, width, height
     }
   }, [selectedNodeId, graphData]);
   
-  // Custom node rendering
+  // Custom node rendering with text label
   const nodeThreeObject = useCallback((node) => {
     const isSelected = node.id === selectedNodeId;
+    
+    // Create node sphere
     const geometry = new THREE.SphereGeometry(isSelected ? 12 : 8);
     const material = new THREE.MeshLambertMaterial({
       color: node.color,
@@ -64,6 +66,59 @@ const BusinessGraph3D = ({ graphData, onNodeClick, selectedNodeId, width, height
       const glow = new THREE.Mesh(glowGeometry, glowMaterial);
       mesh.add(glow);
     }
+    
+    // Create text label
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('2d');
+    canvas.width = 512;
+    canvas.height = 128;
+    
+    // Draw text background
+    context.fillStyle = 'rgba(10, 22, 40, 0.9)';
+    context.roundRect = function(x, y, w, h, r) {
+      if (w < 2 * r) r = w / 2;
+      if (h < 2 * r) r = h / 2;
+      this.beginPath();
+      this.moveTo(x+r, y);
+      this.arcTo(x+w, y, x+w, y+h, r);
+      this.arcTo(x+w, y+h, x, y+h, r);
+      this.arcTo(x, y+h, x, y, r);
+      this.arcTo(x, y, x+w, y, r);
+      this.closePath();
+      this.fill();
+    };
+    
+    const text = node.name.length > 20 ? node.name.substring(0, 18) + '...' : node.name;
+    context.font = 'bold 48px Inter, Arial, sans-serif';
+    const textWidth = context.measureText(text).width;
+    const padding = 20;
+    const bgWidth = textWidth + padding * 2;
+    const bgHeight = 80;
+    const bgX = (canvas.width - bgWidth) / 2;
+    const bgY = (canvas.height - bgHeight) / 2;
+    
+    context.roundRect(bgX, bgY, bgWidth, bgHeight, 12);
+    
+    // Draw text
+    context.fillStyle = isSelected ? '#00D9FF' : '#FFFFFF';
+    context.textAlign = 'center';
+    context.textBaseline = 'middle';
+    context.fillText(text, canvas.width / 2, canvas.height / 2);
+    
+    // Create sprite
+    const texture = new THREE.CanvasTexture(canvas);
+    const spriteMaterial = new THREE.SpriteMaterial({ 
+      map: texture,
+      transparent: true,
+      opacity: 0.9,
+      depthTest: false
+    });
+    const sprite = new THREE.Sprite(spriteMaterial);
+    sprite.scale.set(40, 10, 1);
+    sprite.position.set(0, isSelected ? 20 : 16, 0);
+    
+    // Add sprite to mesh
+    mesh.add(sprite);
     
     return mesh;
   }, [selectedNodeId]);
