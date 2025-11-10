@@ -8,6 +8,7 @@ import { GRAPH_CONFIG } from '../utils/constants';
  */
 const BusinessGraph3D = ({ graphData, onNodeClick, selectedNodeId, width, height }) => {
   const graphRef = useRef();
+  const [nodeScreenPositions, setNodeScreenPositions] = React.useState({});
   
   // Configure graph on mount
   useEffect(() => {
@@ -21,8 +22,28 @@ const BusinessGraph3D = ({ graphData, onNodeClick, selectedNodeId, width, height
       graph.d3Force('link').distance(150);
       graph.d3Force('charge').strength(-300);
       graph.d3Force('center').strength(0.05);
+      
+      // Update node screen positions for CSS labels
+      const updatePositions = () => {
+        if (!graphData?.nodes) return;
+        
+        const positions = {};
+        graphData.nodes.forEach(node => {
+          const screenPos = graph.graph2ScreenCoords(node.x, node.y, node.z);
+          if (screenPos) {
+            positions[node.id] = screenPos;
+          }
+        });
+        setNodeScreenPositions(positions);
+      };
+      
+      // Update on animation frame
+      graph.onEngineStop(updatePositions);
+      const interval = setInterval(updatePositions, 100);
+      
+      return () => clearInterval(interval);
     }
-  }, []);
+  }, [graphData]);
   
   // Focus on selected node
   useEffect(() => {
@@ -201,6 +222,38 @@ const BusinessGraph3D = ({ graphData, onNodeClick, selectedNodeId, width, height
   
   return (
     <div className="w-full h-full graph-canvas relative">
+      {/* CSS Overlay Labels - Always Visible */}
+      {graphData?.nodes?.map(node => {
+        const pos = nodeScreenPositions[node.id];
+        if (!pos) return null;
+        
+        const isSelected = node.id === selectedNodeId;
+        const truncatedName = node.name.length > 18 ? node.name.substring(0, 16) + '...' : node.name;
+        
+        return (
+          <div
+            key={node.id}
+            style={{
+              position: 'absolute',
+              left: `${pos.x}px`,
+              top: `${pos.y - 25}px`,
+              transform: 'translate(-50%, -100%)',
+              pointerEvents: 'none',
+              zIndex: isSelected ? 100 : 10
+            }}
+            className="transition-opacity duration-200"
+          >
+            <div className={`px-2 py-1 rounded text-xs font-semibold whitespace-nowrap ${
+              isSelected 
+                ? 'bg-jax-cyan/90 text-jax-navy' 
+                : 'bg-jax-navy/75 text-white'
+            }`}>
+              {truncatedName}
+            </div>
+          </div>
+        );
+      })}
+      
       {/* 3D Controls Hint */}
       <div className="absolute bottom-6 left-6 z-10 bg-jax-navy/90 backdrop-blur-sm border border-jax-gray-800 rounded-lg px-4 py-3 shadow-xl">
         <p className="text-xs text-jax-gray-400 font-medium mb-2">🎮 3D Controls</p>
