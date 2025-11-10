@@ -5,6 +5,40 @@
 import { RELATIONSHIP_COLORS, INDUSTRY_COLORS } from './constants';
 
 /**
+ * Filter graph data to show only a specific node and its connections
+ * @param {Object} graphData - Full graph data with nodes and links
+ * @param {string} nodeId - ID of the node to focus on
+ * @returns {Object} Filtered graph data
+ */
+export const filterGraphByNode = (graphData, nodeId) => {
+  if (!nodeId || !graphData) {
+    return graphData;
+  }
+  
+  // Find all links involving the selected node
+  const relevantLinks = graphData.links.filter(
+    link => link.source.id === nodeId || link.target.id === nodeId
+  );
+  
+  // Get IDs of connected nodes
+  const connectedNodeIds = new Set([nodeId]);
+  relevantLinks.forEach(link => {
+    connectedNodeIds.add(link.source.id || link.source);
+    connectedNodeIds.add(link.target.id || link.target);
+  });
+  
+  // Filter nodes to only show selected node and connected nodes
+  const filteredNodes = graphData.nodes.filter(node => 
+    connectedNodeIds.has(node.id)
+  );
+  
+  return {
+    nodes: filteredNodes,
+    links: relevantLinks
+  };
+};
+
+/**
  * Build graph data structure from businesses and relationships
  * @param {Array} businesses - Array of business objects
  * @param {Array} relationships - Array of relationship objects

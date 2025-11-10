@@ -9,7 +9,7 @@ import {
 } from './components';
 import useGraphData from './hooks/useGraphData';
 import useBusinessFilter from './hooks/useBusinessFilter';
-import { searchBusinesses } from './utils/graph-builder';
+import { searchBusinesses, filterGraphByNode } from './utils/graph-builder';
 
 /**
  * Main application component
@@ -80,11 +80,16 @@ function App() {
   const filteredBusinesses = searchBusinesses(businesses, filters.searchQuery);
   
   // Build graph data with filters
-  const graphData = useGraphData(filteredBusinesses, relationships, {
+  const fullGraphData = useGraphData(filteredBusinesses, relationships, {
     minConfidence: filters.minConfidence,
     selectedTypes: filters.selectedTypes.length > 0 ? filters.selectedTypes : null,
     selectedIndustries: filters.selectedIndustries.length > 0 ? filters.selectedIndustries : null
   });
+  
+  // Filter graph to show only selected node's connections
+  const graphData = selectedBusiness 
+    ? filterGraphByNode(fullGraphData, selectedBusiness.id)
+    : fullGraphData;
   
   // Handle business selection
   const handleBusinessSelect = (business) => {
@@ -248,13 +253,35 @@ function App() {
             height={graphHeight}
           />
           
-          {/* Overlay hint */}
+          {/* Overlay hints */}
           {!selectedBusiness && graphData.nodes.length > 0 && (
             <div className="absolute top-24 left-1/2 transform -translate-x-1/2 pointer-events-none">
               <div className="glass px-6 py-3 rounded-full shadow-xl animate-fade-in">
                 <p className="text-sm text-white font-medium">
                   💡 Select from dropdown above or click any node to explore partnerships
                 </p>
+              </div>
+            </div>
+          )}
+          
+          {/* Show All Network Button */}
+          {selectedBusiness && (
+            <div className="absolute top-24 left-1/2 transform -translate-x-1/2 z-20">
+              <div className="flex items-center gap-4">
+                <div className="glass px-6 py-3 rounded-full shadow-xl">
+                  <p className="text-sm text-white font-medium">
+                    👁️ Viewing <span className="text-jax-cyan">{selectedBusiness.name}</span> network ({graphData.nodes.length - 1} connections)
+                  </p>
+                </div>
+                <button
+                  onClick={handleCloseDetail}
+                  className="btn btn-ghost text-sm px-4 py-2 shadow-xl"
+                >
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                  </svg>
+                  Show All Network
+                </button>
               </div>
             </div>
           )}
