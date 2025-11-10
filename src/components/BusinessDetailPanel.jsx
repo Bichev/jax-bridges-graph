@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import { getBusinessRelationships } from '../utils/graph-builder';
 import { 
   formatConfidence, 
@@ -13,15 +13,72 @@ import { RELATIONSHIP_LABELS, RELATIONSHIP_COLORS } from '../utils/constants';
 /**
  * Business detail panel showing relationships and opportunities
  */
-const BusinessDetailPanel = ({ business, relationships, businesses, onClose }) => {
+const BusinessDetailPanel = ({ business, relationships, businesses, onClose, onWidthChange }) => {
+  const [panelWidth, setPanelWidth] = useState(480); // Default width
+  const [isResizing, setIsResizing] = useState(false);
+  const panelRef = useRef(null);
+  
   if (!business) return null;
   
   const businessRelationships = sortByConfidence(
     getBusinessRelationships(business.id, relationships, businesses)
   );
   
+  // Handle resize start
+  const handleResizeStart = (e) => {
+    e.preventDefault();
+    setIsResizing(true);
+    document.body.style.cursor = 'ew-resize';
+    document.body.style.userSelect = 'none';
+  };
+  
+  // Handle resize
+  React.useEffect(() => {
+    const handleMouseMove = (e) => {
+      if (!isResizing) return;
+      
+      const newWidth = window.innerWidth - e.clientX;
+      // Min width: 400px, Max width: 800px
+      const constrainedWidth = Math.max(400, Math.min(800, newWidth));
+      setPanelWidth(constrainedWidth);
+      if (onWidthChange) {
+        onWidthChange(constrainedWidth);
+      }
+    };
+    
+    const handleMouseUp = () => {
+      if (isResizing) {
+        setIsResizing(false);
+        document.body.style.cursor = '';
+        document.body.style.userSelect = '';
+      }
+    };
+    
+    if (isResizing) {
+      document.addEventListener('mousemove', handleMouseMove);
+      document.addEventListener('mouseup', handleMouseUp);
+    }
+    
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseup', handleMouseUp);
+    };
+  }, [isResizing]);
+  
   return (
-    <div className="fixed inset-y-0 right-0 w-full md:w-[480px] bg-jax-navy border-l border-jax-gray-800 shadow-2xl z-50 overflow-y-auto animate-slide-left">
+    <div 
+      ref={panelRef}
+      className="fixed inset-y-0 right-0 bg-jax-navy border-l border-jax-gray-800 shadow-2xl z-50 overflow-y-auto animate-slide-left"
+      style={{ width: window.innerWidth < 768 ? '100%' : `${panelWidth}px` }}
+    >
+      {/* Resize Handle */}
+      <div
+        className="hidden md:block absolute left-0 top-0 bottom-0 w-1 hover:w-2 bg-jax-cyan/20 hover:bg-jax-cyan cursor-ew-resize transition-all z-50"
+        onMouseDown={handleResizeStart}
+        style={{ 
+          boxShadow: isResizing ? '0 0 10px rgba(0, 217, 255, 0.5)' : 'none'
+        }}
+      />
       <div className="sticky top-0 bg-jax-navy/95 backdrop-blur-sm border-b border-jax-gray-800 z-50 pt-20 md:pt-0">
         {/* Header */}
         <div className="flex items-center justify-between p-6">

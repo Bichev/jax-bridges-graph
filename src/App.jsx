@@ -21,6 +21,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
+  const [detailPanelWidth, setDetailPanelWidth] = useState(480);
   const [dimensions, setDimensions] = useState({
     width: window.innerWidth,
     height: window.innerHeight
@@ -147,8 +148,8 @@ function App() {
   // Calculate layout dimensions
   const headerHeight = 73; // Header height
   const sidebarWidth = 320; // Fixed sidebar width
-  const detailPanelWidth = selectedBusiness ? 480 : 0;
-  const graphWidth = dimensions.width - sidebarWidth - detailPanelWidth;
+  const currentDetailPanelWidth = selectedBusiness ? detailPanelWidth : 0;
+  const graphWidth = dimensions.width - sidebarWidth - currentDetailPanelWidth;
   const graphHeight = dimensions.height - headerHeight;
   
   return (
@@ -294,6 +295,7 @@ function App() {
             relationships={relationships}
             businesses={businesses}
             onClose={handleCloseDetail}
+            onWidthChange={setDetailPanelWidth}
           />
         )}
       </div>
