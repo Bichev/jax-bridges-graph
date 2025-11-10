@@ -3,7 +3,7 @@ import React from 'react';
 /**
  * Header component with branding and info
  */
-const Header = () => {
+const Header = ({ onAboutClick }) => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass border-b border-white/10">
       <div className="container mx-auto px-6 py-4">
@@ -25,19 +25,20 @@ const Header = () => {
           
           {/* Action buttons */}
           <div className="hidden md:flex items-center gap-3">
-            <a 
-              href="https://jaxaiagency.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
+            <button 
+              onClick={onAboutClick}
               className="btn btn-ghost text-sm"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               About
-            </a>
+            </button>
             <a 
-              href="mailto:hi@jaxaiagency.com"
+              // href="https://jaxaiagency.com" 
+              href="https://www.linkedin.com/in/bichev/" 
+              target="_blank" 
+              rel="noopener noreferrer"
               className="btn btn-primary text-sm"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

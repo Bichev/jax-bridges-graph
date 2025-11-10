@@ -91,7 +91,7 @@ const BusinessGraph3D = ({ graphData, onNodeClick, selectedNodeId, width, height
     }
 
     // Create node sphere
-    const geometry = new THREE.SphereGeometry(isSelected ? 12 : 8);
+    const geometry = new THREE.SphereGeometry(isSelected ? 15 : 10);
     const material = new THREE.MeshLambertMaterial({
       color: node.color,
       transparent: true,

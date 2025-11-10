@@ -4,7 +4,8 @@ import {
   NetworkStats, 
   FilterPanel, 
   BusinessGraph3D, 
-  BusinessDetailPanel 
+  BusinessDetailPanel,
+  AboutModal
 } from './components';
 import useGraphData from './hooks/useGraphData';
 import useBusinessFilter from './hooks/useBusinessFilter';
@@ -19,6 +20,7 @@ function App() {
   const [selectedBusiness, setSelectedBusiness] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [dimensions, setDimensions] = useState({
     width: window.innerWidth,
     height: window.innerHeight
@@ -147,7 +149,10 @@ function App() {
   return (
     <div className="min-h-screen bg-jax-dark">
       {/* Header */}
-      <Header />
+      <Header onAboutClick={() => setIsAboutOpen(true)} />
+      
+      {/* About Modal */}
+      <AboutModal isOpen={isAboutOpen} onClose={() => setIsAboutOpen(false)} />
       
       {/* Main Content */}
       <div className="pt-[73px] flex">
@@ -202,7 +207,7 @@ function App() {
             {/* Footer */}
             <div className="text-center pt-4 border-t border-jax-gray-800">
               <p className="text-xs text-jax-gray-500">
-                Powered by <span className="text-gradient font-semibold">JAX AI Agency</span>
+                Powered by <span className="text-gradient font-semibold">Vladimir Bichev</span>
               </p>
               <p className="text-xs text-jax-gray-600 mt-1">
                 Building AI solutions 🍞

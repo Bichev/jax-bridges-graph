@@ -7,4 +7,5 @@ export { default as NetworkStats } from './NetworkStats';
 export { default as FilterPanel } from './FilterPanel';
 export { default as BusinessGraph3D } from './BusinessGraph3D';
 export { default as BusinessDetailPanel } from './BusinessDetailPanel';
+export { default as AboutModal } from './AboutModal';
 
