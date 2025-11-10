@@ -274,57 +274,47 @@ const InfoRow = ({ icon, label, value }) => {
 };
 
 /**
- * Direction column component - shows one direction of the partnership
+ * Partnership content component - "Why This Works" section
  */
-const DirectionColumn = ({ relationship, direction, title, icon }) => {
+const WhyThisWorksBox = ({ relationship }) => {
   if (!relationship) {
     return (
-      <div className="flex-1 min-w-0 flex flex-col">
-        <div className="flex items-center gap-2 mb-3">
-          {icon}
-          <h5 className="text-xs font-bold text-jax-gray-500 uppercase">{title}</h5>
-        </div>
-        <div className="bg-jax-gray-800/30 border border-jax-gray-800 rounded-lg p-3 flex-grow">
-          <p className="text-xs text-jax-gray-600 italic">No partnership identified in this direction</p>
-        </div>
+      <div className="bg-jax-gray-800/30 border border-jax-gray-800 rounded-lg p-3 flex items-center justify-center min-h-[80px]">
+        <p className="text-xs text-jax-gray-600 italic">No partnership identified</p>
       </div>
     );
   }
   
-  const { type, reasoning, value_prop } = relationship;
+  return (
+    <div className="bg-jax-gray-800/30 border border-jax-gray-800 rounded-lg p-3">
+      <p className="text-xs font-semibold text-jax-cyan uppercase mb-1.5">Why This Works</p>
+      <p className="text-xs text-jax-gray-300 leading-relaxed">{relationship.reasoning}</p>
+    </div>
+  );
+};
+
+/**
+ * Partnership content component - "Value Proposition" section
+ */
+const ValuePropositionBox = ({ relationship }) => {
+  if (!relationship) {
+    return (
+      <div className="bg-jax-gray-800/50 border border-jax-gray-800/50 rounded-lg p-3 flex items-center justify-center min-h-[60px]">
+        <p className="text-xs text-jax-gray-600 italic">-</p>
+      </div>
+    );
+  }
+  
+  const { value_prop } = relationship;
   
   return (
-    <div className="flex-1 min-w-0 flex flex-col">
-      {/* Header */}
-      <div className="flex items-center gap-2 mb-3">
-        {icon}
-        <h5 className="text-xs font-bold text-jax-gray-400 uppercase">{title}</h5>
-        <div className="flex items-center gap-1.5">
-          <div 
-            className="w-1.5 h-1.5 rounded-full" 
-            style={{ backgroundColor: RELATIONSHIP_COLORS[type] }}
-          />
-          <span className="text-xs text-jax-gray-500 font-medium uppercase tracking-wide">
-            {RELATIONSHIP_LABELS[type]}
-          </span>
-        </div>
-      </div>
-      
-      {/* Why This Works - flexible height */}
-      <div className="bg-jax-gray-800/30 border border-jax-gray-800 rounded-lg p-3 mb-3">
-        <p className="text-xs font-semibold text-jax-cyan uppercase mb-1.5">Why This Works</p>
-        <p className="text-xs text-jax-gray-300 leading-relaxed">{reasoning}</p>
-      </div>
-      
-      {/* Value Proposition - always rendered for consistent alignment */}
-      <div className={`bg-green-500/5 border rounded-lg p-3 ${value_prop ? 'border-green-500/20' : 'border-jax-gray-800/50'}`}>
-        <p className="text-xs font-semibold text-green-400 uppercase mb-1.5">Value Proposition</p>
-        {value_prop ? (
-          <p className="text-xs text-green-300 leading-relaxed font-medium">{value_prop}</p>
-        ) : (
-          <p className="text-xs text-jax-gray-600 italic">No specific value proposition identified</p>
-        )}
-      </div>
+    <div className={`bg-green-500/5 border rounded-lg p-3 ${value_prop ? 'border-green-500/20' : 'border-jax-gray-800/50'}`}>
+      <p className="text-xs font-semibold text-green-400 uppercase mb-1.5">Value Proposition</p>
+      {value_prop ? (
+        <p className="text-xs text-green-300 leading-relaxed font-medium">{value_prop}</p>
+      ) : (
+        <p className="text-xs text-jax-gray-600 italic">No specific value proposition identified</p>
+      )}
     </div>
   );
 };
@@ -397,31 +387,52 @@ const RelationshipCard = ({ relationship }) => {
         </div>
       </div>
       
-      {/* Bidirectional Partnership View */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
-        {/* What They Provide to You */}
-        <DirectionColumn 
-          relationship={inboundRel}
-          direction="inbound"
-          title="What They Provide"
-          icon={
-            <svg className="w-4 h-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 17l-5-5m0 0l5-5m-5 5h12" />
-            </svg>
-          }
-        />
+      {/* Bidirectional Partnership View - Grid layout for equal heights */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-3">
+        {/* Headers Row */}
+        <div className="flex items-center gap-2">
+          <svg className="w-4 h-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 17l-5-5m0 0l5-5m-5 5h12" />
+          </svg>
+          <h5 className="text-xs font-bold text-jax-gray-400 uppercase">What They Provide</h5>
+          {inboundRel && (
+            <div className="flex items-center gap-1.5">
+              <div 
+                className="w-1.5 h-1.5 rounded-full" 
+                style={{ backgroundColor: RELATIONSHIP_COLORS[inboundRel.type] }}
+              />
+              <span className="text-xs text-jax-gray-500 font-medium uppercase tracking-wide">
+                {RELATIONSHIP_LABELS[inboundRel.type]}
+              </span>
+            </div>
+          )}
+        </div>
         
-        {/* What You Provide to Them */}
-        <DirectionColumn 
-          relationship={outboundRel}
-          direction="outbound"
-          title="What You Provide"
-          icon={
-            <svg className="w-4 h-4 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          }
-        />
+        <div className="flex items-center gap-2">
+          <svg className="w-4 h-4 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+          <h5 className="text-xs font-bold text-jax-gray-400 uppercase">What You Provide</h5>
+          {outboundRel && (
+            <div className="flex items-center gap-1.5">
+              <div 
+                className="w-1.5 h-1.5 rounded-full" 
+                style={{ backgroundColor: RELATIONSHIP_COLORS[outboundRel.type] }}
+              />
+              <span className="text-xs text-jax-gray-500 font-medium uppercase tracking-wide">
+                {RELATIONSHIP_LABELS[outboundRel.type]}
+              </span>
+            </div>
+          )}
+        </div>
+        
+        {/* Why This Works Row - Both boxes will have equal height */}
+        <WhyThisWorksBox relationship={inboundRel} />
+        <WhyThisWorksBox relationship={outboundRel} />
+        
+        {/* Value Proposition Row - Both boxes will have equal height and be aligned */}
+        <ValuePropositionBox relationship={inboundRel} />
+        <ValuePropositionBox relationship={outboundRel} />
       </div>
       
       {/* Collaboration Example - NEW! */}
