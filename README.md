@@ -164,7 +164,27 @@ npm run analyze:sample
 
 # Full analysis with all businesses
 npm run analyze
+
+# Add new businesses incrementally (after updating CSV)
+npm run analyze:incremental
 ```
+
+### 💰 Cost & Performance
+
+**Quick Cost Reference** (using GPT-4o-mini):
+
+| Businesses | Full Analysis Cost | Time | Add 1 Business |
+|------------|-------------------|------|----------------|
+| 20 | $0.10 | 10 min | $0.01 (1 min) |
+| 50 | $0.64 | 1 hour | $0.03 (2 min) |
+| 100 | $2.60 | 4 hours | $0.05 (5 min) |
+| 200 | $10.45 | 16 hours | $0.11 (10 min) |
+
+**💡 Pro Tip**: Use incremental analysis (`npm run analyze:incremental`) when adding new businesses. It's **much faster and cheaper** than re-running the full analysis!
+
+For detailed cost breakdowns and optimization strategies, see:
+- 📊 [ANALYSIS-COSTS.md](./ANALYSIS-COSTS.md) - Comprehensive cost guide
+- ⚡ [QUICK-COST-REFERENCE.md](./QUICK-COST-REFERENCE.md) - Quick reference
 
 ## 🎯 Usage Guide
 
@@ -178,10 +198,8 @@ npm run analyze
 
 This is a POC (Proof of Concept) project. For questions or suggestions, contact:
 
-**Vlad - JAX AI Agency**
-- Email: hi@jaxaiagency.com
-- Website: https://jaxaiagency.com
-- LinkedIn: linkedin.com/in/bichev
+**Vlad - linkedin.com/in/bichev**
+
 
 ## 📄 License
 
@@ -195,5 +213,5 @@ MIT License - see LICENSE file for details
 
 ---
 
-**Built with ❤️ by JAX AI Agency** | Baking AI solutions (and sourdough bread) 🍞
+**Built with ❤️ by Vladimir Bichev** | Baking AI solutions (and sourdough bread) 🍞
 

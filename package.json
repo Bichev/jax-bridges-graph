@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "analyze": "node scripts/analyze-relationships.js",
-    "analyze:sample": "node scripts/analyze-relationships.js --sample=5"
+    "analyze:sample": "node scripts/analyze-relationships.js --sample=5",
+    "analyze:incremental": "node scripts/analyze-incremental.js"
   },
   "dependencies": {
     "react": "^18.2.0",
