@@ -6,9 +6,9 @@
 export const RELATIONSHIP_TYPES = {
   VENDOR: 'vendor',
   PARTNER: 'partner',
-  REFERRAL: 'referral',
   COLLABORATION: 'collaboration',
-  SUPPLY_CHAIN: 'supply_chain'
+  SUPPLY_CHAIN: 'supply_chain',
+  REFERRAL: 'referral'
 };
 
 // Relationship type colors (matching brand palette)

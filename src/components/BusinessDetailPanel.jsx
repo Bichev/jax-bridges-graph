@@ -11,17 +11,50 @@ import {
 import { RELATIONSHIP_LABELS, RELATIONSHIP_COLORS } from '../utils/constants';
 
 /**
+ * Enrich relationships with their reverse counterparts
+ * For each relationship shown, find the relationship in the opposite direction
+ */
+const enrichRelationshipsWithReverse = (businessId, businessRelationships, allRelationships, businesses) => {
+  const businessMap = businesses.reduce((map, b) => {
+    map[b.id] = b;
+    return map;
+  }, {});
+  
+  return businessRelationships.map(rel => {
+    // Find the reverse relationship (opposite direction)
+    const partnerId = rel.partner.id;
+    const reverseRel = allRelationships.find(r => {
+      // If current rel is A→B (from businessId to partnerId), find B→A (from partnerId to businessId)
+      // If current rel is B→A (from partnerId to businessId), find A→B (from businessId to partnerId)
+      if (rel.direction === 'outbound') {
+        // Current: businessId → partnerId, find: partnerId → businessId
+        return r.from_id === partnerId && r.to_id === businessId;
+      } else {
+        // Current: partnerId → businessId, find: businessId → partnerId
+        return r.from_id === businessId && r.to_id === partnerId;
+      }
+    });
+    
+    return {
+      ...rel,
+      reverseRelationship: reverseRel || null
+    };
+  });
+};
+
+/**
  * Business detail panel showing relationships and opportunities
  */
 const BusinessDetailPanel = ({ business, relationships, businesses, onClose, onWidthChange }) => {
-  const [panelWidth, setPanelWidth] = useState(480); // Default width
+  const [panelWidth, setPanelWidth] = useState(600); // Default width - increased for bidirectional view
   const [isResizing, setIsResizing] = useState(false);
   const panelRef = useRef(null);
   
   if (!business) return null;
   
+  const rawRelationships = getBusinessRelationships(business.id, relationships, businesses);
   const businessRelationships = sortByConfidence(
-    getBusinessRelationships(business.id, relationships, businesses)
+    enrichRelationshipsWithReverse(business.id, rawRelationships, relationships, businesses)
   );
   
   // Handle resize start
@@ -38,8 +71,8 @@ const BusinessDetailPanel = ({ business, relationships, businesses, onClose, onW
       if (!isResizing) return;
       
       const newWidth = window.innerWidth - e.clientX;
-      // Min width: 400px, Max width: 800px
-      const constrainedWidth = Math.max(400, Math.min(800, newWidth));
+      // Min width: 500px (for two-column view), Max width: 900px
+      const constrainedWidth = Math.max(500, Math.min(900, newWidth));
       setPanelWidth(constrainedWidth);
       if (onWidthChange) {
         onWidthChange(constrainedWidth);
@@ -240,6 +273,61 @@ const InfoRow = ({ icon, label, value }) => {
 };
 
 /**
+ * Direction column component - shows one direction of the partnership
+ */
+const DirectionColumn = ({ relationship, direction, title, icon }) => {
+  if (!relationship) {
+    return (
+      <div className="flex-1 min-w-0">
+        <div className="flex items-center gap-2 mb-3">
+          {icon}
+          <h5 className="text-xs font-bold text-jax-gray-500 uppercase">{title}</h5>
+        </div>
+        <div className="bg-jax-gray-800/30 border border-jax-gray-800 rounded-lg p-3">
+          <p className="text-xs text-jax-gray-600 italic">No partnership identified in this direction</p>
+        </div>
+      </div>
+    );
+  }
+  
+  const { type, reasoning, value_prop } = relationship;
+  
+  return (
+    <div className="flex-1 min-w-0">
+      <div className="flex items-center gap-2 mb-3">
+        {icon}
+        <h5 className="text-xs font-bold text-jax-gray-400 uppercase">{title}</h5>
+        <div className="flex items-center gap-1.5">
+          <div 
+            className="w-1.5 h-1.5 rounded-full" 
+            style={{ backgroundColor: RELATIONSHIP_COLORS[type] }}
+          />
+          <span className="text-xs text-jax-gray-500 font-medium uppercase tracking-wide">
+            {RELATIONSHIP_LABELS[type]}
+          </span>
+        </div>
+      </div>
+      
+      <div className="space-y-3">
+        {/* Why This Works */}
+        <div className="bg-jax-gray-800/30 border border-jax-gray-800 rounded-lg p-3">
+          <p className="text-xs font-semibold text-jax-cyan uppercase mb-1.5">Why This Works</p>
+          <p className="text-xs text-jax-gray-300 leading-relaxed">{reasoning}</p>
+        </div>
+        
+        {/* Value Proposition */}
+        {value_prop && (
+          <div className="bg-green-500/5 border border-green-500/20 rounded-lg p-3">
+            <p className="text-xs font-semibold text-green-400 uppercase mb-1.5">Value Proposition</p>
+            <p className="text-xs text-green-300 leading-relaxed font-medium">{value_prop}</p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+/**
  * Relationship card component
  */
 const RelationshipCard = ({ relationship }) => {
@@ -248,14 +336,17 @@ const RelationshipCard = ({ relationship }) => {
   const { 
     type, 
     confidence, 
-    reasoning, 
-    value_prop, 
     collaboration_example,
     synergy_potential,
     action_items, 
     partner, 
-    direction 
+    direction,
+    reverseRelationship
   } = relationship;
+  
+  // Determine which relationship is inbound and which is outbound
+  const inboundRel = direction === 'inbound' ? relationship : reverseRelationship;
+  const outboundRel = direction === 'outbound' ? relationship : reverseRelationship;
   
   // Handle contact button click
   const handleContactClick = async (e) => {
@@ -274,6 +365,11 @@ const RelationshipCard = ({ relationship }) => {
     window.location.href = `mailto:${partner.contact_email}?subject=Partnership Opportunity from JAX Bridges`;
   };
   
+  // Use the highest confidence between both directions
+  const displayConfidence = reverseRelationship 
+    ? Math.max(confidence, reverseRelationship.confidence)
+    : confidence;
+  
   return (
     <div className="card-hover p-5 space-y-4">
       {/* Header */}
@@ -285,63 +381,45 @@ const RelationshipCard = ({ relationship }) => {
           <p className="text-sm text-jax-gray-400">{partner.industry}</p>
         </div>
         <div className="flex flex-col items-end gap-2">
-          <span className={`badge ${getConfidenceLevelColor(confidence)}`}>
-            {formatConfidence(confidence)}
+          <span className={`badge ${getConfidenceLevelColor(displayConfidence)}`}>
+            {formatConfidence(displayConfidence)}
           </span>
           <div className="flex items-center gap-1.5">
-            <div 
-              className="w-2 h-2 rounded-full" 
-              style={{ backgroundColor: RELATIONSHIP_COLORS[type] }}
-            />
-            <span className="text-xs text-jax-gray-400 font-medium uppercase tracking-wide">
-              {RELATIONSHIP_LABELS[type]}
+            <svg className="w-4 h-4 text-jax-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+            </svg>
+            <span className="text-xs text-jax-gray-400 font-medium">
+              {reverseRelationship ? 'Bidirectional' : 'One-way'}
             </span>
           </div>
         </div>
       </div>
       
-      {/* Direction indicator */}
-      <div className="flex items-center gap-2 text-xs text-jax-gray-500">
-        {direction === 'outbound' ? (
-          <>
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-            <span>You provide to them</span>
-          </>
-        ) : (
-          <>
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      {/* Bidirectional Partnership View */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {/* What They Provide to You */}
+        <DirectionColumn 
+          relationship={inboundRel}
+          direction="inbound"
+          title="What They Provide"
+          icon={
+            <svg className="w-4 h-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 17l-5-5m0 0l5-5m-5 5h12" />
             </svg>
-            <span>They provide to you</span>
-          </>
-        )}
-      </div>
-      
-      {/* Why This Partnership Makes Sense */}
-      <div className="space-y-3">
-        <div className="flex items-start gap-2">
-          <svg className="w-5 h-5 text-jax-cyan flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-          </svg>
-          <div className="flex-1">
-            <p className="text-xs font-semibold text-jax-gray-500 uppercase mb-1">Why This Works</p>
-            <p className="text-sm text-jax-gray-300 leading-relaxed">{reasoning}</p>
-          </div>
-        </div>
+          }
+        />
         
-        {value_prop && (
-          <div className="flex items-start gap-2">
-            <svg className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        {/* What You Provide to Them */}
+        <DirectionColumn 
+          relationship={outboundRel}
+          direction="outbound"
+          title="What You Provide"
+          icon={
+            <svg className="w-4 h-4 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
-            <div className="flex-1">
-              <p className="text-xs font-semibold text-green-500 uppercase mb-1">Value Proposition</p>
-              <p className="text-sm text-green-300 leading-relaxed font-medium">{value_prop}</p>
-            </div>
-          </div>
-        )}
+          }
+        />
       </div>
       
       {/* Collaboration Example - NEW! */}

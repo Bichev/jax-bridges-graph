@@ -21,7 +21,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
-  const [detailPanelWidth, setDetailPanelWidth] = useState(480);
+  const [detailPanelWidth, setDetailPanelWidth] = useState(600); // Increased for bidirectional view
   const [dimensions, setDimensions] = useState({
     width: window.innerWidth,
     height: window.innerHeight
