@@ -8,7 +8,6 @@ import { GRAPH_CONFIG } from '../utils/constants';
  */
 const BusinessGraph3D = ({ graphData, onNodeClick, selectedNodeId, width, height }) => {
   const graphRef = useRef();
-  const [nodeScreenPositions, setNodeScreenPositions] = React.useState({});
   
   // Configure graph on mount
   useEffect(() => {
@@ -22,28 +21,8 @@ const BusinessGraph3D = ({ graphData, onNodeClick, selectedNodeId, width, height
       graph.d3Force('link').distance(150);
       graph.d3Force('charge').strength(-300);
       graph.d3Force('center').strength(0.05);
-      
-      // Update node screen positions for CSS labels
-      const updatePositions = () => {
-        if (!graphData?.nodes) return;
-        
-        const positions = {};
-        graphData.nodes.forEach(node => {
-          const screenPos = graph.graph2ScreenCoords(node.x, node.y, node.z);
-          if (screenPos) {
-            positions[node.id] = screenPos;
-          }
-        });
-        setNodeScreenPositions(positions);
-      };
-      
-      // Update on animation frame
-      graph.onEngineStop(updatePositions);
-      const interval = setInterval(updatePositions, 100);
-      
-      return () => clearInterval(interval);
     }
-  }, [graphData]);
+  }, []);
   
   // Focus on selected node
   useEffect(() => {
@@ -60,45 +39,114 @@ const BusinessGraph3D = ({ graphData, onNodeClick, selectedNodeId, width, height
     }
   }, [selectedNodeId, graphData]);
   
-  // Node rendering with glow effect for selected
+  // Custom node rendering with text label
   const nodeThreeObject = useCallback((node) => {
     const isSelected = node.id === selectedNodeId;
     
+    // Create node sphere
+    const geometry = new THREE.SphereGeometry(isSelected ? 12 : 8);
+    const material = new THREE.MeshLambertMaterial({
+      color: node.color,
+      transparent: true,
+      opacity: GRAPH_CONFIG.nodeOpacity,
+      emissive: isSelected ? node.color : '#000000',
+      emissiveIntensity: isSelected ? 0.5 : 0
+    });
+    
+    const mesh = new THREE.Mesh(geometry, material);
+    
+    // Add glow effect for selected node
     if (isSelected) {
-      // Create larger sphere with glow for selected node
-      const group = new THREE.Group();
-      
-      // Main sphere
-      const geometry = new THREE.SphereGeometry(10);
-      const material = new THREE.MeshLambertMaterial({
-        color: node.color,
-        transparent: true,
-        opacity: 0.9,
-        emissive: node.color,
-        emissiveIntensity: 0.5
-      });
-      const mesh = new THREE.Mesh(geometry, material);
-      group.add(mesh);
-      
-      // Glow effect
-      const glowGeometry = new THREE.SphereGeometry(12);
+      const glowGeometry = new THREE.SphereGeometry(14);
       const glowMaterial = new THREE.MeshBasicMaterial({
         color: node.color,
         transparent: true,
         opacity: 0.2
       });
       const glow = new THREE.Mesh(glowGeometry, glowMaterial);
-      group.add(glow);
-      
-      return group;
+      mesh.add(glow);
     }
     
-    return false; // Use default rendering for non-selected nodes
+    // Create text label
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('2d');
+    canvas.width = 512;
+    canvas.height = 128;
+    
+    // Draw text background
+    context.fillStyle = 'rgba(10, 22, 40, 0.9)';
+    context.roundRect = function(x, y, w, h, r) {
+      if (w < 2 * r) r = w / 2;
+      if (h < 2 * r) r = h / 2;
+      this.beginPath();
+      this.moveTo(x+r, y);
+      this.arcTo(x+w, y, x+w, y+h, r);
+      this.arcTo(x+w, y+h, x, y+h, r);
+      this.arcTo(x, y+h, x, y, r);
+      this.arcTo(x, y, x+w, y, r);
+      this.closePath();
+      this.fill();
+    };
+    
+    const text = node.name.length > 20 ? node.name.substring(0, 18) + '...' : node.name;
+    context.font = 'bold 48px Inter, Arial, sans-serif';
+    const textWidth = context.measureText(text).width;
+    const padding = 20;
+    const bgWidth = textWidth + padding * 2;
+    const bgHeight = 80;
+    const bgX = (canvas.width - bgWidth) / 2;
+    const bgY = (canvas.height - bgHeight) / 2;
+    
+    context.roundRect(bgX, bgY, bgWidth, bgHeight, 12);
+    
+    // Draw text
+    context.fillStyle = isSelected ? '#00D9FF' : '#FFFFFF';
+    context.textAlign = 'center';
+    context.textBaseline = 'middle';
+    context.fillText(text, canvas.width / 2, canvas.height / 2);
+    
+    // Create sprite
+    const texture = new THREE.CanvasTexture(canvas);
+    const spriteMaterial = new THREE.SpriteMaterial({ 
+      map: texture,
+      transparent: true,
+      opacity: 0.9,
+      depthTest: false
+    });
+    const sprite = new THREE.Sprite(spriteMaterial);
+    sprite.scale.set(40, 10, 1);
+    sprite.position.set(0, isSelected ? 20 : 16, 0);
+    
+    // Add sprite to mesh
+    mesh.add(sprite);
+    
+    return mesh;
   }, [selectedNodeId]);
   
-  // Simple text label - always visible above nodes
+  // Node label rendering
   const nodeLabel = useCallback((node) => {
-    return node.name;
+    return `
+      <div style="
+        background: rgba(10, 22, 40, 0.95);
+        border: 1px solid rgba(0, 217, 255, 0.3);
+        border-radius: 8px;
+        padding: 12px;
+        color: white;
+        font-family: Inter, sans-serif;
+        max-width: 250px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      ">
+        <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px; color: #00D9FF;">
+          ${node.name}
+        </div>
+        <div style="font-size: 12px; color: #94A3B8; margin-bottom: 6px;">
+          ${node.industry}
+        </div>
+        <div style="font-size: 11px; color: #64748B;">
+          ${node.connections} connection${node.connections !== 1 ? 's' : ''}
+        </div>
+      </div>
+    `;
   }, []);
   
   // Link label rendering with collaboration example
@@ -222,38 +270,6 @@ const BusinessGraph3D = ({ graphData, onNodeClick, selectedNodeId, width, height
   
   return (
     <div className="w-full h-full graph-canvas relative">
-      {/* CSS Overlay Labels - Always Visible */}
-      {graphData?.nodes?.map(node => {
-        const pos = nodeScreenPositions[node.id];
-        if (!pos) return null;
-        
-        const isSelected = node.id === selectedNodeId;
-        const truncatedName = node.name.length > 18 ? node.name.substring(0, 16) + '...' : node.name;
-        
-        return (
-          <div
-            key={node.id}
-            style={{
-              position: 'absolute',
-              left: `${pos.x}px`,
-              top: `${pos.y - 25}px`,
-              transform: 'translate(-50%, -100%)',
-              pointerEvents: 'none',
-              zIndex: isSelected ? 100 : 10
-            }}
-            className="transition-opacity duration-200"
-          >
-            <div className={`px-2 py-1 rounded text-xs font-semibold whitespace-nowrap ${
-              isSelected 
-                ? 'bg-jax-cyan/90 text-jax-navy' 
-                : 'bg-jax-navy/75 text-white'
-            }`}>
-              {truncatedName}
-            </div>
-          </div>
-        );
-      })}
-      
       {/* 3D Controls Hint */}
       <div className="absolute bottom-6 left-6 z-10 bg-jax-navy/90 backdrop-blur-sm border border-jax-gray-800 rounded-lg px-4 py-3 shadow-xl">
         <p className="text-xs text-jax-gray-400 font-medium mb-2">🎮 3D Controls</p>
@@ -273,12 +289,8 @@ const BusinessGraph3D = ({ graphData, onNodeClick, selectedNodeId, width, height
         backgroundColor={GRAPH_CONFIG.backgroundColor}
         nodeThreeObject={nodeThreeObject}
         nodeThreeObjectExtend={true}
-        nodeAutoColorBy="industry"
         nodeLabel={nodeLabel}
-        nodeRelSize={6}
-        nodeResolution={16}
         onNodeClick={handleNodeClick}
-        nodeOpacity={0.9}
         linkLabel={linkLabel}
         linkColor={linkColor}
         linkWidth={linkWidth}
