@@ -1,0 +1,363 @@
+[
+  {
+    "from_id": "aa6ebbde-279e-4c0e-904a-38e1e8de52bc",
+    "to_id": "aa6ebbde-279e-4c0e-904a-38e1e8de52bc",
+    "from_name": "JPO Logistics LLC",
+    "to_name": "JPO Logistics LLC",
+    "type": "partner",
+    "confidence": 75,
+    "reasoning": "JAX AI Agency specializes in AI consulting, which can greatly enhance JPO Logistics’ operational efficiency through automation and data analysis. By partnering, they can create tailored AI solutions for logistics challenges, providing JPO with a competitive edge.",
+    "value_prop": "By implementing AI-driven route optimization tools for JPO, it is estimated they can save 15% on fuel costs, while JAX could earn $20,000 from the project.",
+    "collaboration_example": "JAX AI Agency could develop an AI-powered dashboard for JPO Logistics that analyzes shipping routes and predicts delays based on historical data. For example, if JPO has a shipment that typically takes 5 hours, JAX’s system could identify potential traffic issues and suggest an alternative route in real-time, resulting in reduced delivery times and increased customer satisfaction.",
+    "synergy_potential": "The unique synergy lies in the intersection of cutting-edge AI technology and the logistics industry, where predictive analytics can revolutionize JPO's operations, setting them apart from competitors who rely on traditional methods.",
+    "action_items": [
+      "Schedule an initial meeting to discuss specific logistics challenges faced by JPO.",
+      "Develop a pilot project proposal for a route optimization tool that JAX can present to JPO's leadership.",
+      "Plan a joint marketing campaign highlighting the benefits of AI in logistics for local businesses, positioning both companies as innovative leaders."
+    ],
+    "estimated_value": "high",
+    "mutual_benefit": true
+  },
+  {
+    "from_id": "aa6ebbde-279e-4c0e-904a-38e1e8de52bc",
+    "to_id": "aa6ebbde-279e-4c0e-904a-38e1e8de52bc",
+    "from_name": "JPO Logistics LLC",
+    "to_name": "JPO Logistics LLC",
+    "type": "referral",
+    "confidence": 70,
+    "reasoning": "As JPO Logistics serves a network of shippers and owner-operators who are increasingly looking to modernize their operations, they can refer these clients to JAX AI Agency for AI consulting services.",
+    "value_prop": "Each referral can potentially generate $5,000 in consulting fees for JAX, while JPO earns goodwill and strengthens client relationships.",
+    "collaboration_example": "When a shipper approaches JPO expressing a need for improved operational efficiency, JPO can recommend JAX AI Agency for an AI assessment, leading to a consulting engagement that could streamline the shipper's logistics and reduce costs, thus enhancing JPO's value proposition.",
+    "synergy_potential": "JPO has direct access to a clientele that is ripe for AI adoption, creating a seamless referral pathway that benefits both companies without overlapping services.",
+    "action_items": [
+      "Train JPO’s team on JAX's services so they can effectively refer clients.",
+      "Create a referral agreement outlining commission structures for JPO.",
+      "Set up a quarterly review to discuss referral outcomes and optimize the partnership."
+    ],
+    "estimated_value": "medium",
+    "mutual_benefit": true
+  },
+  {
+    "from_id": "5f0be160-2bfd-4881-8c12-8d3f4ca9ec4a",
+    "to_id": "5f0be160-2bfd-4881-8c12-8d3f4ca9ec4a",
+    "from_name": "flow",
+    "to_name": "flow",
+    "type": "collaboration",
+    "confidence": 75,
+    "reasoning": "JAX AI Agency can leverage flow's coaching services to enhance their AI adoption strategies for clients. By integrating coaching into their AI solutions, both businesses can provide a comprehensive package that addresses not just the technology, but also the human aspect of AI implementation.",
+    "value_prop": "By collaborating, JAX AI Agency can increase revenue through bundled services, while flow can expand their service offerings, appealing to tech-savvy clients who are interested in AI.",
+    "collaboration_example": "JAX AI Agency could develop a workshop series where they introduce AI tools to flow's clients, who are primarily small business owners looking to modernize. In this series, flow provides coaching on how to integrate these tools into daily operations, ensuring a smoother transition. For instance, a local fitness center could benefit from both AI scheduling software and coaching on customer engagement techniques, resulting in a successful pilot project that both businesses can showcase.",
+    "synergy_potential": "The unique synergy lies in combining advanced AI capabilities with professional coaching, creating a holistic approach to business modernization that neither could achieve alone. This pairing enables a focus on both technology and personal development.",
+    "action_items": [
+      "Schedule a meeting between JAX AI Agency and flow to discuss potential workshop topics and logistics.",
+      "Develop a joint marketing campaign highlighting the upcoming workshop series to attract clients.",
+      "Pilot the first workshop with a select group of flow's clients to gather feedback and refine future offerings."
+    ],
+    "estimated_value": "high",
+    "mutual_benefit": true
+  },
+  {
+    "from_id": "05eb2032-b1ba-453f-b03e-a9d5ff7bb7ec",
+    "to_id": "05eb2032-b1ba-453f-b03e-a9d5ff7bb7ec",
+    "from_name": "Jazzi’s Creations",
+    "to_name": "Jazzi’s Creations",
+    "type": "collaboration",
+    "confidence": 80,
+    "reasoning": "JAX AI Agency can leverage Jazzi's Creations' expertise in events to host interactive workshops showcasing AI applications for small businesses. This collaboration can provide Jazzi's with tech-savvy clients interested in modernizing through AI, and JAX AI can benefit from Jazzi's established local connections.",
+    "value_prop": "By organizing joint workshops, JAX AI Agency can directly engage with at least 20 local businesses, potentially generating $10,000 in new consulting contracts through increased visibility and client acquisition.",
+    "collaboration_example": "JAX AI Agency sets up a workshop at Jazzi’s Creations where small business owners learn to use AI to streamline their operations. During the event, attendees create personalized gifts while also developing a simple AI tool for their business with JAX AI's guidance. Each participant pays $250 for the workshop, leading to $5,000 in revenue for both businesses and potential follow-up consulting contracts for JAX AI.",
+    "synergy_potential": "This pairing uniquely combines technology and creativity, allowing JAX AI to present AI solutions in a hands-on, engaging manner while Jazzi’s leverages tech to enhance its offering, making both businesses more appealing to their target audiences.",
+    "action_items": [
+      "Schedule a planning meeting to define workshop details and target audience.",
+      "Create a joint marketing campaign to promote the workshop through social media and local business networks.",
+      "Develop follow-up consulting packages for participants after the workshop."
+    ],
+    "estimated_value": "high",
+    "mutual_benefit": true
+  },
+  {
+    "from_id": "05eb2032-b1ba-453f-b03e-a9d5ff7bb7ec",
+    "to_id": "05eb2032-b1ba-453f-b03e-a9d5ff7bb7ec",
+    "from_name": "Jazzi’s Creations",
+    "to_name": "Jazzi’s Creations",
+    "type": "referral",
+    "confidence": 70,
+    "reasoning": "Jazzi’s Creations serves a similar clientele to JAX AI, specifically small and mid-sized businesses looking for promotional gifts and team-building activities, without competing directly. This creates an opportunity for mutual referrals.",
+    "value_prop": "For every client referral that JAX AI converts into a contract, Jazzi’s could earn a 10% commission, potentially generating an additional $3,000 annually based on JAX AI's target of 30 new clients.",
+    "collaboration_example": "When a family approaches Jazzi’s for custom gifts, she identifies them as a small business owner who could benefit from AI solutions. Jazzi refers them to JAX AI, and upon successful contract signing, she receives a $300 referral fee, enhancing her business income and establishing a referral network.",
+    "synergy_potential": "The relationship leverages Jazzi's local community presence and connections to introduce JAX AI to businesses that may not yet be considering AI, creating a pipeline of potential clients while enhancing Jazzi's service portfolio.",
+    "action_items": [
+      "Develop a referral agreement outlining commission structures and responsibilities.",
+      "Create a shared marketing flyer highlighting both businesses' services to distribute at events.",
+      "Set up a regular check-in schedule to discuss client referrals and feedback."
+    ],
+    "estimated_value": "medium",
+    "mutual_benefit": true
+  },
+  {
+    "from_id": "9a0f9257-0908-463c-9343-87c6c8c9e8fd",
+    "to_id": "5962b559-7eff-4a73-a4c3-1ea2c46de37e",
+    "from_name": "JAX AI Agency",
+    "to_name": "IV Creative",
+    "type": "referral",
+    "confidence": 80,
+    "reasoning": "Both JAX AI Agency and IV Creative target local businesses in Jacksonville. JAX AI can refer clients needing content creation to IV Creative, while IV Creative can direct clients looking to modernize operations to JAX AI. This mutual referral can enhance their client offerings without direct competition.",
+    "value_prop": "Increased customer base for both businesses, potentially increasing revenue by 15-20% through referrals.",
+    "collaboration_example": "JAX AI Agency identifies a real estate client needing both AI tools and engaging content for their website. They refer this client to IV Creative for content creation while providing AI consulting services. As a result, both businesses secure a contract worth $10,000, splitting the revenue from the project.",
+    "synergy_potential": "The unique synergy lies in combining AI technology with creative content, offering a comprehensive solution for local businesses looking for modernization and engagement.",
+    "action_items": [
+      "Set up a referral program where each business will receive a 10% commission for referred clients.",
+      "Organize a joint event to showcase how AI can enhance marketing content, inviting local businesses.",
+      "Create a shared marketing brochure highlighting both services to distribute at local networking events."
+    ],
+    "estimated_value": "high",
+    "mutual_benefit": true
+  },
+  {
+    "from_id": "9a0f9257-0908-463c-9343-87c6c8c9e8fd",
+    "to_id": "5962b559-7eff-4a73-a4c3-1ea2c46de37e",
+    "from_name": "JAX AI Agency",
+    "to_name": "IV Creative",
+    "type": "collaboration",
+    "confidence": 75,
+    "reasoning": "JAX AI Agency could leverage IV Creative's design skills to create engaging marketing materials that showcase AI solutions. This collaboration could help both businesses enhance their service offerings and visibility in Jacksonville.",
+    "value_prop": "Joint marketing initiatives could increase brand awareness by 30% and generate new leads, leading to potential project revenues of $20,000 over the next quarter.",
+    "collaboration_example": "JAX AI Agency and IV Creative team up to develop a workshop titled 'Modernizing Your Business with AI.' JAX AI provides insights on AI applications while IV Creative designs promotional materials and social media campaigns. Together, they attract 50 local businesses, charging a $200 registration fee, generating $10,000 in revenue and new leads for both.",
+    "synergy_potential": "This partnership uniquely combines technical expertise with creative marketing, enabling them to offer transformative solutions that directly address the needs of local businesses.",
+    "action_items": [
+      "Schedule a brainstorming session to outline the workshop content and marketing strategy.",
+      "Develop a timeline for promotional materials to ensure timely marketing ahead of the event.",
+      "Utilize social media and local business forums to promote the workshop and reach a broader audience."
+    ],
+    "estimated_value": "high",
+    "mutual_benefit": true
+  },
+  {
+    "from_id": "aa6ebbde-279e-4c0e-904a-38e1e8de52bc",
+    "to_id": "5f0be160-2bfd-4881-8c12-8d3f4ca9ec4a",
+    "from_name": "JPO Logistics LLC",
+    "to_name": "flow",
+    "type": "referral",
+    "confidence": 75,
+    "reasoning": "JPO Logistics serves shippers and owner operators who may benefit from coaching services offered by flow. Likewise, flow could refer clients needing logistics support to JPO. This mutual referral system could enhance client acquisition for both businesses.",
+    "value_prop": "By implementing a referral program, JPO Logistics could see a potential increase in new clients by 20%, while flow could gain additional coaching clients, resulting in an estimated revenue boost of $25k annually.",
+    "collaboration_example": "JPO Logistics hosts a monthly networking event for shippers, and they could invite Miguel from flow to provide a coaching session on stress management for logistics professionals. Attendees would gain valuable insights while flow could gather potential clients, leading to at least 5 new coaching engagements worth $1,500 each.",
+    "synergy_potential": "This pairing is unique because logistics professionals often deal with high-stress environments, making flow's coaching services particularly relevant and valuable for JPO's clientele.",
+    "action_items": [
+      "Set up an introductory meeting between Paulette and Miguel to discuss mutual client needs.",
+      "Develop a referral program where each business tracks and incentivizes referrals.",
+      "Plan the first networking event with a coaching session within the next month."
+    ],
+    "estimated_value": "medium",
+    "mutual_benefit": true
+  },
+  {
+    "from_id": "5f0be160-2bfd-4881-8c12-8d3f4ca9ec4a",
+    "to_id": "aa6ebbde-279e-4c0e-904a-38e1e8de52bc",
+    "from_name": "flow",
+    "to_name": "JPO Logistics LLC",
+    "type": "referral",
+    "confidence": 70,
+    "reasoning": "Miguel from flow may have clients who are small business owners or entrepreneurs needing logistics support for shipping and operations. Referring these clients to JPO Logistics could provide them with essential services while giving JPO access to a new customer base.",
+    "value_prop": "Flow could increase its service offering by adding logistics referrals, leading to potential commissions from JPO for each client referred, which could add approximately $10k to flow's annual income.",
+    "collaboration_example": "Miguel could create a workshop for his clients on 'Streamlining Your Business Operations,' where he includes a segment about efficient logistics and recommends JPO Logistics as the go-to provider. This could directly lead to 3 new contracts for JPO worth $15k.",
+    "synergy_potential": "This partnership is distinctive because flow's coaching clients often seek comprehensive solutions for business efficiency, and introducing logistics support complements the coaching services seamlessly.",
+    "action_items": [
+      "Discuss potential workshop topics that integrate logistics into coaching sessions.",
+      "Explore commission structures for successful referrals from flow to JPO Logistics.",
+      "Create promotional materials highlighting the combined value of coaching and logistics support."
+    ],
+    "estimated_value": "medium",
+    "mutual_benefit": true
+  },
+  {
+    "from_id": "aa6ebbde-279e-4c0e-904a-38e1e8de52bc",
+    "to_id": "05eb2032-b1ba-453f-b03e-a9d5ff7bb7ec",
+    "from_name": "JPO Logistics LLC",
+    "to_name": "Jazzi’s Creations",
+    "type": "vendor",
+    "confidence": 70,
+    "reasoning": "JPO Logistics could provide shipping services for Jazzi's Creations' products, particularly for large orders of personalized gifts that need to be delivered to corporate clients. This relationship allows Jazzi to ensure timely delivery, enhancing customer satisfaction.",
+    "value_prop": "By using JPO Logistics, Jazzi's Creations can reduce shipping costs by 15% for bulk orders, which can increase profit margins significantly on corporate gifts.",
+    "collaboration_example": "When Jazzi’s Creations fulfills a large order for a corporate client, JPO Logistics can handle the shipping logistics, ensuring the gifts arrive on time for an event. For instance, if Jazzi creates 200 customized gift boxes for a corporate retreat, JPO can manage the distribution to the venue, ensuring everything is delivered in perfect condition.",
+    "synergy_potential": "This pairing is unique because JPO Logistics specializes in freight services that can cater to larger, bulk orders that Jazzi's Creations might not have the capacity to ship efficiently on their own. Their combined strengths can lead to a more streamlined operations process.",
+    "action_items": [
+      "Schedule a meeting to discuss potential shipping needs and volume requirements for Jazzi's Creations.",
+      "Negotiate a discount rate for bulk shipping orders to establish a competitive edge for Jazzi's corporate clients.",
+      "Create a joint marketing campaign highlighting the efficiency of using JPO Logistics for Jazzi’s corporate gift deliveries."
+    ],
+    "estimated_value": "high",
+    "mutual_benefit": true
+  },
+  {
+    "from_id": "05eb2032-b1ba-453f-b03e-a9d5ff7bb7ec",
+    "to_id": "aa6ebbde-279e-4c0e-904a-38e1e8de52bc",
+    "from_name": "Jazzi’s Creations",
+    "to_name": "JPO Logistics LLC",
+    "type": "referral",
+    "confidence": 60,
+    "reasoning": "Jazzi's Creations targets families and businesses, which may require logistics services for event planning or corporate retreats. They can refer clients needing freight services to JPO Logistics.",
+    "value_prop": "Jazzi’s Creations can earn referral fees from JPO for every client that they send over who requires logistics services, creating a new revenue stream.",
+    "collaboration_example": "When Jazzi's Creations hosts a DIY workshop for a company, if they notice the company struggles with logistics for transporting materials, they can refer them to JPO Logistics. If JPO secures a contract, Jazzi gets a 10% referral fee on the contract value.",
+    "synergy_potential": "This relationship is special because Jazzi has direct access to clients who may not be aware of the logistics services available to them, providing JPO with a steady influx of potential clients through well-established networks.",
+    "action_items": [
+      "Create a referral agreement that outlines commission structures for Jazzi's Creations.",
+      "Develop co-branded materials that Jazzi can distribute at events to promote JPO's services.",
+      "Host a joint event where JPO can present logistics solutions to Jazzi’s clients, showcasing the benefits of their services."
+    ],
+    "estimated_value": "medium",
+    "mutual_benefit": true
+  },
+  {
+    "from_id": "aa6ebbde-279e-4c0e-904a-38e1e8de52bc",
+    "to_id": "5962b559-7eff-4a73-a4c3-1ea2c46de37e",
+    "from_name": "JPO Logistics LLC",
+    "to_name": "IV Creative",
+    "type": "referral",
+    "confidence": 80,
+    "reasoning": "JPO Logistics LLC serves shippers and owner operators who may also be in need of marketing and content creation services. By referring clients who require branding and promotional materials, both businesses can enhance their service offerings without direct competition.",
+    "value_prop": "JPO Logistics could tap into the marketing expertise of IV Creative to provide more comprehensive solutions to their clients, enhancing customer loyalty and potentially increasing revenue through upselling additional services.",
+    "collaboration_example": "When JPO Logistics acquires a new shipping contract, they can introduce their client to IV Creative for assistance with marketing their shipping services. As a result, IV Creative designs a promotional campaign that showcases the client's capabilities, leading to a potential 20% increase in their contracted shipping volume, with JPO earning a referral fee for the introduction.",
+    "synergy_potential": "The unique synergy lies in the fact that JPO can enhance its logistics offerings with marketing support from IV Creative, creating a one-stop solution for clients who need both logistics and promotional strategies, which is rare in the Jacksonville market.",
+    "action_items": [
+      "Arrange a meeting between Paulette from JPO and Iliana from IV to discuss client referral processes.",
+      "Develop a referral agreement outlining commission structures for referred clients.",
+      "Create marketing materials that highlight the partnership and how clients can benefit from both services."
+    ],
+    "estimated_value": "medium",
+    "mutual_benefit": true
+  },
+  {
+    "from_id": "5962b559-7eff-4a73-a4c3-1ea2c46de37e",
+    "to_id": "aa6ebbde-279e-4c0e-904a-38e1e8de52bc",
+    "from_name": "IV Creative",
+    "to_name": "JPO Logistics LLC",
+    "type": "referral",
+    "confidence": 70,
+    "reasoning": "IV Creative targets local business owners who may need logistics services for shipping products. By referring clients in need of freight services, IV Creative can expand their service offerings while providing value to their clients.",
+    "value_prop": "IV Creative can enhance its value proposition by connecting local businesses to JPO Logistics, which could lead to increased customer satisfaction and retention for IV Creative, while also generating referral fees.",
+    "collaboration_example": "When a local retailer approaches IV Creative for a marketing strategy, they can refer them to JPO Logistics for their shipping needs. If the retailer contracts JPO for logistics services, IV could receive a 10% referral fee on the first shipment, while the retailer benefits from a seamless logistics solution.",
+    "synergy_potential": "This partnership is unique as it allows IV Creative to position itself as a comprehensive support system for local businesses by not only enhancing their market visibility but also simplifying their operational logistics, thus providing a full-service experience.",
+    "action_items": [
+      "Set up a referral system where IV can easily connect clients needing logistics with JPO.",
+      "Create a joint marketing campaign that promotes logistics solutions available to local businesses.",
+      "Organize a networking event where both businesses can showcase their services to local entrepreneurs."
+    ],
+    "estimated_value": "medium",
+    "mutual_benefit": true
+  },
+  {
+    "from_id": "5f0be160-2bfd-4881-8c12-8d3f4ca9ec4a",
+    "to_id": "05eb2032-b1ba-453f-b03e-a9d5ff7bb7ec",
+    "from_name": "flow",
+    "to_name": "Jazzi’s Creations",
+    "type": "referral",
+    "confidence": 70,
+    "reasoning": "Both businesses target families and professionals, albeit in different ways. Business A's coaching services could enhance the personal development of clients who may also be interested in the creative and team-building workshops offered by Business B.",
+    "value_prop": "By referring clients to each other, both businesses can expand their customer base. Business A could increase its coaching clients by 20% through referrals from Business B.",
+    "collaboration_example": "Miguel from flow could refer clients who are parents seeking personal growth to Jazzi’s Creations for family-oriented craft workshops. For example, a coaching client who wants to improve work-life balance might benefit from a creative outlet at Jazzi’s. In return, Jasmyne could refer families interested in enhancing teamwork through coaching sessions.",
+    "synergy_potential": "The unique pairing stems from the blending of personal development with creative expression, catering to clients looking for holistic enrichment in both their personal and family lives.",
+    "action_items": [
+      "Schedule a meeting between Miguel and Jasmyne to discuss referral opportunities.",
+      "Create a referral program that offers discounts for clients referred to either business.",
+      "Develop joint marketing materials highlighting the benefits of coaching and crafting for personal and family growth."
+    ],
+    "estimated_value": "medium",
+    "mutual_benefit": true
+  },
+  {
+    "from_id": "05eb2032-b1ba-453f-b03e-a9d5ff7bb7ec",
+    "to_id": "5f0be160-2bfd-4881-8c12-8d3f4ca9ec4a",
+    "from_name": "Jazzi’s Creations",
+    "to_name": "flow",
+    "type": "collaboration",
+    "confidence": 80,
+    "reasoning": "Jazzi's Creations can utilize coaching services from flow to enhance the experience at their workshops, while flow can benefit from the exposure to Jazzi's clientele, creating a win-win situation.",
+    "value_prop": "This collaboration could lead to a 30% increase in workshop attendance for Jazzi’s Creations and an additional revenue stream for flow through corporate coaching packages.",
+    "collaboration_example": "Jazzi's Creations can host a 'Creative Leadership' workshop where Miguel provides coaching on leadership skills while participants create personalized gifts. This event could attract 20 attendees, generating $1,000 for Jazzi and $500 for Miguel through coaching fees, while enhancing the workshop experience.",
+    "synergy_potential": "Combining coaching with creative workshops creates a unique offering that not only fosters creativity but also personal and professional development, appealing to a broader audience.",
+    "action_items": [
+      "Plan a 'Creative Leadership' workshop for next month.",
+      "Design promotional materials that highlight both coaching and crafting benefits.",
+      "Set up a feedback mechanism to assess the success of the event and explore future collaborations."
+    ],
+    "estimated_value": "high",
+    "mutual_benefit": true
+  },
+  {
+    "from_id": "5f0be160-2bfd-4881-8c12-8d3f4ca9ec4a",
+    "to_id": "5962b559-7eff-4a73-a4c3-1ea2c46de37e",
+    "from_name": "flow",
+    "to_name": "IV Creative",
+    "type": "vendor",
+    "confidence": 80,
+    "reasoning": "Flow, specializing in coaching, could benefit from IV Creative's marketing expertise to attract more clients. In exchange, IV Creative can leverage Flow’s coaching sessions as part of their service offerings for local business owners.",
+    "value_prop": "By utilizing IV Creative's marketing services, Flow can increase its client base by at least 20% within six months, translating to an additional $10,000 in revenue. Conversely, IV Creative can include Flow's coaching as a value-add in their packages, boosting their service offerings.",
+    "collaboration_example": "Flow contracts IV Creative to develop a targeted social media campaign that showcases their coaching services. The campaign highlights success stories and client testimonials, leading to a 30% increase in inquiries for Flow's coaching sessions. In return, IV Creative promotes Flow’s services in their newsletter, gaining a new service to offer to their clients.",
+    "synergy_potential": "The unique synergy lies in Flow's deep understanding of personal and professional development, combined with IV Creative's marketing strategies tailored for local businesses. This partnership can create a powerful narrative that resonates with Jacksonville's business community, driving engagement for both parties.",
+    "action_items": [
+      "Schedule an introductory meeting between Miguel and Iliana to discuss specific marketing goals and strategies.",
+      "Develop a marketing plan outlining the campaigns and promotional materials needed for Flow's coaching services.",
+      "Create a referral agreement where IV Creative gets a percentage of the revenue from any clients they refer to Flow."
+    ],
+    "estimated_value": "high",
+    "mutual_benefit": true
+  },
+  {
+    "from_id": "5962b559-7eff-4a73-a4c3-1ea2c46de37e",
+    "to_id": "5f0be160-2bfd-4881-8c12-8d3f4ca9ec4a",
+    "from_name": "IV Creative",
+    "to_name": "flow",
+    "type": "referral",
+    "confidence": 70,
+    "reasoning": "IV Creative serves local business owners who may need coaching services, creating an opportunity for referral partnerships. Flow can become a trusted resource for IV Creative's clients looking for professional development.",
+    "value_prop": "By referring clients to Flow, IV Creative can enhance its service offerings, leading to potential revenue increases of 10% through referral fees or shared course income.",
+    "collaboration_example": "IV Creative identifies a local business owner struggling with employee engagement. They refer this client to Flow for a coaching session. As a result, the client engages with Flow and pays for a series of workshops, generating $1,500 in revenue. IV Creative receives a 10% referral fee, earning $150.",
+    "synergy_potential": "This partnership is unique because it allows IV Creative to provide a holistic approach to marketing, integrating both branding and personal development, which is increasingly appealing to local businesses seeking comprehensive support.",
+    "action_items": [
+      "Create a formal referral agreement outlining the terms and commissions for referred clients.",
+      "Develop marketing materials highlighting Flow's coaching services to distribute to IV Creative's client base.",
+      "Set up regular check-ins between both businesses to discuss referral success stories and adjust strategies as needed."
+    ],
+    "estimated_value": "medium",
+    "mutual_benefit": true
+  },
+  {
+    "from_id": "05eb2032-b1ba-453f-b03e-a9d5ff7bb7ec",
+    "to_id": "5962b559-7eff-4a73-a4c3-1ea2c46de37e",
+    "from_name": "Jazzi’s Creations",
+    "to_name": "IV Creative",
+    "type": "collaboration",
+    "confidence": 85,
+    "reasoning": "Jazzi's Creations offers personalized gifts and DIY workshops, which can be promoted through IV Creative's content creation services. By working together, they can create engaging marketing materials that highlight Jazzi's unique offerings, attracting more clients and increasing brand visibility.",
+    "value_prop": "By collaborating on marketing content, Jazzi's Creations could see a 20% increase in workshop sign-ups and sales of personalized gifts, translating into an estimated additional revenue of $1,000 per month.",
+    "collaboration_example": "IV Creative designs a visually appealing social media campaign for Jazzi's Creations, showcasing a new holiday-themed DIY workshop. They create a series of eye-catching posts and videos that capture the crafting process. Jazzi's Creations promotes the campaign across its channels, leading to a sold-out workshop with 30 participants, generating $1,500 in revenue for Jazzi and increased brand exposure for IV.",
+    "synergy_potential": "The unique synergy lies in Jazzi's hands-on, community-oriented approach to crafting combined with IV Creative's expertise in digital storytelling, creating authentic connections with the local Jacksonville audience.",
+    "action_items": [
+      "Schedule a meeting to discuss a potential holiday workshop campaign.",
+      "Develop a joint marketing plan that includes social media content and promotional strategies.",
+      "Create a timeline for the campaign launch and outline specific deliverables from both businesses."
+    ],
+    "estimated_value": "high",
+    "mutual_benefit": true
+  },
+  {
+    "from_id": "5962b559-7eff-4a73-a4c3-1ea2c46de37e",
+    "to_id": "05eb2032-b1ba-453f-b03e-a9d5ff7bb7ec",
+    "from_name": "IV Creative",
+    "to_name": "Jazzi’s Creations",
+    "type": "referral",
+    "confidence": 70,
+    "reasoning": "Both businesses target local entrepreneurs and families, offering complementary services without direct competition. IV Creative can refer clients looking for team-building activities or personalized gifts to Jazzi's Creations, enhancing the value provided to their clients.",
+    "value_prop": "This referral relationship could lead to an estimated 10 new clients for Jazzi's Creations per month, potentially generating an additional $5,000 in revenue through workshops and gift sales.",
+    "collaboration_example": "IV Creative works with a local business that needs team-building activities for its staff. They refer the company to Jazzi's Creations for a DIY workshop where employees can bond while creating personalized gifts. The referred business books a session for 20 people, generating $1,000 for Jazzi, while IV Creative enhances its service offering by providing a complete package.",
+    "synergy_potential": "The synergy arises from both businesses focusing on enhancing local community relationships, leveraging Jazzi's crafting skills with IV's marketing acumen to foster stronger connections among local businesses and families.",
+    "action_items": [
+      "Create a referral agreement that outlines the terms and benefits for both parties.",
+      "Develop a list of potential clients that IV Creative can refer to Jazzi's Creations.",
+      "Host a joint networking event to introduce both businesses to local community members and potential clients."
+    ],
+    "estimated_value": "medium",
+    "mutual_benefit": true
+  }
+]

@@ -1,0 +1,148 @@
+# Cursor AI Rules for JAX Business Relationship Mapper
+
+## Project Context
+This is a React + Vite application that uses AI to map business relationships in the JAX Bridges cohort. It features a 3D force-directed graph visualization and AI-powered relationship analysis.
+
+## Key Technologies
+- React 18 with functional components and hooks
+- Vite for build tooling
+- Tailwind CSS for styling
+- react-force-graph-3d for 3D visualization
+- OpenAI GPT-4o for AI analysis
+- Node.js scripts for data processing
+
+## Coding Standards
+
+### React Components
+- Use functional components with hooks (no class components)
+- Use PascalCase for component names
+- Include PropTypes or TypeScript types
+- Keep components under 150 lines (refactor if larger)
+- Use custom hooks for reusable logic
+
+### JavaScript
+- Use ES6+ syntax (const/let, arrow functions, destructuring)
+- Use async/await over promise chains
+- Prefer pure functions (no side effects)
+- Document functions with JSDoc comments
+
+### Styling
+- Use Tailwind CSS utility classes
+- Follow mobile-first responsive design
+- Use custom classes only when necessary
+- Maintain brand colors: jax-cyan (#00D9FF), jax-navy (#0A1628)
+
+### File Organization
+- Components in `src/components/`
+- Utilities in `src/utils/`
+- Hooks in `src/hooks/`
+- Scripts in `scripts/`
+- Data in `data/`
+
+### Git Commits
+- Format: `<type>(<scope>): <subject>`
+- Types: feat, fix, docs, style, refactor, test, chore
+- Example: `feat(graph): add node filtering by industry`
+
+### Error Handling
+- Always use try-catch for async operations
+- Log errors with context
+- Provide user-friendly error messages
+- Continue execution on non-critical failures
+
+### Performance
+- Memoize expensive computations with useMemo
+- Memoize callbacks with useCallback
+- Use React.memo for expensive components
+- Debounce search/filter inputs
+
+## AI Integration
+- OpenAI API key must be in .env (never hardcode)
+- Use retry logic with exponential backoff
+- Handle rate limits gracefully
+- Parse JSON responses with error handling
+
+## Documentation
+- Update README for major features
+- Comment complex logic
+- Use JSDoc for function documentation
+- Keep SETUP.md current with installation steps
+
+## Testing Workflow
+- Test with sample data first (npm run analyze:sample)
+- Verify graph renders at different screen sizes
+- Test all filter combinations
+- Check console for errors
+
+## Security
+- Never commit .env file
+- API calls only from Node.js scripts (not frontend)
+- Sanitize all user inputs
+- Use HTTPS for production deployment
+
+## Common Patterns
+
+### Custom Hook
+```javascript
+const useCustomHook = (dependency) => {
+  const [value, setValue] = useState(null);
+  useEffect(() => {
+    // logic
+  }, [dependency]);
+  return value;
+};
+```
+
+### Component Structure
+```javascript
+const Component = ({ prop1, prop2 }) => {
+  // 1. State
+  const [state, setState] = useState(null);
+  
+  // 2. Effects
+  useEffect(() => {}, []);
+  
+  // 3. Handlers
+  const handleClick = () => {};
+  
+  // 4. Computed values
+  const computed = useMemo(() => {}, []);
+  
+  // 5. Render
+  return <div></div>;
+};
+```
+
+### Async Function
+```javascript
+const asyncFn = async () => {
+  try {
+    const result = await someOperation();
+    return result;
+  } catch (error) {
+    console.error('Context:', error);
+    return null;
+  }
+};
+```
+
+## When Making Changes
+1. Read relevant documentation (PRD, SETUP, CODING-GUIDELINES)
+2. Maintain existing code style
+3. Test changes locally
+4. Update documentation if needed
+5. Check for lint errors
+6. Commit with descriptive message
+
+## Helpful Commands
+- `npm run dev` - Start dev server
+- `npm run build` - Build for production
+- `npm run analyze` - Run AI analysis
+- `npm run analyze:sample` - Quick test with 5 businesses
+
+## Resources
+- PRD: `doc/PRD.md`
+- Setup Guide: `SETUP.md`
+- Coding Guidelines: `doc/CODING-GUIDELINES.md`
+- Architecture: `doc/ARCHITECTURE.md` (if exists)
+

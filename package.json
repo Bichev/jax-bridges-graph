@@ -1,0 +1,42 @@
+{
+  "name": "jax-business-relationship-mapper",
+  "version": "1.0.0",
+  "description": "AI-powered business relationship mapper for JAX Bridges cohort",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "analyze": "node scripts/analyze-relationships.js",
+    "analyze:sample": "node scripts/analyze-relationships.js --sample=5"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-force-graph-3d": "^1.24.4",
+    "three": "^0.159.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.16",
+    "dotenv": "^16.3.1",
+    "openai": "^4.20.1",
+    "papaparse": "^5.4.1",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.3.6",
+    "uuid": "^9.0.1",
+    "vite": "^5.0.8"
+  },
+  "keywords": [
+    "business-networking",
+    "ai",
+    "relationship-mapping",
+    "jacksonville",
+    "visualization"
+  ],
+  "author": "Vlad - JAX AI Agency",
+  "license": "MIT"
+}
+
