@@ -1,7 +1,6 @@
 import React, { useRef, useEffect, useCallback } from 'react';
 import ForceGraph3D from 'react-force-graph-3d';
 import * as THREE from 'three';
-import SpriteText from 'three-spritetext';
 import { GRAPH_CONFIG } from '../utils/constants';
 
 /**
@@ -40,76 +39,45 @@ const BusinessGraph3D = ({ graphData, onNodeClick, selectedNodeId, width, height
     }
   }, [selectedNodeId, graphData]);
   
-  // Custom node rendering with text label
+  // Node rendering with glow effect for selected
   const nodeThreeObject = useCallback((node) => {
     const isSelected = node.id === selectedNodeId;
     
-    // Create node sphere
-    const geometry = new THREE.SphereGeometry(isSelected ? 12 : 8);
-    const material = new THREE.MeshLambertMaterial({
-      color: node.color,
-      transparent: true,
-      opacity: GRAPH_CONFIG.nodeOpacity,
-      emissive: isSelected ? node.color : '#000000',
-      emissiveIntensity: isSelected ? 0.5 : 0
-    });
-    
-    const mesh = new THREE.Mesh(geometry, material);
-    
-    // Add glow effect for selected node
     if (isSelected) {
-      const glowGeometry = new THREE.SphereGeometry(14);
+      // Create larger sphere with glow for selected node
+      const group = new THREE.Group();
+      
+      // Main sphere
+      const geometry = new THREE.SphereGeometry(10);
+      const material = new THREE.MeshLambertMaterial({
+        color: node.color,
+        transparent: true,
+        opacity: 0.9,
+        emissive: node.color,
+        emissiveIntensity: 0.5
+      });
+      const mesh = new THREE.Mesh(geometry, material);
+      group.add(mesh);
+      
+      // Glow effect
+      const glowGeometry = new THREE.SphereGeometry(12);
       const glowMaterial = new THREE.MeshBasicMaterial({
         color: node.color,
         transparent: true,
         opacity: 0.2
       });
       const glow = new THREE.Mesh(glowGeometry, glowMaterial);
-      mesh.add(glow);
+      group.add(glow);
+      
+      return group;
     }
     
-    // Create text label using SpriteText
-    const text = node.name.length > 20 ? node.name.substring(0, 18) + '...' : node.name;
-    const sprite = new SpriteText(text);
-    sprite.color = isSelected ? '#00D9FF' : '#FFFFFF';
-    sprite.textHeight = 8;
-    sprite.backgroundColor = 'rgba(10, 22, 40, 0.8)';
-    sprite.padding = 2;
-    sprite.borderRadius = 4;
-    sprite.fontFace = 'Inter, Arial, sans-serif';
-    sprite.fontWeight = 'bold';
-    sprite.position.set(0, isSelected ? 20 : 16, 0);
-    
-    // Add sprite to mesh
-    mesh.add(sprite);
-    
-    return mesh;
+    return false; // Use default rendering for non-selected nodes
   }, [selectedNodeId]);
   
-  // Node label rendering
+  // Simple text label - always visible above nodes
   const nodeLabel = useCallback((node) => {
-    return `
-      <div style="
-        background: rgba(10, 22, 40, 0.95);
-        border: 1px solid rgba(0, 217, 255, 0.3);
-        border-radius: 8px;
-        padding: 12px;
-        color: white;
-        font-family: Inter, sans-serif;
-        max-width: 250px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-      ">
-        <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px; color: #00D9FF;">
-          ${node.name}
-        </div>
-        <div style="font-size: 12px; color: #94A3B8; margin-bottom: 6px;">
-          ${node.industry}
-        </div>
-        <div style="font-size: 11px; color: #64748B;">
-          ${node.connections} connection${node.connections !== 1 ? 's' : ''}
-        </div>
-      </div>
-    `;
+    return node.name;
   }, []);
   
   // Link label rendering with collaboration example
@@ -252,8 +220,12 @@ const BusinessGraph3D = ({ graphData, onNodeClick, selectedNodeId, width, height
         backgroundColor={GRAPH_CONFIG.backgroundColor}
         nodeThreeObject={nodeThreeObject}
         nodeThreeObjectExtend={true}
+        nodeAutoColorBy="industry"
         nodeLabel={nodeLabel}
+        nodeRelSize={6}
+        nodeResolution={16}
         onNodeClick={handleNodeClick}
+        nodeOpacity={0.9}
         linkLabel={linkLabel}
         linkColor={linkColor}
         linkWidth={linkWidth}
