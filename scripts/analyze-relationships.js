@@ -68,6 +68,7 @@ const main = async () => {
     const relationships = [];
     let analysisCount = 0;
     let totalPairs = 0;
+    let skippedPairs = 0;
     const startTime = Date.now();
     
     for (let i = 0; i < businessesToAnalyze.length; i++) {
@@ -75,6 +76,13 @@ const main = async () => {
         totalPairs++;
         const bizA = businessesToAnalyze[i];
         const bizB = businessesToAnalyze[j];
+        
+        // Skip if somehow the same business (safety check)
+        if (bizA.id === bizB.id) {
+          console.log(`\n⚠️  Skipping self-relationship: ${bizA.name}`);
+          skippedPairs++;
+          continue;
+        }
         
         try {
           console.log(`\n[${totalPairs}/${businessesToAnalyze.length * (businessesToAnalyze.length - 1) / 2}] Analyzing:`);
@@ -116,9 +124,21 @@ const main = async () => {
               mutual_benefit: result.mutual_benefit
             }));
             
-            relationships.push(...transformedRelationships);
-            console.log(`  ✅ Found ${transformedRelationships.length} relationship(s)`);
-            transformedRelationships.forEach(rel => {
+            // Filter out any self-relationships (safety check)
+            const validRelationships = transformedRelationships.filter(rel => {
+              if (rel.from_id === rel.to_id) {
+                console.log(`  ⚠️  Filtered out invalid self-relationship for ${rel.from_name}`);
+                return false;
+              }
+              return true;
+            });
+            
+            relationships.push(...validRelationships);
+            console.log(`  ✅ Found ${validRelationships.length} valid relationship(s)`);
+            if (transformedRelationships.length !== validRelationships.length) {
+              console.log(`  ⚠️  Filtered out ${transformedRelationships.length - validRelationships.length} invalid relationship(s)`);
+            }
+            validRelationships.forEach(rel => {
               console.log(`     ${rel.type.toUpperCase()}: ${rel.from_name} → ${rel.to_name} (${rel.confidence}%)`);
             });
           } else {
@@ -161,6 +181,9 @@ const main = async () => {
     console.log(`✅ Businesses analyzed: ${businessesToAnalyze.length}`);
     console.log(`✅ Pairs evaluated: ${analysisCount}`);
     console.log(`✅ Relationships found: ${relationships.length}`);
+    if (skippedPairs > 0) {
+      console.log(`⚠️  Skipped pairs: ${skippedPairs} (same business)`);
+    }
     console.log(`✅ Duration: ${duration}s`);
     console.log(`✅ Avg confidence: ${(relationships.reduce((sum, r) => sum + r.confidence, 0) / relationships.length || 0).toFixed(1)}%`);
     
