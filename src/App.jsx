@@ -154,13 +154,6 @@ function App() {
         {/* Sidebar */}
         <aside className="w-80 border-r border-jax-gray-800 bg-jax-navy/50 overflow-y-auto" style={{ height: graphHeight }}>
           <div className="p-6 space-y-6">
-            {/* Stats */}
-            <NetworkStats 
-              businesses={businesses}
-              relationships={relationships}
-              selectedBusiness={selectedBusiness}
-            />
-            
             {/* Filters */}
             <FilterPanel
               businesses={businesses}
@@ -171,6 +164,15 @@ function App() {
               updateSearchQuery={updateSearchQuery}
               resetFilters={resetFilters}
             />
+            
+            {/* Stats */}
+            <NetworkStats 
+              businesses={businesses}
+              relationships={relationships}
+              selectedBusiness={selectedBusiness}
+            />
+            
+
             
             {/* Instructions */}
             <div className="card p-4 space-y-2">

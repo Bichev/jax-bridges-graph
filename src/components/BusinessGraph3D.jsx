@@ -1,6 +1,7 @@
-import React, { useRef, useEffect, useCallback } from 'react';
+import React, { useRef, useEffect, useCallback, useMemo } from 'react';
 import ForceGraph3D from 'react-force-graph-3d';
 import * as THREE from 'three';
+import { CSS2DRenderer, CSS2DObject } from 'three/examples/jsm/renderers/CSS2DRenderer.js';
 import { GRAPH_CONFIG } from '../utils/constants';
 
 /**
@@ -8,6 +9,15 @@ import { GRAPH_CONFIG } from '../utils/constants';
  */
 const BusinessGraph3D = ({ graphData, onNodeClick, selectedNodeId, width, height }) => {
   const graphRef = useRef();
+  const labelRenderer = useMemo(() => {
+    const renderer = new CSS2DRenderer();
+    renderer.domElement.style.position = 'absolute';
+    renderer.domElement.style.top = '0px';
+    renderer.domElement.style.pointerEvents = 'none';
+    renderer.domElement.style.zIndex = '2';
+    return renderer;
+  }, []);
+  const extraRenderers = useMemo(() => [labelRenderer], [labelRenderer]);
   
   // Configure graph on mount
   useEffect(() => {
@@ -39,10 +49,47 @@ const BusinessGraph3D = ({ graphData, onNodeClick, selectedNodeId, width, height
     }
   }, [selectedNodeId, graphData]);
   
+  // Refresh node objects when selection or data changes (ensures label updates)
+  useEffect(() => {
+    if (graphRef.current) {
+      graphRef.current.refresh();
+    }
+  }, [selectedNodeId, graphData]);
+  
+  // Update label visuals when selection changes
+  const updateLabelState = useCallback(() => {
+    if (!graphData?.nodes) {
+      return;
+    }
+    graphData.nodes.forEach((node) => {
+      const isSelected = node.id === selectedNodeId;
+      if (node.__labelElement) {
+        node.__labelElement.classList.toggle('is-selected', isSelected);
+      }
+      if (node.__labelObject) {
+        node.__labelObject.position.set(0, isSelected ? 26 : 20, 0);
+      }
+    });
+  }, [graphData, selectedNodeId]);
+
+  useEffect(() => {
+    updateLabelState();
+  }, [updateLabelState]);
+  
   // Custom node rendering with text label
   const nodeThreeObject = useCallback((node) => {
     const isSelected = node.id === selectedNodeId;
     
+    // Remove existing custom elements if rerendering
+    if (node.__labelObject) {
+      node.__labelObject.parent?.remove(node.__labelObject);
+      node.__labelObject = null;
+    }
+    if (node.__labelElement) {
+      node.__labelElement.remove();
+      node.__labelElement = null;
+    }
+
     // Create node sphere
     const geometry = new THREE.SphereGeometry(isSelected ? 12 : 8);
     const material = new THREE.MeshLambertMaterial({
@@ -52,9 +99,8 @@ const BusinessGraph3D = ({ graphData, onNodeClick, selectedNodeId, width, height
       emissive: isSelected ? node.color : '#000000',
       emissiveIntensity: isSelected ? 0.5 : 0
     });
-    
     const mesh = new THREE.Mesh(geometry, material);
-    
+
     // Add glow effect for selected node
     if (isSelected) {
       const glowGeometry = new THREE.SphereGeometry(14);
@@ -66,60 +112,20 @@ const BusinessGraph3D = ({ graphData, onNodeClick, selectedNodeId, width, height
       const glow = new THREE.Mesh(glowGeometry, glowMaterial);
       mesh.add(glow);
     }
-    
-    // Create text label
-    const canvas = document.createElement('canvas');
-    const context = canvas.getContext('2d');
-    canvas.width = 512;
-    canvas.height = 128;
-    
-    // Draw text background
-    context.fillStyle = 'rgba(10, 22, 40, 0.9)';
-    context.roundRect = function(x, y, w, h, r) {
-      if (w < 2 * r) r = w / 2;
-      if (h < 2 * r) r = h / 2;
-      this.beginPath();
-      this.moveTo(x+r, y);
-      this.arcTo(x+w, y, x+w, y+h, r);
-      this.arcTo(x+w, y+h, x, y+h, r);
-      this.arcTo(x, y+h, x, y, r);
-      this.arcTo(x, y, x+w, y, r);
-      this.closePath();
-      this.fill();
-    };
-    
-    const text = node.name.length > 20 ? node.name.substring(0, 18) + '...' : node.name;
-    context.font = 'bold 48px Inter, Arial, sans-serif';
-    const textWidth = context.measureText(text).width;
-    const padding = 20;
-    const bgWidth = textWidth + padding * 2;
-    const bgHeight = 80;
-    const bgX = (canvas.width - bgWidth) / 2;
-    const bgY = (canvas.height - bgHeight) / 2;
-    
-    context.roundRect(bgX, bgY, bgWidth, bgHeight, 12);
-    
-    // Draw text
-    context.fillStyle = isSelected ? '#00D9FF' : '#FFFFFF';
-    context.textAlign = 'center';
-    context.textBaseline = 'middle';
-    context.fillText(text, canvas.width / 2, canvas.height / 2);
-    
-    // Create sprite
-    const texture = new THREE.CanvasTexture(canvas);
-    const spriteMaterial = new THREE.SpriteMaterial({ 
-      map: texture,
-      transparent: true,
-      opacity: 0.9,
-      depthTest: false
-    });
-    const sprite = new THREE.Sprite(spriteMaterial);
-    sprite.scale.set(40, 10, 1);
-    sprite.position.set(0, isSelected ? 20 : 16, 0);
-    
-    // Add sprite to mesh
-    mesh.add(sprite);
-    
+
+    // Create HTML label using CSS2DObject
+    const labelElement = document.createElement('div');
+    labelElement.className = `node-label${isSelected ? ' is-selected' : ''}`;
+    labelElement.textContent = node.name;
+    labelElement.dataset.nodeId = node.id;
+
+    node.__labelElement = labelElement;
+
+    const labelObject = new CSS2DObject(labelElement);
+    labelObject.position.set(0, isSelected ? 26 : 20, 0);
+    node.__labelObject = labelObject;
+    mesh.add(labelObject);
+
     return mesh;
   }, [selectedNodeId]);
   
@@ -288,7 +294,7 @@ const BusinessGraph3D = ({ graphData, onNodeClick, selectedNodeId, width, height
         height={height}
         backgroundColor={GRAPH_CONFIG.backgroundColor}
         nodeThreeObject={nodeThreeObject}
-        nodeThreeObjectExtend={true}
+        nodeThreeObjectExtend={false}
         nodeLabel={nodeLabel}
         onNodeClick={handleNodeClick}
         linkLabel={linkLabel}
@@ -303,6 +309,7 @@ const BusinessGraph3D = ({ graphData, onNodeClick, selectedNodeId, width, height
         enableNavigationControls={true}
         controlType="orbit"
         showNavInfo={false}
+        extraRenderers={extraRenderers}
       />
     </div>
   );

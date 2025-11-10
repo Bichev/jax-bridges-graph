@@ -63,6 +63,28 @@
     @apply px-3 py-1 rounded-full text-xs font-semibold inline-flex items-center gap-1;
   }
   
+  /* Force graph node labels */
+  .node-label {
+    @apply text-xs font-semibold;
+    padding: 0.35rem 0.6rem;
+    border-radius: 9999px;
+    background: rgba(10, 22, 40, 0.82);
+    border: 1px solid rgba(0, 217, 255, 0.25);
+    color: #E2E8F0;
+    white-space: nowrap;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    pointer-events: none;
+    box-shadow: 0 4px 12px rgba(2, 6, 23, 0.45);
+    backdrop-filter: blur(4px);
+  }
+
+  .node-label.is-selected {
+    color: #00D9FF;
+    border-color: rgba(0, 217, 255, 0.55);
+    box-shadow: 0 0 14px rgba(0, 217, 255, 0.4);
+  }
+  
   /* Input styles */
   .input {
     @apply bg-jax-gray-900 border border-jax-gray-800 rounded-lg px-4 py-2 text-white placeholder-jax-gray-500 focus:outline-none focus:border-jax-cyan focus:ring-2 focus:ring-jax-cyan/20 transition-all;
