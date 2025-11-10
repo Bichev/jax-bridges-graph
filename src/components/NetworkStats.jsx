@@ -132,7 +132,7 @@ const StatCard = ({ icon, label, value, color }) => {
           {icon}
         </div>
         <div className="flex-1 min-w-0">
-          <p className="text-sm text-jax-gray-400">{label}</p>
+          <p className="text-xs text-jax-gray-400 whitespace-nowrap overflow-hidden text-ellipsis">{label}</p>
           <p className="text-2xl font-bold text-white">{value}</p>
         </div>
       </div>

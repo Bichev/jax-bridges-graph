@@ -214,7 +214,18 @@ const BusinessGraph3D = ({ graphData, onNodeClick, selectedNodeId, width, height
   }
   
   return (
-    <div className="w-full h-full graph-canvas">
+    <div className="w-full h-full graph-canvas relative">
+      {/* 3D Controls Hint */}
+      <div className="absolute bottom-6 left-6 z-10 bg-jax-navy/90 backdrop-blur-sm border border-jax-gray-800 rounded-lg px-4 py-3 shadow-xl">
+        <p className="text-xs text-jax-gray-400 font-medium mb-2">🎮 3D Controls</p>
+        <div className="space-y-1 text-xs text-jax-gray-500">
+          <p>• <span className="text-jax-cyan">Left-click + drag:</span> Rotate</p>
+          <p>• <span className="text-jax-cyan">Right-click + drag:</span> Pan</p>
+          <p>• <span className="text-jax-cyan">Scroll:</span> Zoom</p>
+          <p>• <span className="text-jax-cyan">Click node:</span> View details</p>
+        </div>
+      </div>
+      
       <ForceGraph3D
         ref={graphRef}
         graphData={graphData}
@@ -233,6 +244,9 @@ const BusinessGraph3D = ({ graphData, onNodeClick, selectedNodeId, width, height
         d3AlphaDecay={GRAPH_CONFIG.d3AlphaDecay}
         d3VelocityDecay={GRAPH_CONFIG.d3VelocityDecay}
         enableNodeDrag={false}
+        enableNavigationControls={true}
+        controlType="orbit"
+        showNavInfo={false}
       />
     </div>
   );

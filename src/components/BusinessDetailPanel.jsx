@@ -20,17 +20,17 @@ const BusinessDetailPanel = ({ business, relationships, businesses, onClose }) =
   );
   
   return (
-    <div className="fixed inset-y-0 right-0 w-full md:w-[480px] bg-jax-navy border-l border-jax-gray-800 shadow-2xl z-40 overflow-y-auto animate-slide-left">
-      <div className="sticky top-0 bg-jax-navy/95 backdrop-blur-sm border-b border-jax-gray-800 z-10">
+    <div className="fixed inset-y-0 right-0 w-full md:w-[480px] bg-jax-navy border-l border-jax-gray-800 shadow-2xl z-50 overflow-y-auto animate-slide-left">
+      <div className="sticky top-0 bg-jax-navy/95 backdrop-blur-sm border-b border-jax-gray-800 z-50 pt-20 md:pt-0">
         {/* Header */}
         <div className="flex items-center justify-between p-6">
           <h2 className="text-xl font-bold text-white">Business Details</h2>
           <button
             onClick={onClose}
-            className="p-2 hover:bg-jax-gray-800 rounded-lg transition-colors"
+            className="p-2 hover:bg-jax-gray-800 rounded-lg transition-colors relative z-50"
             aria-label="Close panel"
           >
-            <svg className="w-6 h-6 text-jax-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-6 h-6 text-jax-gray-400 hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
