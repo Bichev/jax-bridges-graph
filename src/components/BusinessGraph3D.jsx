@@ -14,13 +14,13 @@ const BusinessGraph3D = ({ graphData, onNodeClick, selectedNodeId, width, height
     if (graphRef.current) {
       const graph = graphRef.current;
       
-      // Set camera position
-      graph.cameraPosition({ z: 400 });
+      // Set initial camera position - zoomed out to see whole network
+      graph.cameraPosition({ z: 800 }, { x: 0, y: 0, z: 0 }, 2000);
       
       // Configure force simulation
-      graph.d3Force('link').distance(100);
-      graph.d3Force('charge').strength(-200);
-      graph.d3Force('center').strength(0.1);
+      graph.d3Force('link').distance(150);
+      graph.d3Force('charge').strength(-300);
+      graph.d3Force('center').strength(0.05);
     }
   }, []);
   
@@ -288,6 +288,7 @@ const BusinessGraph3D = ({ graphData, onNodeClick, selectedNodeId, width, height
         height={height}
         backgroundColor={GRAPH_CONFIG.backgroundColor}
         nodeThreeObject={nodeThreeObject}
+        nodeThreeObjectExtend={true}
         nodeLabel={nodeLabel}
         onNodeClick={handleNodeClick}
         linkLabel={linkLabel}
