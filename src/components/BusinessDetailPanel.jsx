@@ -10,6 +10,7 @@ import {
   sortByConfidence
 } from '../utils/formatters';
 import { RELATIONSHIP_LABELS, RELATIONSHIP_COLORS } from '../utils/constants';
+import { sanitizeForPDF } from '../utils/textSanitizer';
 
 /**
  * Enrich relationships with their reverse counterparts
@@ -83,12 +84,7 @@ const BusinessDetailPanel = ({ business, relationships, businesses, onClose, onW
       
       // Helper function to wrap text
       const wrapText = (text, maxWidth) => {
-        // Remove emojis and clean up text
-        const cleanText = (text || '')
-          .replace(/[\u{1F300}-\u{1F9FF}]/gu, '') // Remove emojis
-          .replace(/[\u{2600}-\u{26FF}]/gu, '')   // Remove misc symbols
-          .replace(/[\u{2700}-\u{27BF}]/gu, '')   // Remove dingbats
-          .trim();
+        const cleanText = sanitizeForPDF(text);
         return doc.splitTextToSize(cleanText, maxWidth);
       };
       
@@ -139,14 +135,14 @@ const BusinessDetailPanel = ({ business, relationships, businesses, onClose, onW
       doc.setFontSize(20);
       doc.setFont('helvetica', 'bold');
       doc.setTextColor(0, 0, 0);
-      doc.text(business.name, margin, yPos);
+      doc.text(sanitizeForPDF(business.name), margin, yPos);
       yPos += 10;
       
       // Industry Badge
       doc.setFontSize(10);
       doc.setFont('helvetica', 'normal');
       doc.setTextColor(0, 217, 255);
-      doc.text(`● ${business.industry}`, margin, yPos);
+      doc.text(`* ${sanitizeForPDF(business.industry)}`, margin, yPos);
       yPos += 12;
       
       // Description
@@ -176,7 +172,7 @@ const BusinessDetailPanel = ({ business, relationships, businesses, onClose, onW
         doc.text('Contact:', margin + 3, yPos);
         doc.setFont('helvetica', 'normal');
         doc.setTextColor(40, 40, 40);
-        doc.text(business.contact_name, margin + 22, yPos);
+        doc.text(sanitizeForPDF(business.contact_name), margin + 22, yPos);
         yPos += 5;
       }
       
@@ -291,7 +287,7 @@ const BusinessDetailPanel = ({ business, relationships, businesses, onClose, onW
           doc.setFontSize(11);
           doc.setFont('helvetica', 'bold');
           doc.setTextColor(20, 20, 40);
-          doc.text(partner.name, margin + 12, yPos + 3.5);
+          doc.text(sanitizeForPDF(partner.name), margin + 12, yPos + 3.5);
           
           // Confidence badge on the right
           doc.setFontSize(8);
@@ -309,10 +305,10 @@ const BusinessDetailPanel = ({ business, relationships, businesses, onClose, onW
           doc.setFontSize(8);
           doc.setFont('helvetica', 'normal');
           doc.setTextColor(100, 100, 120);
-          doc.text(partner.industry, margin + 12, yPos);
+          doc.text(sanitizeForPDF(partner.industry), margin + 12, yPos);
           
           doc.setTextColor(0, 102, 204);
-          const directionText = reverseRelationship ? '⇄ Bidirectional' : '→ One-way';
+          const directionText = reverseRelationship ? '<-> Bidirectional' : '-> One-way';
           doc.text(directionText, pageWidth - margin - 25, yPos);
           yPos += 8;
           

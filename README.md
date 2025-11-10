@@ -70,6 +70,7 @@ jax-bridges-graph/
 │
 ├── scripts/
 │   ├── analyze-relationships.js    # Main analysis CLI
+│   ├── clean-pdf-text.js           # Text sanitization utility
 │   └── utils/
 │       ├── csv-parser.js           # CSV parsing utilities
 │       └── openai-client.js        # OpenAI API wrapper
@@ -77,7 +78,7 @@ jax-bridges-graph/
 ├── src/
 │   ├── components/
 │   │   ├── BusinessGraph3D.jsx     # 3D network graph
-│   │   ├── BusinessDetailPanel.jsx # Detail view & reports
+│   │   ├── BusinessDetailPanel.jsx # Detail view & PDF export
 │   │   ├── NetworkStats.jsx        # Analytics dashboard
 │   │   ├── Header.jsx              # App header
 │   │   └── index.js                # Component exports
@@ -85,6 +86,7 @@ jax-bridges-graph/
 │   ├── utils/
 │   │   ├── graph-builder.js        # Graph data transformer
 │   │   ├── formatters.js           # Data formatters
+│   │   ├── textSanitizer.js        # Text cleaning utilities
 │   │   └── constants.js            # App constants
 │   │
 │   ├── hooks/
@@ -193,6 +195,53 @@ For detailed cost breakdowns and optimization strategies, see:
 3. **Review Insights** - Read AI-generated reasoning and specific action items
 4. **Filter Results** - Use filters to focus on specific relationship types or confidence levels
 5. **Take Action** - Contact potential partners using provided email/phone information
+
+## 📄 PDF Export & Text Cleaning
+
+### Export Partnership Reports
+
+Click the "Save to PDF" button in the business detail panel to generate a professional partnership analysis report. The PDF includes:
+
+- Business profile and contact information
+- All partnership opportunities with confidence scores
+- Bidirectional relationship indicators
+- Detailed collaboration scenarios
+- Value propositions and next steps
+
+**Enhanced PDF Export Features:**
+- ✨ Clean, professional formatting with JAX Bridges branding
+- 🧹 Automatic text sanitization removes problematic Unicode characters
+- ➡️ Converts special arrows and symbols to ASCII equivalents
+- 📝 Proper handling of emojis and icon fonts
+
+### Text Cleaning Utility
+
+If you need to clean text extracted from PDFs or fix encoding issues:
+
+```bash
+# Test the text sanitization with examples
+npm run clean-text
+
+# Clean specific text
+npm run clean-text "Your text with → arrows and !Ä artifacts"
+```
+
+The text sanitizer handles common PDF issues:
+- Icon font artifacts (`!Ä`, `%I`, etc.)
+- Bracket frame indicators (`[!]`, `[*]`, etc.)
+- Unicode arrows (`→`, `⇄`, `←`) converted to ASCII (`->`, `<->`, `<-`)
+- Emojis and special symbols
+- PDF replacement characters (`�`)
+- Malformed whitespace
+
+**For developers:** Import the utility in your code:
+
+```javascript
+import { sanitizeForPDF, cleanPDFExtraction } from './src/utils/textSanitizer';
+
+const cleanText = sanitizeForPDF('Text with → arrows and 🎉 emojis');
+// Returns: 'Text with -> arrows and emojis'
+```
 
 ## 🤝 Contributing
 
