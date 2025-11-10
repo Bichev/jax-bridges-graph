@@ -15,16 +15,21 @@ export const filterGraphByNode = (graphData, nodeId) => {
     return graphData;
   }
   
+  // Helper function to get node ID (handles both string IDs and node objects)
+  const getNodeId = (node) => typeof node === 'object' ? node.id : node;
+  
   // Find all links involving the selected node
-  const relevantLinks = graphData.links.filter(
-    link => link.source.id === nodeId || link.target.id === nodeId
-  );
+  const relevantLinks = graphData.links.filter(link => {
+    const sourceId = getNodeId(link.source);
+    const targetId = getNodeId(link.target);
+    return sourceId === nodeId || targetId === nodeId;
+  });
   
   // Get IDs of connected nodes
   const connectedNodeIds = new Set([nodeId]);
   relevantLinks.forEach(link => {
-    connectedNodeIds.add(link.source.id || link.source);
-    connectedNodeIds.add(link.target.id || link.target);
+    connectedNodeIds.add(getNodeId(link.source));
+    connectedNodeIds.add(getNodeId(link.target));
   });
   
   // Filter nodes to only show selected node and connected nodes
