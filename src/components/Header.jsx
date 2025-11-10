@@ -10,9 +10,24 @@ const Header = ({ onAboutClick }) => {
         <div className="flex items-center justify-between">
           {/* Logo and Title */}
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-jax-cyan to-purple-500 flex items-center justify-center glow-cyan">
-              <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-jax-cyan to-purple-500 flex items-center justify-center glow-cyan relative overflow-hidden">
+              {/* Custom network/bridge logo - interconnected nodes */}
+              <svg className="w-8 h-8 text-white" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                {/* Connection lines */}
+                <path d="M8 12L16 8L24 12M8 20L16 16L24 20M8 12L8 20M24 12L24 20M16 8L16 24" 
+                  stroke="currentColor" 
+                  strokeWidth="1.5" 
+                  strokeLinecap="round" 
+                  opacity="0.6"
+                />
+                {/* Nodes */}
+                <circle cx="16" cy="8" r="2.5" fill="currentColor" />
+                <circle cx="8" cy="12" r="2.5" fill="currentColor" />
+                <circle cx="24" cy="12" r="2.5" fill="currentColor" />
+                <circle cx="16" cy="16" r="3" fill="currentColor" />
+                <circle cx="8" cy="20" r="2.5" fill="currentColor" />
+                <circle cx="24" cy="20" r="2.5" fill="currentColor" />
+                <circle cx="16" cy="24" r="2.5" fill="currentColor" />
               </svg>
             </div>
             <div>
