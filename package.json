@@ -12,6 +12,7 @@
     "analyze:incremental": "node scripts/analyze-incremental.js"
   },
   "dependencies": {
+    "jspdf": "^3.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-force-graph-3d": "^1.24.4",
@@ -40,4 +41,3 @@
   "author": "Vlad - JAX AI Agency",
   "license": "MIT"
 }
-
