@@ -227,7 +227,7 @@ npm run clean-text "Your text with → arrows and !Ä artifacts"
 ```
 
 The text sanitizer handles common PDF issues:
-- Icon font artifacts (`!Ä`, `%I`, etc.)
+- Icon font artifacts (`!Ä`, `%I`, etc.) while preserving percentage signs (`15%`, `30%`)
 - Bracket frame indicators (`[!]`, `[*]`, etc.)
 - Unicode arrows (`→`, `⇄`, `←`) converted to ASCII (`->`, `<->`, `<-`)
 - Emojis and special symbols

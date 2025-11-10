@@ -271,8 +271,8 @@ const BusinessDetailPanel = ({ business, relationships, businesses, onClose, onW
           
           checkNewPage(65);
           
-          // Relationship box background
-          doc.setFillColor(252, 252, 254);
+          // Relationship box background removed for cleaner look
+          // doc.setFillColor(252, 252, 254);
           const boxStartY = yPos - 2;
           
           // Partner number badge
@@ -419,10 +419,10 @@ const BusinessDetailPanel = ({ business, relationships, businesses, onClose, onW
               yPos += 3.5;
             });
             
-            // Draw box around example
-            const exampleHeight = yPos - exampleStartY + 1;
-            doc.setDrawColor(200, 180, 220);
-            doc.rect(margin + 6, exampleStartY, contentWidth - 12, exampleHeight);
+            // Border around example removed for cleaner look
+            // const exampleHeight = yPos - exampleStartY + 1;
+            // doc.setDrawColor(200, 180, 220);
+            // doc.rect(margin + 6, exampleStartY, contentWidth - 12, exampleHeight);
             
             yPos += 4;
           }
@@ -487,12 +487,12 @@ const BusinessDetailPanel = ({ business, relationships, businesses, onClose, onW
             yPos += 2;
           }
           
-          // Draw subtle border around relationship
-          const boxHeight = yPos - boxStartY + 1;
-          doc.setDrawColor(220, 220, 230);
-          doc.setLineWidth(0.5);
-          doc.roundedRect(margin + 2, boxStartY, contentWidth - 4, boxHeight, 2, 2);
-          doc.setLineWidth(0.2); // Reset line width
+          // Border around relationship removed for cleaner look
+          // const boxHeight = yPos - boxStartY + 1;
+          // doc.setDrawColor(220, 220, 230);
+          // doc.setLineWidth(0.5);
+          // doc.roundedRect(margin + 2, boxStartY, contentWidth - 4, boxHeight, 2, 2);
+          // doc.setLineWidth(0.2); // Reset line width
           
           yPos += 6;
         });

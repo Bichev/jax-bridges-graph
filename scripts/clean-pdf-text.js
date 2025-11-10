@@ -30,6 +30,11 @@ const PROBLEM_EXAMPLES = [
     expected: 'Professional Services'
   },
   {
+    name: 'Percentage signs (preserved)',
+    input: 'increase revenue by 15% on projects and 30% increase in volume',
+    expected: 'increase revenue by 15% on projects and 30% increase in volume'
+  },
+  {
     name: 'Unicode arrows',
     input: 'Company A → Company B ⇄ Company C',
     expected: 'Company A -> Company B <-> Company C'

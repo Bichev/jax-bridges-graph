@@ -45,10 +45,11 @@ export const sanitizeForPDF = (text) => {
     .replace(/\[\?\]\s*/g, '')              // [?] indicator
     .replace(/\[i\]\s*/gi, '')              // [i] or [I] indicator
     .replace(/\[x\]\s*/gi, '')              // [x] or [X] indicator
-    // THIRD: Remove problematic icon font artifacts
-    .replace(/[!%][\u00C0-\u00FF]/g, '')    // Icon font artifacts like !Ä
-    .replace(/[!%][�\uFFFD\s]/g, '')        // Replacement characters and spaces after ! or %
-    .replace(/^[!%]\s+/g, '')               // Leading ! or % with space
+    // THIRD: Remove problematic icon font artifacts (but preserve percentage signs)
+    .replace(/[!%][\u00C0-\u00FF]/g, '')    // Icon font artifacts like !Ä, %I (with diacritics)
+    .replace(/![�\uFFFD]/g, '')             // Replacement characters after !
+    .replace(/^%[\u0041-\u005A]\s+/gm, '')  // Leading %[A-Z] with space (e.g., "%I Professional")
+    .replace(/^!\s+/gm, '')                 // Leading ! with space
     // FOURTH: Remove emoji ranges and symbols we don't want
     .replace(/[\u{1F300}-\u{1F9FF}]/gu, '') // Emojis
     .replace(/[\u{2600}-\u{26FF}]/gu, '')   // Misc symbols (after bullets are converted)

@@ -172,6 +172,8 @@ Running `npm run clean-text` shows these results:
 
 ```
 ✅ PASS: Icon font artifacts (!Ä)
+✅ PASS: Industry icons (%I) removed
+✅ PASS: Percentage signs (15%, 30%) preserved
 ✅ PASS: Unicode arrows (→, ⇄)
 ✅ PASS: Mixed problematic characters
 ✅ PASS: Bracket frame indicators ([!], [*])
