@@ -104,12 +104,13 @@ const BusinessDetailPanel = ({ business, relationships, businesses, onClose, onW
       className="fixed inset-y-0 right-0 bg-jax-navy border-l border-jax-gray-800 shadow-2xl z-50 overflow-y-auto animate-slide-left"
       style={{ width: window.innerWidth < 768 ? '100%' : `${panelWidth}px` }}
     >
-      {/* Resize Handle */}
+      {/* Resize Handle - Fixed position so it doesn't scroll away */}
       <div
-        className="hidden md:block absolute left-0 top-0 bottom-0 w-1 hover:w-2 bg-jax-cyan/20 hover:bg-jax-cyan cursor-ew-resize transition-all z-50"
+        className="hidden md:block fixed left-0 top-0 bottom-0 w-1 hover:w-2 bg-jax-cyan/20 hover:bg-jax-cyan cursor-ew-resize transition-all z-[60]"
         onMouseDown={handleResizeStart}
         style={{ 
-          boxShadow: isResizing ? '0 0 10px rgba(0, 217, 255, 0.5)' : 'none'
+          boxShadow: isResizing ? '0 0 10px rgba(0, 217, 255, 0.5)' : 'none',
+          left: `calc(100vw - ${panelWidth}px)`
         }}
       />
       <div className="sticky top-0 bg-jax-navy/95 backdrop-blur-sm border-b border-jax-gray-800 z-50 pt-20 md:pt-0">
@@ -278,12 +279,12 @@ const InfoRow = ({ icon, label, value }) => {
 const DirectionColumn = ({ relationship, direction, title, icon }) => {
   if (!relationship) {
     return (
-      <div className="flex-1 min-w-0">
+      <div className="flex-1 min-w-0 flex flex-col">
         <div className="flex items-center gap-2 mb-3">
           {icon}
           <h5 className="text-xs font-bold text-jax-gray-500 uppercase">{title}</h5>
         </div>
-        <div className="bg-jax-gray-800/30 border border-jax-gray-800 rounded-lg p-3">
+        <div className="bg-jax-gray-800/30 border border-jax-gray-800 rounded-lg p-3 flex-grow">
           <p className="text-xs text-jax-gray-600 italic">No partnership identified in this direction</p>
         </div>
       </div>
@@ -293,7 +294,8 @@ const DirectionColumn = ({ relationship, direction, title, icon }) => {
   const { type, reasoning, value_prop } = relationship;
   
   return (
-    <div className="flex-1 min-w-0">
+    <div className="flex-1 min-w-0 flex flex-col">
+      {/* Header */}
       <div className="flex items-center gap-2 mb-3">
         {icon}
         <h5 className="text-xs font-bold text-jax-gray-400 uppercase">{title}</h5>
@@ -308,19 +310,19 @@ const DirectionColumn = ({ relationship, direction, title, icon }) => {
         </div>
       </div>
       
-      <div className="space-y-3">
-        {/* Why This Works */}
-        <div className="bg-jax-gray-800/30 border border-jax-gray-800 rounded-lg p-3">
-          <p className="text-xs font-semibold text-jax-cyan uppercase mb-1.5">Why This Works</p>
-          <p className="text-xs text-jax-gray-300 leading-relaxed">{reasoning}</p>
-        </div>
-        
-        {/* Value Proposition */}
-        {value_prop && (
-          <div className="bg-green-500/5 border border-green-500/20 rounded-lg p-3">
-            <p className="text-xs font-semibold text-green-400 uppercase mb-1.5">Value Proposition</p>
-            <p className="text-xs text-green-300 leading-relaxed font-medium">{value_prop}</p>
-          </div>
+      {/* Why This Works - flexible height */}
+      <div className="bg-jax-gray-800/30 border border-jax-gray-800 rounded-lg p-3 mb-3">
+        <p className="text-xs font-semibold text-jax-cyan uppercase mb-1.5">Why This Works</p>
+        <p className="text-xs text-jax-gray-300 leading-relaxed">{reasoning}</p>
+      </div>
+      
+      {/* Value Proposition - always rendered for consistent alignment */}
+      <div className={`bg-green-500/5 border rounded-lg p-3 ${value_prop ? 'border-green-500/20' : 'border-jax-gray-800/50'}`}>
+        <p className="text-xs font-semibold text-green-400 uppercase mb-1.5">Value Proposition</p>
+        {value_prop ? (
+          <p className="text-xs text-green-300 leading-relaxed font-medium">{value_prop}</p>
+        ) : (
+          <p className="text-xs text-jax-gray-600 italic">No specific value proposition identified</p>
         )}
       </div>
     </div>
@@ -396,7 +398,7 @@ const RelationshipCard = ({ relationship }) => {
       </div>
       
       {/* Bidirectional Partnership View */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
         {/* What They Provide to You */}
         <DirectionColumn 
           relationship={inboundRel}
