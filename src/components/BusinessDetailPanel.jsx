@@ -243,6 +243,8 @@ const InfoRow = ({ icon, label, value }) => {
  * Relationship card component
  */
 const RelationshipCard = ({ relationship }) => {
+  const [showCopied, setShowCopied] = useState(false);
+  
   const { 
     type, 
     confidence, 
@@ -254,6 +256,23 @@ const RelationshipCard = ({ relationship }) => {
     partner, 
     direction 
   } = relationship;
+  
+  // Handle contact button click
+  const handleContactClick = async (e) => {
+    e.preventDefault();
+    
+    // Try to copy email to clipboard
+    try {
+      await navigator.clipboard.writeText(partner.contact_email);
+      setShowCopied(true);
+      setTimeout(() => setShowCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy email:', err);
+    }
+    
+    // Also try to open mailto (will work if email client is configured)
+    window.location.href = `mailto:${partner.contact_email}?subject=Partnership Opportunity from JAX Bridges`;
+  };
   
   return (
     <div className="card-hover p-5 space-y-4">
@@ -382,15 +401,29 @@ const RelationshipCard = ({ relationship }) => {
       {/* Contact Button */}
       {partner.contact_email && (
         <div className="pt-3">
-          <a
-            href={`mailto:${partner.contact_email}?subject=Partnership Opportunity from JAX Bridges`}
-            className="btn btn-primary w-full"
+          <button
+            onClick={handleContactClick}
+            className="btn btn-primary w-full relative"
           >
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-            Contact {partner.name}
-          </a>
+            {showCopied ? (
+              <>
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                Email Copied!
+              </>
+            ) : (
+              <>
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                Contact {partner.name}
+              </>
+            )}
+          </button>
+          <p className="text-xs text-jax-gray-500 text-center mt-2">
+            {partner.contact_email}
+          </p>
         </div>
       )}
     </div>
