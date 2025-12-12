@@ -11,7 +11,9 @@
     "analyze:sample": "node scripts/analyze-relationships.js --sample=5",
     "analyze:incremental": "node scripts/analyze-incremental.js",
     "clean-text": "node scripts/clean-pdf-text.js",
-    "generate-judges-report": "node scripts/generate-judges-report-pdf.js"
+    "generate-judges-report": "node scripts/generate-judges-report-pdf.js",
+    "generate-relationship-pdfs": "node scripts/generate-all-relationship-pdfs.js",
+    "generate-business-reports": "node scripts/generate-all-business-reports.js"
   },
   "dependencies": {
     "jspdf": "^3.0.3",
