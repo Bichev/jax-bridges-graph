@@ -10,7 +10,8 @@
     "analyze": "node scripts/analyze-relationships.js",
     "analyze:sample": "node scripts/analyze-relationships.js --sample=5",
     "analyze:incremental": "node scripts/analyze-incremental.js",
-    "clean-text": "node scripts/clean-pdf-text.js"
+    "clean-text": "node scripts/clean-pdf-text.js",
+    "generate-judges-report": "node scripts/generate-judges-report-pdf.js"
   },
   "dependencies": {
     "jspdf": "^3.0.3",
