@@ -13,7 +13,8 @@
     "clean-text": "node scripts/clean-pdf-text.js",
     "generate-judges-report": "node scripts/generate-judges-report-pdf.js",
     "generate-relationship-pdfs": "node scripts/generate-all-relationship-pdfs.js",
-    "generate-business-reports": "node scripts/generate-all-business-reports.js"
+    "generate-business-reports": "node scripts/generate-all-business-reports.js",
+    "publish-reports": "node scripts/publish-reports.js"
   },
   "dependencies": {
     "jspdf": "^3.0.3",

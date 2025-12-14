@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JAX Bridges Partnership Reports</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <style>
+    :root {
+      --navy: #0A1628;
+      --cyan: #00D9FF;
+      --dark: #111827;
+      --gray-800: #1F2937;
+      --gray-600: #4B5563;
+      --gray-400: #9CA3AF;
+      --gray-200: #E5E7EB;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--dark) 100%);
+      min-height: 100vh;
+      color: #fff;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .logo {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, var(--cyan), #00FF88);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 10px;
+    }
+    
+    .subtitle {
+      color: var(--gray-400);
+      font-size: 1.1rem;
+    }
+    
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 30px 0;
+      flex-wrap: wrap;
+    }
+    
+    .stat {
+      text-align: center;
+    }
+    
+    .stat-value {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--cyan);
+    }
+    
+    .stat-label {
+      color: var(--gray-400);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .card {
+      background: rgba(31, 41, 55, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+    }
+    
+    .card-header {
+      padding: 20px 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 8px 12px;
+    }
+    
+    .search-box input {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 0.95rem;
+      width: 200px;
+      outline: none;
+    }
+    
+    .search-box input::placeholder {
+      color: var(--gray-400);
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    th, td {
+      padding: 16px 24px;
+      text-align: left;
+    }
+    
+    th {
+      background: rgba(0, 0, 0, 0.2);
+      color: var(--gray-400);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+    
+    tr {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      transition: background 0.2s;
+    }
+    
+    tbody tr:hover {
+      background: rgba(0, 217, 255, 0.05);
+    }
+    
+    .num {
+      width: 50px;
+      color: var(--gray-400);
+      font-size: 0.9rem;
+    }
+    
+    .name a {
+      color: #fff;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 500;
+    }
+    
+    .name a:hover {
+      color: var(--cyan);
+    }
+    
+    .icon {
+      font-size: 1.2rem;
+    }
+    
+    .size {
+      width: 100px;
+      color: var(--gray-400);
+      font-size: 0.9rem;
+    }
+    
+    .action {
+      width: 140px;
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      background: linear-gradient(135deg, var(--cyan), #00C4E0);
+      color: var(--navy);
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 217, 255, 0.4);
+    }
+    
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      color: var(--gray-400);
+      font-size: 0.85rem;
+    }
+    
+    footer a {
+      color: var(--cyan);
+      text-decoration: none;
+    }
+    
+    .hidden {
+      display: none !important;
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px 10px;
+      }
+      
+      th, td {
+        padding: 12px 10px;
+      }
+      
+      .size, .num {
+        display: none;
+      }
+      
+      .action {
+        width: auto;
+      }
+      
+      .search-box input {
+        width: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">JAX Bridges</div>
+      <p class="subtitle">Business Partnership Analysis Reports</p>
+      
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-value">30</div>
+          <div class="stat-label">Reports Available</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">December</div>
+          <div class="stat-label">14, 2025</div>
+        </div>
+      </div>
+    </header>
+    
+    <main class="card">
+      <div class="card-header">
+        <h2 class="card-title">📊 Partnership Reports</h2>
+        <div class="search-box">
+          <span>🔍</span>
+          <input type="text" id="search" placeholder="Search businesses...">
+        </div>
+      </div>
+      
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Business Name</th>
+            <th>Size</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="file-list">
+
+        <tr>
+          <td class="num">1</td>
+          <td class="name">
+            <a href="ALYS_Always_Love_Yourself_Partnership_Analysis_2025-12-14.pdf" download>
+              <span class="icon">📄</span>
+              ALYS Always Love Yourself
+            </a>
+          </td>
+          <td class="size">259.6 KB</td>
+          <td class="action">
+            <a href="ALYS_Always_Love_Yourself_Partnership_Analysis_2025-12-14.pdf" download class="btn">
+              ⬇️ Download
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="num">2</td>
+          <td class="name">
+            <a href="Aspirations_Behavioral_Health_Inc._Partnership_Analysis_2025-12-14.pdf" download>
+              <span class="icon">📄</span>
+              Aspirations Behavioral Health Inc.
+            </a>
+          </td>
+          <td class="size">254.6 KB</td>
+          <td class="action">
+            <a href="Aspirations_Behavioral_Health_Inc._Partnership_Analysis_2025-12-14.pdf" download class="btn">
+              ⬇️ Download
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="num">3</td>
+          <td class="name">
+            <a href="Be_Present_Detalles_Partnership_Analysis_2025-12-14.pdf" download>
+              <span class="icon">📄</span>
+              Be Present Detalles
+            </a>
+          </td>
+          <td class="size">264.6 KB</td>
+          <td class="action">
+            <a href="Be_Present_Detalles_Partnership_Analysis_2025-12-14.pdf" download class="btn">
+              ⬇️ Download
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="num">4</td>
+          <td class="name">
+            <a href="Big_Rig_Compliance_Pros_Partnership_Analysis_2025-12-14.pdf" download>
+              <span class="icon">📄</span>
+              Big Rig Compliance Pros
+            </a>
+          </td>
+          <td class="size">264.2 KB</td>
+          <td class="action">
+            <a href="Big_Rig_Compliance_Pros_Partnership_Analysis_2025-12-14.pdf" download class="btn">
+              ⬇️ Download
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="num">5</td>
+          <td class="name">
+            <a href="Bluebird_Health_Partners_Partnership_Analysis_2025-12-14.pdf" download>
+              <span class="icon">📄</span>
+              Bluebird Health Partners
+            </a>
+          </td>
+          <td class="size">262.9 KB</td>
+          <td class="action">
+            <a href="Bluebird_Health_Partners_Partnership_Analysis_2025-12-14.pdf" download class="btn">
+              ⬇️ Download
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="num">6</td>
+          <td class="name">
+            <a href="Celebrate_%26_Smile_International_Steppers_Partnership_Analysis_2025-12-14.pdf" download>
+              <span class="icon">📄</span>
+              Celebrate &amp; Smile International Steppers
+            </a>
+          </td>
+          <td class="size">255.4 KB</td>
+          <td class="action">
+            <a href="Celebrate_%26_Smile_International_Steppers_Partnership_Analysis_2025-12-14.pdf" download class="btn">
+              ⬇️ Download
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="num">7</td>
+          <td class="name">
+            <a href="Communikate_Design_%26_Marketing_Partnership_Analysis_2025-12-14.pdf" download>
+              <span class="icon">📄</span>
+              Communikate Design &amp; Marketing
+            </a>
+          </td>
+          <td class="size">261.4 KB</td>
+          <td class="action">
+            <a href="Communikate_Design_%26_Marketing_Partnership_Analysis_2025-12-14.pdf" download class="btn">
+              ⬇️ Download
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="num">8</td>
+          <td class="name">
+            <a href="Complete_Renewal_LLC_Partnership_Analysis_2025-12-14.pdf" download>
+              <span class="icon">📄</span>
+              Complete Renewal LLC
+            </a>
+          </td>
+          <td class="size">257.4 KB</td>
+          <td class="action">
+            <a href="Complete_Renewal_LLC_Partnership_Analysis_2025-12-14.pdf" download class="btn">
+              ⬇️ Download
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="num">9</td>
+          <td class="name">
+            <a href="Connections_to_the_Nations_Llc_Partnership_Analysis_2025-12-14.pdf" download>
+              <span class="icon">📄</span>
+              Connections to the Nations Llc
+            </a>
+          </td>
+          <td class="size">257.8 KB</td>
+          <td class="action">
+            <a href="Connections_to_the_Nations_Llc_Partnership_Analysis_2025-12-14.pdf" download class="btn">
+              ⬇️ Download
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="num">10</td>
+          <td class="name">
+            <a href="Enriquez_Aesthetics_Partnership_Analysis_2025-12-14.pdf" download>
+              <span class="icon">📄</span>
+              Enriquez Aesthetics
+            </a>
+          </td>
+          <td class="size">262.6 KB</td>
+          <td class="action">
+            <a href="Enriquez_Aesthetics_Partnership_Analysis_2025-12-14.pdf" download class="btn">
+              ⬇️ Download
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="num">11</td>
+          <td class="name">
+            <a href="flow_Partnership_Analysis_2025-12-14.pdf" download>
+              <span class="icon">📄</span>
+              flow
+            </a>
+          </td>
+          <td class="size">260.9 KB</td>
+          <td class="action">
+            <a href="flow_Partnership_Analysis_2025-12-14.pdf" download class="btn">
+              ⬇️ Download
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="num">12</td>
+          <td class="name">
+            <a href="Free_Agents_Inc_Partnership_Analysis_2025-12-14.pdf" download>
+              <span class="icon">📄</span>
+              Free Agents Inc
+            </a>
+          </td>
+          <td class="size">257.0 KB</td>
+          <td class="action">
+            <a href="Free_Agents_Inc_Partnership_Analysis_2025-12-14.pdf" download class="btn">
+              ⬇️ Download
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="num">13</td>
+          <td class="name">
+            <a href="Genuines_Coaching_%26_Consulting_Partnership_Analysis_2025-12-14.pdf" download>
+              <span class="icon">📄</span>
+              Genuines Coaching &amp; Consulting
+            </a>
+          </td>
+          <td class="size">264.1 KB</td>
+          <td class="action">
+            <a href="Genuines_Coaching_%26_Consulting_Partnership_Analysis_2025-12-14.pdf" download class="btn">
+              ⬇️ Download
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="num">14</td>
+          <td class="name">
+            <a href="Grayland_Partnership_Analysis_2025-12-14.pdf" download>
+              <span class="icon">📄</span>
+              Grayland
+            </a>
+          </td>
+          <td class="size">260.6 KB</td>
+          <td class="action">
+            <a href="Grayland_Partnership_Analysis_2025-12-14.pdf" download class="btn">
+              ⬇️ Download
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="num">15</td>
+          <td class="name">
+            <a href="IV_Creative_Partnership_Analysis_2025-12-14.pdf" download>
+              <span class="icon">📄</span>
+              IV Creative
+            </a>
+          </td>
+          <td class="size">249.8 KB</td>
+          <td class="action">
+            <a href="IV_Creative_Partnership_Analysis_2025-12-14.pdf" download class="btn">
+              ⬇️ Download
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="num">16</td>
+          <td class="name">
+            <a href="Jamz_Trainings_Partnership_Analysis_2025-12-14.pdf" download>
+              <span class="icon">📄</span>
+              Jamz Trainings
+            </a>
+          </td>
+          <td class="size">263.7 KB</td>
+          <td class="action">
+            <a href="Jamz_Trainings_Partnership_Analysis_2025-12-14.pdf" download class="btn">
+              ⬇️ Download
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="num">17</td>
+          <td class="name">
+            <a href="JAX_AI_Agency_Partnership_Analysis_2025-12-14.pdf" download>
+              <span class="icon">📄</span>
+              JAX AI Agency
+            </a>
+          </td>
+          <td class="size">235.4 KB</td>
+          <td class="action">
+            <a href="JAX_AI_Agency_Partnership_Analysis_2025-12-14.pdf" download class="btn">
+              ⬇️ Download
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="num">18</td>
+          <td class="name">
+            <a href="Jazzi%E2%80%99s_Creations_Partnership_Analysis_2025-12-14.pdf" download>
+              <span class="icon">📄</span>
+              Jazzi’s Creations
+            </a>
+          </td>
+          <td class="size">252.6 KB</td>
+          <td class="action">
+            <a href="Jazzi%E2%80%99s_Creations_Partnership_Analysis_2025-12-14.pdf" download class="btn">
+              ⬇️ Download
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="num">19</td>
+          <td class="name">
+            <a href="JPO_Logistics_LLC_Partnership_Analysis_2025-12-14.pdf" download>
+              <span class="icon">📄</span>
+              JPO Logistics LLC
+            </a>
+          </td>
+          <td class="size">261.3 KB</td>
+          <td class="action">
+            <a href="JPO_Logistics_LLC_Partnership_Analysis_2025-12-14.pdf" download class="btn">
+              ⬇️ Download
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="num">20</td>
+          <td class="name">
+            <a href="MyahnArt_LLC_Partnership_Analysis_2025-12-14.pdf" download>
+              <span class="icon">📄</span>
+              MyahnArt LLC
+            </a>
+          </td>
+          <td class="size">265.7 KB</td>
+          <td class="action">
+            <a href="MyahnArt_LLC_Partnership_Analysis_2025-12-14.pdf" download class="btn">
+              ⬇️ Download
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="num">21</td>
+          <td class="name">
+            <a href="Noseniorleftbehindfl.org_Partnership_Analysis_2025-12-14.pdf" download>
+              <span class="icon">📄</span>
+              Noseniorleftbehindfl.org
+            </a>
+          </td>
+          <td class="size">266.0 KB</td>
+          <td class="action">
+            <a href="Noseniorleftbehindfl.org_Partnership_Analysis_2025-12-14.pdf" download class="btn">
+              ⬇️ Download
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="num">22</td>
+          <td class="name">
+            <a href="Organize_Design_Create_Partnership_Analysis_2025-12-14.pdf" download>
+              <span class="icon">📄</span>
+              Organize Design Create
+            </a>
+          </td>
+          <td class="size">267.3 KB</td>
+          <td class="action">
+            <a href="Organize_Design_Create_Partnership_Analysis_2025-12-14.pdf" download class="btn">
+              ⬇️ Download
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="num">23</td>
+          <td class="name">
+            <a href="Relax_Relate_%26_Release_Partnership_Analysis_2025-12-14.pdf" download>
+              <span class="icon">📄</span>
+              Relax Relate &amp; Release
+            </a>
+          </td>
+          <td class="size">264.9 KB</td>
+          <td class="action">
+            <a href="Relax_Relate_%26_Release_Partnership_Analysis_2025-12-14.pdf" download class="btn">
+              ⬇️ Download
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="num">24</td>
+          <td class="name">
+            <a href="Simple_Creations_By_T_Partnership_Analysis_2025-12-14.pdf" download>
+              <span class="icon">📄</span>
+              Simple Creations By T
+            </a>
+          </td>
+          <td class="size">261.9 KB</td>
+          <td class="action">
+            <a href="Simple_Creations_By_T_Partnership_Analysis_2025-12-14.pdf" download class="btn">
+              ⬇️ Download
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="num">25</td>
+          <td class="name">
+            <a href="Soulfitness_Studio_Health_and_wellness_center_Partnership_Analysis_2025-12-14.pdf" download>
+              <span class="icon">📄</span>
+              Soulfitness Studio Health and wellness center
+            </a>
+          </td>
+          <td class="size">262.8 KB</td>
+          <td class="action">
+            <a href="Soulfitness_Studio_Health_and_wellness_center_Partnership_Analysis_2025-12-14.pdf" download class="btn">
+              ⬇️ Download
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="num">26</td>
+          <td class="name">
+            <a href="The_Collective_Om_Partnership_Analysis_2025-12-14.pdf" download>
+              <span class="icon">📄</span>
+              The Collective Om
+            </a>
+          </td>
+          <td class="size">253.9 KB</td>
+          <td class="action">
+            <a href="The_Collective_Om_Partnership_Analysis_2025-12-14.pdf" download class="btn">
+              ⬇️ Download
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="num">27</td>
+          <td class="name">
+            <a href="The_P-Way_Solutions_LLC_Partnership_Analysis_2025-12-14.pdf" download>
+              <span class="icon">📄</span>
+              The P-Way Solutions LLC
+            </a>
+          </td>
+          <td class="size">259.4 KB</td>
+          <td class="action">
+            <a href="The_P-Way_Solutions_LLC_Partnership_Analysis_2025-12-14.pdf" download class="btn">
+              ⬇️ Download
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="num">28</td>
+          <td class="name">
+            <a href="Tosh%E2%80%99s_Urban_Garden_Partnership_Analysis_2025-12-14.pdf" download>
+              <span class="icon">📄</span>
+              Tosh’s Urban Garden
+            </a>
+          </td>
+          <td class="size">260.8 KB</td>
+          <td class="action">
+            <a href="Tosh%E2%80%99s_Urban_Garden_Partnership_Analysis_2025-12-14.pdf" download class="btn">
+              ⬇️ Download
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="num">29</td>
+          <td class="name">
+            <a href="We_buy_any_house_Partnership_Analysis_2025-12-14.pdf" download>
+              <span class="icon">📄</span>
+              We buy any house
+            </a>
+          </td>
+          <td class="size">263.2 KB</td>
+          <td class="action">
+            <a href="We_buy_any_house_Partnership_Analysis_2025-12-14.pdf" download class="btn">
+              ⬇️ Download
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="num">30</td>
+          <td class="name">
+            <a href="WhitBits_Cookies_Partnership_Analysis_2025-12-14.pdf" download>
+              <span class="icon">📄</span>
+              WhitBits Cookies
+            </a>
+          </td>
+          <td class="size">263.7 KB</td>
+          <td class="action">
+            <a href="WhitBits_Cookies_Partnership_Analysis_2025-12-14.pdf" download class="btn">
+              ⬇️ Download
+            </a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </main>
+    
+    <footer>
+      <p>Generated by <a href="https://jaxaiagency.com" target="_blank">JAX AI Agency</a> • Powered by AI</p>
+      <p style="margin-top: 8px;">Each report contains partnership opportunities with all other businesses in the cohort.</p>
+    </footer>
+  </div>
+  
+  <script>
+    // Simple search functionality
+    const searchInput = document.getElementById('search');
+    const rows = document.querySelectorAll('#file-list tr');
+    
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase();
+      
+      rows.forEach(row => {
+        const name = row.querySelector('.name').textContent.toLowerCase();
+        if (name.includes(query)) {
+          row.classList.remove('hidden');
+        } else {
+          row.classList.add('hidden');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
