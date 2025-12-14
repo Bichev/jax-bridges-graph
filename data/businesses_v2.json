@@ -1,9 +1,9 @@
 [
   {
-    "id": "fe7ad7de-43f7-4b78-9d45-99dfff96d359",
+    "id": "c9418117-fca1-4ecb-b135-ca0d73081a67",
     "name": "JAX AI Agency",
-    "contact_name": "Vladimir Bichev",
-    "description": "Software Technology and AI Consulting",
+    "contact_name": "Vic Bushe",
+    "description": "Technology and AI Consulting",
     "website": "https://jaxaiagency.com/",
     "target_market": "Small and mid-sized businesses in Jacksonville and the Southeast (insurance, real estate, logistics, marketing agencies, fitness, and restaurants) that want to modernize operations with AI agents, automation tools, and custom AI services.",
     "current_needs": "Early client partnerships to co-create pilot projects, marketing visibility in Jacksonville, and introductions to local businesses that want to explore AI adoption.",
@@ -12,10 +12,10 @@
     "linkedin": "linkedin.com/in/bichev",
     "fun_fact": "Every week I bake Sourdough bread for my family!",
     "industry": "Technology",
-    "services": "Software Technology and AI Consulting"
+    "services": "Technology and AI Consulting"
   },
   {
-    "id": "c39aa8c1-b505-4f42-8762-13a9702854f5",
+    "id": "eeb3c868-a581-4eee-b60f-b010564b1f84",
     "name": "JPO Logistics LLC",
     "contact_name": "Paulette Orr",
     "description": "General freight services and dispatching service.",
@@ -30,7 +30,7 @@
     "services": "General freight services and dispatching service."
   },
   {
-    "id": "0b4e19b1-3dd3-43b8-a382-4f0bffd26f3c",
+    "id": "9b4c9f84-a955-43e1-84e6-0bee82517666",
     "name": "flow",
     "contact_name": "Miguel  Camargo",
     "description": "Coaching",
@@ -45,7 +45,7 @@
     "services": "Coaching"
   },
   {
-    "id": "a613339e-68e9-4e21-befb-14f83346bae8",
+    "id": "a24efa36-5391-4d11-9419-b84c1bb8c913",
     "name": "Jazzi’s Creations",
     "contact_name": "Jasmyne Irizarry",
     "description": "DIY Craft Studio & Personalized Gift Shop",
@@ -60,7 +60,7 @@
     "services": "DIY Craft Studio & Personalized Gift Shop"
   },
   {
-    "id": "389f2c70-8c20-418c-b595-415427a579e2",
+    "id": "b5c82088-8d5b-4000-bcc3-61fb1962174b",
     "name": "IV Creative",
     "contact_name": "Iliana",
     "description": "We support local businesses who are in need of content creation services.",
@@ -75,7 +75,7 @@
     "services": "We support local businesses who are in need of content creation services.  "
   },
   {
-    "id": "b85e2c13-cf1f-4d90-8d04-6f1060b8190b",
+    "id": "b7f20223-0344-40ae-ac23-d4db2e7bd8dd",
     "name": "Genuines Coaching & Consulting",
     "contact_name": "Reden Dionisio",
     "description": "Coaching, Speaking, Training",
@@ -90,7 +90,7 @@
     "services": "Coaching, Speaking, Training"
   },
   {
-    "id": "34c676b8-1f0e-4bef-ae5c-f82e4a094201",
+    "id": "617ae48e-d745-40b3-b695-23bc6ed0916e",
     "name": "Bluebird Health Partners",
     "contact_name": "Cary Hendricks",
     "description": "Healthcare Strategy Execution Consulting",
@@ -105,7 +105,7 @@
     "services": "Healthcare Strategy Execution Consulting"
   },
   {
-    "id": "adc4a6d0-0710-4f1e-a68a-2c707e1408c4",
+    "id": "4b212885-9549-4bff-b016-997554786382",
     "name": "Enriquez Aesthetics",
     "contact_name": "Bianca Enriquez",
     "description": "Luxury facial experiences",
@@ -120,7 +120,7 @@
     "services": "Luxury facial experiences "
   },
   {
-    "id": "1744ef1d-d4fe-4fb0-9b68-98d52748352d",
+    "id": "aab29436-913f-401e-95e0-7db468d77e34",
     "name": "Tosh’s Urban Garden",
     "contact_name": "Latachia Kins-Hunt",
     "description": "Natural herbal products (teas, tinctures and health care options) created in small batches with low to no synthetic additives. Eco-conscious individuals looking for alternative health options .",
@@ -135,7 +135,7 @@
     "services": "Natural herbal products (teas, tinctures and health care options) created in small batches with low to no synthetic additives. Eco-conscious individuals looking for alternative health options ."
   },
   {
-    "id": "ecfb4fb5-d2d7-4d2c-a9d2-cbef029d78f1",
+    "id": "29191ad1-b267-4773-95ba-a33d0a9a2905",
     "name": "Celebrate & Smile International Steppers",
     "contact_name": "Tiffany Barksdale",
     "description": "community/employee enhancement through art of dance",
@@ -150,7 +150,7 @@
     "services": "community/employee enhancement through art of dance"
   },
   {
-    "id": "6ed2d06a-b259-42b2-997f-5a4c8651f816",
+    "id": "0bb44a0b-9d9c-4a91-832e-55dbc62a275f",
     "name": "The Collective Om",
     "contact_name": "Ashlyn Schwartz",
     "description": "Holistic health services for individuals and small teams",
@@ -165,7 +165,7 @@
     "services": "Holistic health services for individuals and small teams"
   },
   {
-    "id": "12ad724c-2cec-40d8-9326-896a2fe2d972",
+    "id": "5735dec7-4a70-43f7-a45e-d94fde7a3cf6",
     "name": "Communikate Design & Marketing",
     "contact_name": "Kate Reeve",
     "description": "Websites, Branding, Marketing Strategy and more",
@@ -180,7 +180,7 @@
     "services": "Websites, Branding, Marketing Strategy and more"
   },
   {
-    "id": "ec8dde32-15c0-4fa9-a901-97a740df82ef",
+    "id": "a344e7d4-0a25-411b-a01e-0f48aa2f4fb4",
     "name": "We buy any house",
     "contact_name": "Chris Moore",
     "description": "Buy distressed properties",
@@ -195,7 +195,7 @@
     "services": "Buy distressed properties "
   },
   {
-    "id": "99c664f9-a43c-4ec7-bd88-343f6c38e3c9",
+    "id": "2c1d6997-6fea-4a70-a1b5-9d3c9230fdbc",
     "name": "Jamz Trainings",
     "contact_name": "James Robinson",
     "description": "Personal Training & Sports Massage Therapy",
@@ -210,7 +210,7 @@
     "services": "Personal Training & Sports Massage Therapy "
   },
   {
-    "id": "4c2f4dc5-f309-4743-82d6-2019ddd8eef0",
+    "id": "f12072b1-a7e8-402d-9d1a-84086fc1756e",
     "name": "MyahnArt LLC",
     "contact_name": "Myah Freeman",
     "description": "Creative Services and Products: Murals, Live Painting, Custom Portraits and More",
@@ -225,7 +225,7 @@
     "services": "Creative Services and Products: Murals, Live Painting, Custom Portraits and More"
   },
   {
-    "id": "0f4a68d2-f57c-4ac0-8b8e-8f8820732a45",
+    "id": "83c65f58-3d65-48ec-967b-eff622d0ee11",
     "name": "Grayland",
     "contact_name": "Lauren Hubel",
     "description": "Commercial Real Estate Appraisal",
@@ -240,7 +240,7 @@
     "services": "Commercial Real Estate Appraisal "
   },
   {
-    "id": "e382ab08-1079-4048-b78c-7f0706f28494",
+    "id": "5331ab0d-e6cc-492f-915a-398c411e9f28",
     "name": "Be Present Detalles",
     "contact_name": "De’Ana Aguas",
     "description": "Events and Experiences",
@@ -255,7 +255,7 @@
     "services": "Events and Experiences "
   },
   {
-    "id": "161f89b9-a662-42b5-bfae-730f12006e22",
+    "id": "3362225b-b1d2-4303-8e34-136b040422d1",
     "name": "Free Agents Inc",
     "contact_name": "James Higbe",
     "description": "Key people to solve you business issue",
@@ -270,7 +270,7 @@
     "services": "Key people to solve you business issue"
   },
   {
-    "id": "44c24881-9067-457d-ab40-b7c41c185455",
+    "id": "b21d3650-99a3-42ab-a94c-b82474e77ce1",
     "name": "WhitBits Cookies",
     "contact_name": "Whitney Branch",
     "description": "Homemade cookies",
@@ -285,7 +285,7 @@
     "services": "Homemade cookies"
   },
   {
-    "id": "a4920a97-cded-4353-960e-3fa909550faa",
+    "id": "7a9fc9e2-0066-43ec-90d8-c05f13adf421",
     "name": "Aspirations Behavioral Health Inc.",
     "contact_name": "Kristian Wilson",
     "description": "Telahealth mental health counseling",
@@ -300,7 +300,7 @@
     "services": "Telahealth mental health counseling"
   },
   {
-    "id": "b339638e-1c8f-4ef7-b3f4-78fc69c8bce8",
+    "id": "1c86e811-349d-4a59-807a-3e131dde3ead",
     "name": "The P-Way Solutions LLC",
     "contact_name": "Pervis lowman",
     "description": "Commercial Janitorial Services",
@@ -315,7 +315,7 @@
     "services": "Commercial Janitorial Services "
   },
   {
-    "id": "430c88b6-d061-4913-bf5a-07738ed8071f",
+    "id": "abddef3c-4974-423d-bae8-e1079ee61bbf",
     "name": "Relax Relate & Release",
     "contact_name": "Hazel Lee",
     "description": "Massage Therapy",
@@ -330,7 +330,7 @@
     "services": "Massage Therapy "
   },
   {
-    "id": "32f07a7b-a9f4-4b45-b892-6c9dd437ad00",
+    "id": "05cf7cb2-7f4a-462f-8736-e0224ca45bf1",
     "name": "Genuines Coaching & Consulting",
     "contact_name": "Reden Dionisio",
     "description": "Coaching, Speaking, Training",
@@ -345,7 +345,7 @@
     "services": "Coaching, Speaking, Training"
   },
   {
-    "id": "0e55a43a-3964-456c-b00e-2fe21930a450",
+    "id": "7bd08beb-22c3-4e42-955b-508d9ef3b323",
     "name": "Organize Design Create",
     "contact_name": "Victoria Price",
     "description": "Marketing for entrepreneurs, non-profits, and small businesses.",
@@ -360,7 +360,7 @@
     "services": "Marketing for entrepreneurs, non-profits, and small businesses. "
   },
   {
-    "id": "d54c1b02-2cdb-4a6b-9a31-297bf4a1a62c",
+    "id": "9f9acd5f-2a47-44b2-bd7a-60c72132d1b7",
     "name": "Soulfitness Studio Health and wellness center",
     "contact_name": "janice curry",
     "description": "Health and wellness via health food fitness and wellness",
@@ -375,7 +375,7 @@
     "services": "Health and wellness via health food fitness and wellness "
   },
   {
-    "id": "336fbe9d-ae91-4894-920d-1c6007a9d126",
+    "id": "45061f1f-01a2-4bf2-84de-c6bc5de5923b",
     "name": "Simple Creations By T",
     "contact_name": "Tiana Harris",
     "description": "Custom gifts, apparel and accessories",
@@ -388,80 +388,5 @@
     "fun_fact": "I love going to escape rooms when I travel to different cities.",
     "industry": "Professional Services",
     "services": "Custom gifts, apparel and accessories"
-  },
-  {
-    "id": "edd230a9-f106-4516-bb8e-1ccda58a46da",
-    "name": "ALYS Always Love Yourself",
-    "contact_name": "Cenita Williamson",
-    "description": "Skincare Products to consumers and businesses",
-    "website": "Www.alys-alwaysloveyourself.com",
-    "target_market": "mature Women 40 plus",
-    "current_needs": "partnerships with the beauty schools",
-    "contact_email": "cenita@alys.love",
-    "contact_phone": "2068548946",
-    "linkedin": "",
-    "fun_fact": "",
-    "industry": "Professional Services",
-    "services": "Skincare Products to consumers and businesses"
-  },
-  {
-    "id": "6d1220e1-ca82-4120-8b6c-fd6e97aaed59",
-    "name": "Big Rig Compliance Pros",
-    "contact_name": "Sherika Carter",
-    "description": "Big Rig Compliance Pros helps truck drivers and trucking companies stay compliant with State and Federal regulations by handling filings, renewals, permits and other back office paperwork so they can focus on driving.",
-    "website": "BigRigCompliancePros.com",
-    "target_market": "Our ideal client are owner / operators or small to medium fleet owner who wants a trusted partner to handle compliance paperwork accurately and on time.",
-    "current_needs": "Networking and Marketing",
-    "contact_email": "sherikac1214@gmail.com",
-    "contact_phone": "(904) 479-6583",
-    "linkedin": "",
-    "fun_fact": "I have worked in the legal field for over 15 years",
-    "industry": "Professional Services",
-    "services": "Big Rig Compliance Pros helps truck drivers and trucking companies stay compliant with State and Federal regulations by handling filings, renewals, permits and other back office paperwork so they can focus on driving."
-  },
-  {
-    "id": "3947f03d-7956-4d47-b930-7d05d28d47ff",
-    "name": "Noseniorleftbehindfl.org",
-    "contact_name": "Wanda K Jackson",
-    "description": "Assessments for 55 and older in need of a service to help maintain independence.",
-    "website": "www.noseniorleftbehind.org",
-    "target_market": "Senior in need of transportation, Companionship, yard maintenance, small home repairs,  Etc.",
-    "current_needs": "Funding in the amount of 5k-8k",
-    "contact_email": "wjhealth165@gmail.com",
-    "contact_phone": "9044729976 or",
-    "linkedin": "",
-    "fun_fact": "Born to be a blessing to 55 and older population ✨️",
-    "industry": "Professional Services",
-    "services": "Assessments for 55 and older in need of a service to help maintain independence. "
-  },
-  {
-    "id": "7e288783-9c67-4fca-b310-778408d7700c",
-    "name": "Complete Renewal LLC",
-    "contact_name": "Nadege Dolsaint",
-    "description": "Complete Renewal provides meticulously handcrafted, plant-based skincare and haircare solutions alongside transformative holistic wellness education and community initiatives like the On-the-Go Spa, tailored for health-conscious minority women.",
-    "website": "Completerenewal.co",
-    "target_market": "Health-conscious minority women, typically aged 25-55+ who struggles with hyperpigmentation, Homornal imbalance and desire natural healthy alternatives",
-    "current_needs": "$50,000$ in Seed Round funding: Funds will be used to     Streamline Production Equipment,  Fund High-Impact Marketing,  Support Holistic Wellness Education Initiatives",
-    "contact_email": "nadege@completerenewal.co",
-    "contact_phone": "904-203-5207",
-    "linkedin": "https://www.linkedin.com/in/nadege-dolsaint-72509145/",
-    "fun_fact": "I love poetry, love to cook and baked plantbased food",
-    "industry": "Health & Wellness",
-    "services": "Complete Renewal provides meticulously handcrafted, plant-based skincare and haircare solutions alongside transformative holistic wellness education and community initiatives like the On-the-Go Spa, tailored for health-conscious minority women."
-  },
-  {
-    "id": "092c3de6-1e0a-4aa2-a24a-55fe9bf13a5f",
-    "name": "Connections to the Nations Llc",
-    "contact_name": "Arlene Ortiz",
-    "description": "Community Fair and Culture",
-    "website": "Www.connectionstothenations.com",
-    "target_market": "Businesses",
-    "current_needs": "Capital and Marketing",
-    "contact_email": "Connectiontothenations@gmail.com",
-    "contact_phone": "904 434 5475",
-    "linkedin": "",
-    "fun_fact": "Fun , energetic,  perseverance,  make things happen, a believer.",
-    "industry": "Professional Services",
-    "services": "Community Fair and Culture "
   }
 ]

@@ -13,8 +13,8 @@ import { RELATIONSHIP_LABELS, RELATIONSHIP_COLORS } from '../utils/constants';
 import { sanitizeForPDF } from '../utils/textSanitizer';
 
 /**
- * Enrich relationships with their reverse counterparts
- * For each relationship shown, find the relationship in the opposite direction
+ * Enrich relationships with their reverse counterparts and GROUP BY PARTNER
+ * This ensures each partner appears only once, with bidirectional info combined
  */
 const enrichRelationshipsWithReverse = (businessId, businessRelationships, allRelationships, businesses) => {
   const businessMap = businesses.reduce((map, b) => {
@@ -22,12 +22,32 @@ const enrichRelationshipsWithReverse = (businessId, businessRelationships, allRe
     return map;
   }, {});
   
-  return businessRelationships.map(rel => {
-    // Find the reverse relationship (opposite direction)
+  // First, group by partner to eliminate duplicates
+  const partnerMap = new Map();
+  
+  businessRelationships.forEach(rel => {
     const partnerId = rel.partner.id;
+    
+    if (!partnerMap.has(partnerId)) {
+      // First time seeing this partner - add the relationship
+      partnerMap.set(partnerId, rel);
+    } else {
+      // We already have a relationship with this partner
+      // Keep the one with higher confidence, or the outbound one if equal
+      const existing = partnerMap.get(partnerId);
+      if (rel.confidence > existing.confidence || 
+          (rel.confidence === existing.confidence && rel.direction === 'outbound')) {
+        partnerMap.set(partnerId, rel);
+      }
+    }
+  });
+  
+  // Now enrich each unique partner relationship with reverse info
+  return Array.from(partnerMap.values()).map(rel => {
+    const partnerId = rel.partner.id;
+    
+    // Find the reverse relationship (opposite direction)
     const reverseRel = allRelationships.find(r => {
-      // If current rel is A→B (from businessId to partnerId), find B→A (from partnerId to businessId)
-      // If current rel is B→A (from partnerId to businessId), find A→B (from businessId to partnerId)
       if (rel.direction === 'outbound') {
         // Current: businessId → partnerId, find: partnerId → businessId
         return r.from_id === partnerId && r.to_id === businessId;

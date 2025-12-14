@@ -1,0 +1,2841 @@
+
+> jax-business-relationship-mapper@1.0.0 analyze
+> node scripts/analyze-relationships.js
+
+🚀 JAX Business Relationship Analyzer
+
+==================================================
+
+⚙️  Configuration:
+   Model: gpt-4o-mini
+   Temperature: 0.7
+   Max Tokens: 1000
+   Max Retries: 3
+
+📊 Step 1: Parsing business data...
+📄 Reading CSV file: /Users/Vladimir_Bichev/projects/jax-bridges-graph/data/businesses.csv
+✅ Parsed 31 businesses from CSV
+💾 Saved 31 businesses to /Users/Vladimir_Bichev/projects/jax-bridges-graph/data/businesses.json
+
+🤖 Step 2: Analyzing relationships with AI...
+Total pairs to analyze: 465
+
+[1/465] Analyzing:
+  📍 JAX AI Agency <-> JPO Logistics LLC
+(node:84166) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: JAX AI Agency → JPO Logistics LLC (85%)
+     REFERRAL: JPO Logistics LLC → JAX AI Agency (70%)
+
+[2/465] Analyzing:
+  📍 JAX AI Agency <-> flow
+  ✅ Found 1 valid relationship(s)
+     COLLABORATION: JAX AI Agency → flow (75%)
+
+[3/465] Analyzing:
+  📍 JAX AI Agency <-> Jazzi’s Creations
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: JAX AI Agency → Jazzi’s Creations (85%)
+     REFERRAL: Jazzi’s Creations → JAX AI Agency (75%)
+
+[4/465] Analyzing:
+  📍 JAX AI Agency <-> IV Creative
+  ⚠️  Filtered out invalid self-relationship for IV Creative
+  ⚠️  Filtered out invalid self-relationship for IV Creative
+  ✅ Found 0 valid relationship(s)
+  ⚠️  Filtered out 2 invalid relationship(s)
+
+[5/465] Analyzing:
+  📍 JAX AI Agency <-> Genuines Coaching & Consulting
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: JAX AI Agency → Genuines Coaching & Consulting (85%)
+     REFERRAL: Genuines Coaching & Consulting → JAX AI Agency (70%)
+
+[6/465] Analyzing:
+  📍 JAX AI Agency <-> Bluebird Health Partners
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: JAX AI Agency → Bluebird Health Partners (75%)
+     COLLABORATION: JAX AI Agency → Bluebird Health Partners (80%)
+
+[7/465] Analyzing:
+  📍 JAX AI Agency <-> Enriquez Aesthetics
+  ✅ Found 1 valid relationship(s)
+     COLLABORATION: JAX AI Agency → Enriquez Aesthetics (80%)
+
+[8/465] Analyzing:
+  📍 JAX AI Agency <-> Tosh’s Urban Garden
+  ✅ Found 2 valid relationship(s)
+     VENDOR: JAX AI Agency → Tosh’s Urban Garden (70%)
+     REFERRAL: Tosh’s Urban Garden → JAX AI Agency (65%)
+
+[9/465] Analyzing:
+  📍 JAX AI Agency <-> Celebrate & Smile International Steppers
+  ⚠️  Filtered out invalid self-relationship for Celebrate & Smile International Steppers
+  ✅ Found 0 valid relationship(s)
+  ⚠️  Filtered out 1 invalid relationship(s)
+
+[10/465] Analyzing:
+  📍 JAX AI Agency <-> The Collective Om
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: JAX AI Agency → The Collective Om (80%)
+     REFERRAL: The Collective Om → JAX AI Agency (70%)
+
+[11/465] Analyzing:
+  📍 JAX AI Agency <-> Communikate Design & Marketing
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: JAX AI Agency → Communikate Design & Marketing (80%)
+     REFERRAL: Communikate Design & Marketing → JAX AI Agency (70%)
+
+[12/465] Analyzing:
+  📍 JAX AI Agency <-> We buy any house
+  ✅ Found 2 valid relationship(s)
+     PARTNER: JAX AI Agency → We buy any house (85%)
+     REFERRAL: We buy any house → JAX AI Agency (70%)
+
+[13/465] Analyzing:
+  📍 JAX AI Agency <-> Jamz Trainings
+  ✅ Found 2 valid relationship(s)
+     PARTNER: JAX AI Agency → Jamz Trainings (75%)
+     REFERRAL: Jamz Trainings → JAX AI Agency (60%)
+
+[14/465] Analyzing:
+  📍 JAX AI Agency <-> MyahnArt LLC
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: JAX AI Agency → MyahnArt LLC (80%)
+     REFERRAL: MyahnArt LLC → JAX AI Agency (70%)
+
+[15/465] Analyzing:
+  📍 JAX AI Agency <-> Grayland
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: JAX AI Agency → Grayland (75%)
+     COLLABORATION: JAX AI Agency → Grayland (80%)
+
+[16/465] Analyzing:
+  📍 JAX AI Agency <-> Be Present Detalles
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: JAX AI Agency → Be Present Detalles (85%)
+     REFERRAL: Be Present Detalles → JAX AI Agency (70%)
+
+[17/465] Analyzing:
+  📍 JAX AI Agency <-> Free Agents Inc
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: JAX AI Agency → Free Agents Inc (70%)
+     REFERRAL: Free Agents Inc → JAX AI Agency (60%)
+
+[18/465] Analyzing:
+  📍 JAX AI Agency <-> WhitBits Cookies
+  ✅ Found 2 valid relationship(s)
+     PARTNER: JAX AI Agency → WhitBits Cookies (75%)
+     REFERRAL: WhitBits Cookies → JAX AI Agency (60%)
+
+[19/465] Analyzing:
+  📍 JAX AI Agency <-> Aspirations Behavioral Health Inc.
+  ⚠️  Filtered out invalid self-relationship for Aspirations Behavioral Health Inc.
+  ⚠️  Filtered out invalid self-relationship for Aspirations Behavioral Health Inc.
+  ✅ Found 0 valid relationship(s)
+  ⚠️  Filtered out 2 invalid relationship(s)
+
+[20/465] Analyzing:
+  📍 JAX AI Agency <-> The P-Way Solutions LLC
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: JAX AI Agency → The P-Way Solutions LLC (80%)
+     COLLABORATION: JAX AI Agency → The P-Way Solutions LLC (70%)
+
+[21/465] Analyzing:
+  📍 JAX AI Agency <-> Relax Relate & Release
+  ✅ Found 2 valid relationship(s)
+     PARTNER: JAX AI Agency → Relax Relate & Release (75%)
+     REFERRAL: Relax Relate & Release → JAX AI Agency (60%)
+
+[22/465] Analyzing:
+  📍 JAX AI Agency <-> Genuines Coaching & Consulting
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: JAX AI Agency → Genuines Coaching & Consulting (85%)
+     REFERRAL: Genuines Coaching & Consulting → JAX AI Agency (70%)
+
+[23/465] Analyzing:
+  📍 JAX AI Agency <-> Organize Design Create
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: JAX AI Agency → Organize Design Create (85%)
+     REFERRAL: Organize Design Create → JAX AI Agency (70%)
+
+[24/465] Analyzing:
+  📍 JAX AI Agency <-> Soulfitness Studio Health and wellness center
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: JAX AI Agency → Soulfitness Studio Health and wellness center (80%)
+     REFERRAL: Soulfitness Studio Health and wellness center → JAX AI Agency (70%)
+
+[25/465] Analyzing:
+  📍 JAX AI Agency <-> Simple Creations By T
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: JAX AI Agency → Simple Creations By T (80%)
+     VENDOR: Simple Creations By T → JAX AI Agency (70%)
+
+[26/465] Analyzing:
+  📍 JAX AI Agency <-> ALYS Always Love Yourself
+  ✅ Found 2 valid relationship(s)
+     VENDOR: JAX AI Agency → ALYS Always Love Yourself (75%)
+     REFERRAL: ALYS Always Love Yourself → JAX AI Agency (80%)
+
+[27/465] Analyzing:
+  📍 JAX AI Agency <-> Big Rig Compliance Pros
+  ✅ Found 2 valid relationship(s)
+     PARTNER: JAX AI Agency → Big Rig Compliance Pros (75%)
+     REFERRAL: Big Rig Compliance Pros → JAX AI Agency (70%)
+
+[28/465] Analyzing:
+  📍 JAX AI Agency <-> Noseniorleftbehindfl.org
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: JAX AI Agency → Noseniorleftbehindfl.org (80%)
+     REFERRAL: Noseniorleftbehindfl.org → JAX AI Agency (70%)
+
+[29/465] Analyzing:
+  📍 JAX AI Agency <-> Complete Renewal LLC
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: JAX AI Agency → Complete Renewal LLC (80%)
+     REFERRAL: Complete Renewal LLC → JAX AI Agency (70%)
+
+[30/465] Analyzing:
+  📍 JAX AI Agency <-> Connections to the Nations Llc
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: JAX AI Agency → Connections to the Nations Llc (80%)
+     REFERRAL: Connections to the Nations Llc → JAX AI Agency (70%)
+
+[31/465] Analyzing:
+  📍 JPO Logistics LLC <-> flow
+  ✅ Found 1 valid relationship(s)
+     REFERRAL: JPO Logistics LLC → flow (70%)
+
+[32/465] Analyzing:
+  📍 JPO Logistics LLC <-> Jazzi’s Creations
+  ✅ Found 2 valid relationship(s)
+     VENDOR: JPO Logistics LLC → Jazzi’s Creations (75%)
+     REFERRAL: Jazzi’s Creations → JPO Logistics LLC (60%)
+
+[33/465] Analyzing:
+  📍 JPO Logistics LLC <-> IV Creative
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: JPO Logistics LLC → IV Creative (80%)
+     REFERRAL: IV Creative → JPO Logistics LLC (70%)
+
+[34/465] Analyzing:
+  📍 JPO Logistics LLC <-> Genuines Coaching & Consulting
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: JPO Logistics LLC → Genuines Coaching & Consulting (80%)
+     COLLABORATION: Genuines Coaching & Consulting → JPO Logistics LLC (70%)
+
+[35/465] Analyzing:
+  📍 JPO Logistics LLC <-> Bluebird Health Partners
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: JPO Logistics LLC → Bluebird Health Partners (75%)
+     REFERRAL: Bluebird Health Partners → JPO Logistics LLC (70%)
+
+[36/465] Analyzing:
+  📍 JPO Logistics LLC <-> Enriquez Aesthetics
+  ✅ Found 1 valid relationship(s)
+     REFERRAL: JPO Logistics LLC → Enriquez Aesthetics (70%)
+
+[37/465] Analyzing:
+  📍 JPO Logistics LLC <-> Tosh’s Urban Garden
+  ✅ Found 2 valid relationship(s)
+     VENDOR: JPO Logistics LLC → Tosh’s Urban Garden (75%)
+     REFERRAL: Tosh’s Urban Garden → JPO Logistics LLC (60%)
+
+[38/465] Analyzing:
+  📍 JPO Logistics LLC <-> Celebrate & Smile International Steppers
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: JPO Logistics LLC → Celebrate & Smile International Steppers (75%)
+     REFERRAL: Celebrate & Smile International Steppers → JPO Logistics LLC (65%)
+
+[39/465] Analyzing:
+  📍 JPO Logistics LLC <-> The Collective Om
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: JPO Logistics LLC → The Collective Om (70%)
+     REFERRAL: The Collective Om → JPO Logistics LLC (75%)
+
+[40/465] Analyzing:
+  📍 JPO Logistics LLC <-> Communikate Design & Marketing
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: JPO Logistics LLC → Communikate Design & Marketing (75%)
+     VENDOR: Communikate Design & Marketing → JPO Logistics LLC (70%)
+
+[41/465] Analyzing:
+  📍 JPO Logistics LLC <-> We buy any house
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: JPO Logistics LLC → We buy any house (80%)
+     REFERRAL: We buy any house → JPO Logistics LLC (70%)
+
+[42/465] Analyzing:
+  📍 JPO Logistics LLC <-> Jamz Trainings
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: JPO Logistics LLC → Jamz Trainings (80%)
+     REFERRAL: Jamz Trainings → JPO Logistics LLC (70%)
+
+[43/465] Analyzing:
+  📍 JPO Logistics LLC <-> MyahnArt LLC
+  ✅ Found 2 valid relationship(s)
+     VENDOR: JPO Logistics LLC → MyahnArt LLC (75%)
+     REFERRAL: MyahnArt LLC → JPO Logistics LLC (60%)
+
+[44/465] Analyzing:
+  📍 JPO Logistics LLC <-> Grayland
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: JPO Logistics LLC → Grayland (75%)
+     REFERRAL: Grayland → JPO Logistics LLC (70%)
+
+[45/465] Analyzing:
+  📍 JPO Logistics LLC <-> Be Present Detalles
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: JPO Logistics LLC → Be Present Detalles (70%)
+     VENDOR: Be Present Detalles → JPO Logistics LLC (60%)
+
+[46/465] Analyzing:
+  📍 JPO Logistics LLC <-> Free Agents Inc
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: JPO Logistics LLC → Free Agents Inc (75%)
+     VENDOR: Free Agents Inc → JPO Logistics LLC (65%)
+
+[47/465] Analyzing:
+  📍 JPO Logistics LLC <-> WhitBits Cookies
+  ✅ Found 2 valid relationship(s)
+     VENDOR: WhitBits Cookies → JPO Logistics LLC (75%)
+     REFERRAL: JPO Logistics LLC → WhitBits Cookies (60%)
+
+[48/465] Analyzing:
+  📍 JPO Logistics LLC <-> Aspirations Behavioral Health Inc.
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: JPO Logistics LLC → Aspirations Behavioral Health Inc. (80%)
+     REFERRAL: Aspirations Behavioral Health Inc. → JPO Logistics LLC (75%)
+
+[49/465] Analyzing:
+  📍 JPO Logistics LLC <-> The P-Way Solutions LLC
+  ✅ Found 2 valid relationship(s)
+     VENDOR: JPO Logistics LLC → The P-Way Solutions LLC (75%)
+     REFERRAL: The P-Way Solutions LLC → JPO Logistics LLC (65%)
+
+[50/465] Analyzing:
+  📍 JPO Logistics LLC <-> Relax Relate & Release
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: JPO Logistics LLC → Relax Relate & Release (75%)
+     REFERRAL: Relax Relate & Release → JPO Logistics LLC (65%)
+
+[51/465] Analyzing:
+  📍 JPO Logistics LLC <-> Genuines Coaching & Consulting
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: JPO Logistics LLC → Genuines Coaching & Consulting (80%)
+     REFERRAL: Genuines Coaching & Consulting → JPO Logistics LLC (70%)
+
+[52/465] Analyzing:
+  📍 JPO Logistics LLC <-> Organize Design Create
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: JPO Logistics LLC → Organize Design Create (80%)
+     VENDOR: Organize Design Create → JPO Logistics LLC (75%)
+
+[53/465] Analyzing:
+  📍 JPO Logistics LLC <-> Soulfitness Studio Health and wellness center
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: JPO Logistics LLC → Soulfitness Studio Health and wellness center (75%)
+     REFERRAL: Soulfitness Studio Health and wellness center → JPO Logistics LLC (65%)
+
+[54/465] Analyzing:
+  📍 JPO Logistics LLC <-> Simple Creations By T
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: JPO Logistics LLC → Simple Creations By T (75%)
+     VENDOR: Simple Creations By T → JPO Logistics LLC (60%)
+
+[55/465] Analyzing:
+  📍 JPO Logistics LLC <-> ALYS Always Love Yourself
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: JPO Logistics LLC → ALYS Always Love Yourself (75%)
+     VENDOR: ALYS Always Love Yourself → JPO Logistics LLC (80%)
+
+[56/465] Analyzing:
+  📍 JPO Logistics LLC <-> Big Rig Compliance Pros
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: JPO Logistics LLC → Big Rig Compliance Pros (75%)
+     VENDOR: Big Rig Compliance Pros → JPO Logistics LLC (65%)
+
+[57/465] Analyzing:
+  📍 JPO Logistics LLC <-> Noseniorleftbehindfl.org
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: JPO Logistics LLC → Noseniorleftbehindfl.org (70%)
+     REFERRAL: Noseniorleftbehindfl.org → JPO Logistics LLC (60%)
+
+[58/465] Analyzing:
+  📍 JPO Logistics LLC <-> Complete Renewal LLC
+  ✅ Found 2 valid relationship(s)
+     VENDOR: JPO Logistics LLC → Complete Renewal LLC (70%)
+     REFERRAL: Complete Renewal LLC → JPO Logistics LLC (60%)
+
+[59/465] Analyzing:
+  📍 JPO Logistics LLC <-> Connections to the Nations Llc
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: JPO Logistics LLC → Connections to the Nations Llc (70%)
+     VENDOR: Connections to the Nations Llc → JPO Logistics LLC (60%)
+
+[60/465] Analyzing:
+  📍 flow <-> Jazzi’s Creations
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: flow → Jazzi’s Creations (80%)
+     REFERRAL: Jazzi’s Creations → flow (70%)
+
+[61/465] Analyzing:
+  📍 flow <-> IV Creative
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: flow → IV Creative (85%)
+     REFERRAL: IV Creative → flow (70%)
+
+[62/465] Analyzing:
+  📍 flow <-> Genuines Coaching & Consulting
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: flow → Genuines Coaching & Consulting (70%)
+     PARTNER: Genuines Coaching & Consulting → flow (60%)
+
+[63/465] Analyzing:
+  📍 flow <-> Bluebird Health Partners
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: flow → Bluebird Health Partners (75%)
+     REFERRAL: Bluebird Health Partners → flow (70%)
+
+[64/465] Analyzing:
+  📍 flow <-> Enriquez Aesthetics
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: flow → Enriquez Aesthetics (80%)
+     REFERRAL: Enriquez Aesthetics → flow (70%)
+
+[65/465] Analyzing:
+  📍 flow <-> Tosh’s Urban Garden
+  ✅ Found 2 valid relationship(s)
+     PARTNER: flow → Tosh’s Urban Garden (75%)
+     REFERRAL: Tosh’s Urban Garden → flow (70%)
+
+[66/465] Analyzing:
+  📍 flow <-> Celebrate & Smile International Steppers
+  ✅ Found 1 valid relationship(s)
+     COLLABORATION: flow → Celebrate & Smile International Steppers (80%)
+
+[67/465] Analyzing:
+  📍 flow <-> The Collective Om
+  ✅ Found 2 valid relationship(s)
+     PARTNER: flow → The Collective Om (80%)
+     REFERRAL: The Collective Om → flow (70%)
+
+[68/465] Analyzing:
+  📍 flow <-> Communikate Design & Marketing
+  ✅ Found 2 valid relationship(s)
+     PARTNER: flow → Communikate Design & Marketing (80%)
+     REFERRAL: Communikate Design & Marketing → flow (70%)
+
+[69/465] Analyzing:
+  📍 flow <-> We buy any house
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: flow → We buy any house (75%)
+     COLLABORATION: flow → We buy any house (70%)
+
+[70/465] Analyzing:
+  📍 flow <-> Jamz Trainings
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: flow → Jamz Trainings (80%)
+     REFERRAL: Jamz Trainings → flow (75%)
+
+[71/465] Analyzing:
+  📍 flow <-> MyahnArt LLC
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: flow → MyahnArt LLC (75%)
+     REFERRAL: MyahnArt LLC → flow (60%)
+
+[72/465] Analyzing:
+  📍 flow <-> Grayland
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: flow → Grayland (75%)
+     REFERRAL: Grayland → flow (70%)
+
+[73/465] Analyzing:
+  📍 flow <-> Be Present Detalles
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: flow → Be Present Detalles (80%)
+     REFERRAL: Be Present Detalles → flow (70%)
+
+[74/465] Analyzing:
+  📍 flow <-> Free Agents Inc
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: flow → Free Agents Inc (75%)
+     REFERRAL: Free Agents Inc → flow (70%)
+
+[75/465] Analyzing:
+  📍 flow <-> WhitBits Cookies
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: flow → WhitBits Cookies (75%)
+     REFERRAL: WhitBits Cookies → flow (70%)
+
+[76/465] Analyzing:
+  📍 flow <-> Aspirations Behavioral Health Inc.
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: flow → Aspirations Behavioral Health Inc. (80%)
+     VENDOR: Aspirations Behavioral Health Inc. → flow (70%)
+
+[77/465] Analyzing:
+  📍 flow <-> The P-Way Solutions LLC
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: flow → The P-Way Solutions LLC (75%)
+     VENDOR: The P-Way Solutions LLC → flow (60%)
+
+[78/465] Analyzing:
+  📍 flow <-> Relax Relate & Release
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: flow → Relax Relate & Release (75%)
+     REFERRAL: Relax Relate & Release → flow (70%)
+
+[79/465] Analyzing:
+  📍 flow <-> Genuines Coaching & Consulting
+  ✅ Found 2 valid relationship(s)
+     PARTNER: flow → Genuines Coaching & Consulting (75%)
+     REFERRAL: Genuines Coaching & Consulting → flow (60%)
+
+[80/465] Analyzing:
+  📍 flow <-> Organize Design Create
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: flow → Organize Design Create (80%)
+     REFERRAL: Organize Design Create → flow (70%)
+
+[81/465] Analyzing:
+  📍 flow <-> Soulfitness Studio Health and wellness center
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: flow → Soulfitness Studio Health and wellness center (85%)
+     REFERRAL: Soulfitness Studio Health and wellness center → flow (70%)
+
+[82/465] Analyzing:
+  📍 flow <-> Simple Creations By T
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: flow → Simple Creations By T (80%)
+     COLLABORATION: Simple Creations By T → flow (75%)
+
+[83/465] Analyzing:
+  📍 flow <-> ALYS Always Love Yourself
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: flow → ALYS Always Love Yourself (75%)
+     REFERRAL: ALYS Always Love Yourself → flow (65%)
+
+[84/465] Analyzing:
+  📍 flow <-> Big Rig Compliance Pros
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: flow → Big Rig Compliance Pros (80%)
+     REFERRAL: Big Rig Compliance Pros → flow (70%)
+
+[85/465] Analyzing:
+  📍 flow <-> Noseniorleftbehindfl.org
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: flow → Noseniorleftbehindfl.org (75%)
+     REFERRAL: Noseniorleftbehindfl.org → flow (70%)
+
+[86/465] Analyzing:
+  📍 flow <-> Complete Renewal LLC
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: flow → Complete Renewal LLC (75%)
+     COLLABORATION: Complete Renewal LLC → flow (80%)
+
+[87/465] Analyzing:
+  📍 flow <-> Connections to the Nations Llc
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: flow → Connections to the Nations Llc (80%)
+     REFERRAL: Connections to the Nations Llc → flow (70%)
+
+[88/465] Analyzing:
+  📍 Jazzi’s Creations <-> IV Creative
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Jazzi’s Creations → IV Creative (75%)
+     REFERRAL: IV Creative → Jazzi’s Creations (60%)
+
+[89/465] Analyzing:
+  📍 Jazzi’s Creations <-> Genuines Coaching & Consulting
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Jazzi’s Creations → Genuines Coaching & Consulting (80%)
+     REFERRAL: Genuines Coaching & Consulting → Jazzi’s Creations (70%)
+
+[90/465] Analyzing:
+  📍 Jazzi’s Creations <-> Bluebird Health Partners
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Jazzi’s Creations → Bluebird Health Partners (85%)
+     REFERRAL: Bluebird Health Partners → Jazzi’s Creations (70%)
+
+[91/465] Analyzing:
+  📍 Jazzi’s Creations <-> Enriquez Aesthetics
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Jazzi’s Creations → Enriquez Aesthetics (85%)
+     REFERRAL: Enriquez Aesthetics → Jazzi’s Creations (70%)
+
+[92/465] Analyzing:
+  📍 Jazzi’s Creations <-> Tosh’s Urban Garden
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Jazzi’s Creations → Tosh’s Urban Garden (85%)
+     VENDOR: Tosh’s Urban Garden → Jazzi’s Creations (70%)
+
+[93/465] Analyzing:
+  📍 Jazzi’s Creations <-> Celebrate & Smile International Steppers
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Jazzi’s Creations → Celebrate & Smile International Steppers (85%)
+     REFERRAL: Celebrate & Smile International Steppers → Jazzi’s Creations (70%)
+
+[94/465] Analyzing:
+  📍 Jazzi’s Creations <-> The Collective Om
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Jazzi’s Creations → The Collective Om (85%)
+     REFERRAL: The Collective Om → Jazzi’s Creations (70%)
+
+[95/465] Analyzing:
+  📍 Jazzi’s Creations <-> Communikate Design & Marketing
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Jazzi’s Creations → Communikate Design & Marketing (80%)
+     COLLABORATION: Communikate Design & Marketing → Jazzi’s Creations (75%)
+
+[96/465] Analyzing:
+  📍 Jazzi’s Creations <-> We buy any house
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Jazzi’s Creations → We buy any house (70%)
+     COLLABORATION: Jazzi’s Creations → We buy any house (80%)
+
+[97/465] Analyzing:
+  📍 Jazzi’s Creations <-> Jamz Trainings
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Jazzi’s Creations → Jamz Trainings (75%)
+     REFERRAL: Jamz Trainings → Jazzi’s Creations (60%)
+
+[98/465] Analyzing:
+  📍 Jazzi’s Creations <-> MyahnArt LLC
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Jazzi’s Creations → MyahnArt LLC (85%)
+     VENDOR: MyahnArt LLC → Jazzi’s Creations (70%)
+
+[99/465] Analyzing:
+  📍 Jazzi’s Creations <-> Grayland
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Jazzi’s Creations → Grayland (75%)
+     COLLABORATION: Jazzi’s Creations → Grayland (80%)
+
+[100/465] Analyzing:
+  📍 Jazzi’s Creations <-> Be Present Detalles
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Jazzi’s Creations → Be Present Detalles (85%)
+     REFERRAL: Be Present Detalles → Jazzi’s Creations (70%)
+
+[101/465] Analyzing:
+  📍 Jazzi’s Creations <-> Free Agents Inc
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Jazzi’s Creations → Free Agents Inc (85%)
+     REFERRAL: Free Agents Inc → Jazzi’s Creations (70%)
+
+[102/465] Analyzing:
+  📍 Jazzi’s Creations <-> WhitBits Cookies
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Jazzi’s Creations → WhitBits Cookies (85%)
+     VENDOR: WhitBits Cookies → Jazzi’s Creations (70%)
+
+[103/465] Analyzing:
+  📍 Jazzi’s Creations <-> Aspirations Behavioral Health Inc.
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Jazzi’s Creations → Aspirations Behavioral Health Inc. (85%)
+     REFERRAL: Aspirations Behavioral Health Inc. → Jazzi’s Creations (70%)
+
+[104/465] Analyzing:
+  📍 Jazzi’s Creations <-> The P-Way Solutions LLC
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Jazzi’s Creations → The P-Way Solutions LLC (80%)
+     REFERRAL: The P-Way Solutions LLC → Jazzi’s Creations (70%)
+
+[105/465] Analyzing:
+  📍 Jazzi’s Creations <-> Relax Relate & Release
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Jazzi’s Creations → Relax Relate & Release (80%)
+     REFERRAL: Relax Relate & Release → Jazzi’s Creations (70%)
+
+[106/465] Analyzing:
+  📍 Jazzi’s Creations <-> Genuines Coaching & Consulting
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Jazzi’s Creations → Genuines Coaching & Consulting (80%)
+     REFERRAL: Genuines Coaching & Consulting → Jazzi’s Creations (70%)
+
+[107/465] Analyzing:
+  📍 Jazzi’s Creations <-> Organize Design Create
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Jazzi’s Creations → Organize Design Create (85%)
+     REFERRAL: Organize Design Create → Jazzi’s Creations (75%)
+
+[108/465] Analyzing:
+  📍 Jazzi’s Creations <-> Soulfitness Studio Health and wellness center
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Jazzi’s Creations → Soulfitness Studio Health and wellness center (80%)
+     REFERRAL: Soulfitness Studio Health and wellness center → Jazzi’s Creations (70%)
+
+[109/465] Analyzing:
+  📍 Jazzi’s Creations <-> Simple Creations By T
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Jazzi’s Creations → Simple Creations By T (85%)
+     VENDOR: Simple Creations By T → Jazzi’s Creations (70%)
+
+[110/465] Analyzing:
+  📍 Jazzi’s Creations <-> ALYS Always Love Yourself
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Jazzi’s Creations → ALYS Always Love Yourself (85%)
+     REFERRAL: ALYS Always Love Yourself → Jazzi’s Creations (70%)
+
+[111/465] Analyzing:
+  📍 Jazzi’s Creations <-> Big Rig Compliance Pros
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Jazzi’s Creations → Big Rig Compliance Pros (70%)
+     REFERRAL: Big Rig Compliance Pros → Jazzi’s Creations (65%)
+
+[112/465] Analyzing:
+  📍 Jazzi’s Creations <-> Noseniorleftbehindfl.org
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Jazzi’s Creations → Noseniorleftbehindfl.org (80%)
+     REFERRAL: Noseniorleftbehindfl.org → Jazzi’s Creations (60%)
+
+[113/465] Analyzing:
+  📍 Jazzi’s Creations <-> Complete Renewal LLC
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Jazzi’s Creations → Complete Renewal LLC (85%)
+     REFERRAL: Complete Renewal LLC → Jazzi’s Creations (70%)
+
+[114/465] Analyzing:
+  📍 Jazzi’s Creations <-> Connections to the Nations Llc
+  ⚠️  Filtered out invalid self-relationship for Connections to the Nations Llc
+  ⚠️  Filtered out invalid self-relationship for Connections to the Nations Llc
+  ✅ Found 0 valid relationship(s)
+  ⚠️  Filtered out 2 invalid relationship(s)
+
+[115/465] Analyzing:
+  📍 IV Creative <-> Genuines Coaching & Consulting
+  ✅ Found 3 valid relationship(s)
+     REFERRAL: IV Creative → Genuines Coaching & Consulting (80%)
+     REFERRAL: Genuines Coaching & Consulting → IV Creative (75%)
+     COLLABORATION: IV Creative → Genuines Coaching & Consulting (70%)
+
+[116/465] Analyzing:
+  📍 IV Creative <-> Bluebird Health Partners
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: IV Creative → Bluebird Health Partners (75%)
+     REFERRAL: Bluebird Health Partners → IV Creative (70%)
+
+[117/465] Analyzing:
+  📍 IV Creative <-> Enriquez Aesthetics
+  ✅ Found 2 valid relationship(s)
+     VENDOR: IV Creative → Enriquez Aesthetics (80%)
+     REFERRAL: Enriquez Aesthetics → IV Creative (70%)
+
+[118/465] Analyzing:
+  📍 IV Creative <-> Tosh’s Urban Garden
+  ✅ Found 3 valid relationship(s)
+     VENDOR: IV Creative → Tosh’s Urban Garden (80%)
+     VENDOR: Tosh’s Urban Garden → IV Creative (70%)
+     COLLABORATION: IV Creative → Tosh’s Urban Garden (65%)
+
+[119/465] Analyzing:
+  📍 IV Creative <-> Celebrate & Smile International Steppers
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: IV Creative → Celebrate & Smile International Steppers (85%)
+     REFERRAL: Celebrate & Smile International Steppers → IV Creative (75%)
+
+[120/465] Analyzing:
+  📍 IV Creative <-> The Collective Om
+  ✅ Found 2 valid relationship(s)
+     VENDOR: IV Creative → The Collective Om (80%)
+     VENDOR: The Collective Om → IV Creative (70%)
+
+[121/465] Analyzing:
+  📍 IV Creative <-> Communikate Design & Marketing
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: IV Creative → Communikate Design & Marketing (75%)
+     REFERRAL: Communikate Design & Marketing → IV Creative (70%)
+
+[122/465] Analyzing:
+  📍 IV Creative <-> We buy any house
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: IV Creative → We buy any house (75%)
+     REFERRAL: We buy any house → IV Creative (70%)
+
+[123/465] Analyzing:
+  📍 IV Creative <-> Jamz Trainings
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: IV Creative → Jamz Trainings (80%)
+     COLLABORATION: IV Creative → Jamz Trainings (70%)
+
+[124/465] Analyzing:
+  📍 IV Creative <-> MyahnArt LLC
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: IV Creative → MyahnArt LLC (85%)
+     COLLABORATION: MyahnArt LLC → IV Creative (75%)
+
+[125/465] Analyzing:
+  📍 IV Creative <-> Grayland
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: IV Creative → Grayland (75%)
+     COLLABORATION: IV Creative → Grayland (65%)
+
+[126/465] Analyzing:
+  📍 IV Creative <-> Be Present Detalles
+  ✅ Found 2 valid relationship(s)
+     VENDOR: IV Creative → Be Present Detalles (80%)
+     REFERRAL: Be Present Detalles → IV Creative (70%)
+
+[127/465] Analyzing:
+  📍 IV Creative <-> Free Agents Inc
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: IV Creative → Free Agents Inc (70%)
+     REFERRAL: Free Agents Inc → IV Creative (60%)
+
+[128/465] Analyzing:
+  📍 IV Creative <-> WhitBits Cookies
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: IV Creative → WhitBits Cookies (70%)
+     VENDOR: WhitBits Cookies → IV Creative (60%)
+
+[129/465] Analyzing:
+  📍 IV Creative <-> Aspirations Behavioral Health Inc.
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: IV Creative → Aspirations Behavioral Health Inc. (80%)
+     REFERRAL: Aspirations Behavioral Health Inc. → IV Creative (70%)
+
+[130/465] Analyzing:
+  📍 IV Creative <-> The P-Way Solutions LLC
+  ✅ Found 2 valid relationship(s)
+     VENDOR: IV Creative → The P-Way Solutions LLC (75%)
+     REFERRAL: The P-Way Solutions LLC → IV Creative (70%)
+
+[131/465] Analyzing:
+  📍 IV Creative <-> Relax Relate & Release
+  ✅ Found 2 valid relationship(s)
+     VENDOR: IV Creative → Relax Relate & Release (80%)
+     REFERRAL: Relax Relate & Release → IV Creative (70%)
+
+[132/465] Analyzing:
+  📍 IV Creative <-> Genuines Coaching & Consulting
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: IV Creative → Genuines Coaching & Consulting (80%)
+     VENDOR: Genuines Coaching & Consulting → IV Creative (70%)
+
+[133/465] Analyzing:
+  📍 IV Creative <-> Organize Design Create
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: IV Creative → Organize Design Create (80%)
+     REFERRAL: Organize Design Create → IV Creative (70%)
+
+[134/465] Analyzing:
+  📍 IV Creative <-> Soulfitness Studio Health and wellness center
+  ✅ Found 2 valid relationship(s)
+     VENDOR: IV Creative → Soulfitness Studio Health and wellness center (80%)
+     REFERRAL: Soulfitness Studio Health and wellness center → IV Creative (70%)
+
+[135/465] Analyzing:
+  📍 IV Creative <-> Simple Creations By T
+  ✅ Found 2 valid relationship(s)
+     VENDOR: IV Creative → Simple Creations By T (75%)
+     REFERRAL: Simple Creations By T → IV Creative (80%)
+
+[136/465] Analyzing:
+  📍 IV Creative <-> ALYS Always Love Yourself
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: IV Creative → ALYS Always Love Yourself (75%)
+     COLLABORATION: IV Creative → ALYS Always Love Yourself (80%)
+
+[137/465] Analyzing:
+  📍 IV Creative <-> Big Rig Compliance Pros
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: IV Creative → Big Rig Compliance Pros (75%)
+     REFERRAL: Big Rig Compliance Pros → IV Creative (70%)
+
+[138/465] Analyzing:
+  📍 IV Creative <-> Noseniorleftbehindfl.org
+  ✅ Found 2 valid relationship(s)
+     VENDOR: IV Creative → Noseniorleftbehindfl.org (75%)
+     REFERRAL: Noseniorleftbehindfl.org → IV Creative (65%)
+
+[139/465] Analyzing:
+  📍 IV Creative <-> Complete Renewal LLC
+  ✅ Found 2 valid relationship(s)
+     VENDOR: IV Creative → Complete Renewal LLC (70%)
+     REFERRAL: Complete Renewal LLC → IV Creative (60%)
+
+[140/465] Analyzing:
+  📍 IV Creative <-> Connections to the Nations Llc
+  ✅ Found 2 valid relationship(s)
+     VENDOR: IV Creative → Connections to the Nations Llc (80%)
+     REFERRAL: Connections to the Nations Llc → IV Creative (70%)
+
+[141/465] Analyzing:
+  📍 Genuines Coaching & Consulting <-> Bluebird Health Partners
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Genuines Coaching & Consulting → Bluebird Health Partners (85%)
+     REFERRAL: Bluebird Health Partners → Genuines Coaching & Consulting (70%)
+
+[142/465] Analyzing:
+  📍 Genuines Coaching & Consulting <-> Enriquez Aesthetics
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Genuines Coaching & Consulting → Enriquez Aesthetics (75%)
+     REFERRAL: Enriquez Aesthetics → Genuines Coaching & Consulting (60%)
+
+[143/465] Analyzing:
+  📍 Genuines Coaching & Consulting <-> Tosh’s Urban Garden
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Genuines Coaching & Consulting → Tosh’s Urban Garden (75%)
+     REFERRAL: Tosh’s Urban Garden → Genuines Coaching & Consulting (60%)
+
+[144/465] Analyzing:
+  📍 Genuines Coaching & Consulting <-> Celebrate & Smile International Steppers
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Genuines Coaching & Consulting → Celebrate & Smile International Steppers (80%)
+     REFERRAL: Celebrate & Smile International Steppers → Genuines Coaching & Consulting (70%)
+
+[145/465] Analyzing:
+  📍 Genuines Coaching & Consulting <-> The Collective Om
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Genuines Coaching & Consulting → The Collective Om (85%)
+     REFERRAL: The Collective Om → Genuines Coaching & Consulting (70%)
+
+[146/465] Analyzing:
+  📍 Genuines Coaching & Consulting <-> Communikate Design & Marketing
+  ✅ Found 2 valid relationship(s)
+     PARTNER: Genuines Coaching & Consulting → Communikate Design & Marketing (75%)
+     REFERRAL: Communikate Design & Marketing → Genuines Coaching & Consulting (70%)
+
+[147/465] Analyzing:
+  📍 Genuines Coaching & Consulting <-> We buy any house
+  ✅ Found 2 valid relationship(s)
+     PARTNER: Genuines Coaching & Consulting → We buy any house (80%)
+     REFERRAL: We buy any house → Genuines Coaching & Consulting (70%)
+
+[148/465] Analyzing:
+  📍 Genuines Coaching & Consulting <-> Jamz Trainings
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Genuines Coaching & Consulting → Jamz Trainings (75%)
+     COLLABORATION: Jamz Trainings → Genuines Coaching & Consulting (65%)
+
+[149/465] Analyzing:
+  📍 Genuines Coaching & Consulting <-> MyahnArt LLC
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Genuines Coaching & Consulting → MyahnArt LLC (85%)
+     REFERRAL: MyahnArt LLC → Genuines Coaching & Consulting (70%)
+
+[150/465] Analyzing:
+  📍 Genuines Coaching & Consulting <-> Grayland
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Genuines Coaching & Consulting → Grayland (80%)
+     REFERRAL: Grayland → Genuines Coaching & Consulting (75%)
+
+[151/465] Analyzing:
+  📍 Genuines Coaching & Consulting <-> Be Present Detalles
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Genuines Coaching & Consulting → Be Present Detalles (75%)
+     REFERRAL: Be Present Detalles → Genuines Coaching & Consulting (65%)
+
+[152/465] Analyzing:
+  📍 Genuines Coaching & Consulting <-> Free Agents Inc
+  ✅ Found 2 valid relationship(s)
+     PARTNER: Genuines Coaching & Consulting → Free Agents Inc (85%)
+     REFERRAL: Free Agents Inc → Genuines Coaching & Consulting (70%)
+
+[153/465] Analyzing:
+  📍 Genuines Coaching & Consulting <-> WhitBits Cookies
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Genuines Coaching & Consulting → WhitBits Cookies (80%)
+     VENDOR: WhitBits Cookies → Genuines Coaching & Consulting (70%)
+
+[154/465] Analyzing:
+  📍 Genuines Coaching & Consulting <-> Aspirations Behavioral Health Inc.
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Genuines Coaching & Consulting → Aspirations Behavioral Health Inc. (80%)
+     COLLABORATION: Genuines Coaching & Consulting → Aspirations Behavioral Health Inc. (75%)
+
+[155/465] Analyzing:
+  📍 Genuines Coaching & Consulting <-> The P-Way Solutions LLC
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Genuines Coaching & Consulting → The P-Way Solutions LLC (80%)
+     COLLABORATION: Genuines Coaching & Consulting → The P-Way Solutions LLC (70%)
+
+[156/465] Analyzing:
+  📍 Genuines Coaching & Consulting <-> Relax Relate & Release
+  ✅ Found 2 valid relationship(s)
+     PARTNER: Genuines Coaching & Consulting → Relax Relate & Release (75%)
+     REFERRAL: Relax Relate & Release → Genuines Coaching & Consulting (60%)
+
+[157/465] Analyzing:
+  📍 Genuines Coaching & Consulting <-> Genuines Coaching & Consulting
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Genuines Coaching & Consulting → Genuines Coaching & Consulting (85%)
+     REFERRAL: Genuines Coaching & Consulting → Genuines Coaching & Consulting (70%)
+
+[158/465] Analyzing:
+  📍 Genuines Coaching & Consulting <-> Organize Design Create
+  ✅ Found 2 valid relationship(s)
+     PARTNER: Genuines Coaching & Consulting → Organize Design Create (85%)
+     REFERRAL: Organize Design Create → Genuines Coaching & Consulting (70%)
+
+[159/465] Analyzing:
+  📍 Genuines Coaching & Consulting <-> Soulfitness Studio Health and wellness center
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Genuines Coaching & Consulting → Soulfitness Studio Health and wellness center (80%)
+     REFERRAL: Soulfitness Studio Health and wellness center → Genuines Coaching & Consulting (70%)
+
+[160/465] Analyzing:
+  📍 Genuines Coaching & Consulting <-> Simple Creations By T
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Genuines Coaching & Consulting → Simple Creations By T (70%)
+     VENDOR: Simple Creations By T → Genuines Coaching & Consulting (60%)
+
+[161/465] Analyzing:
+  📍 Genuines Coaching & Consulting <-> ALYS Always Love Yourself
+  ✅ Found 2 valid relationship(s)
+     PARTNER: Genuines Coaching & Consulting → ALYS Always Love Yourself (80%)
+     REFERRAL: ALYS Always Love Yourself → Genuines Coaching & Consulting (70%)
+
+[162/465] Analyzing:
+  📍 Genuines Coaching & Consulting <-> Big Rig Compliance Pros
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Genuines Coaching & Consulting → Big Rig Compliance Pros (75%)
+     COLLABORATION: Genuines Coaching & Consulting → Big Rig Compliance Pros (80%)
+
+[163/465] Analyzing:
+  📍 Genuines Coaching & Consulting <-> Noseniorleftbehindfl.org
+  ✅ Found 2 valid relationship(s)
+     PARTNER: Genuines Coaching & Consulting → Noseniorleftbehindfl.org (80%)
+     REFERRAL: Noseniorleftbehindfl.org → Genuines Coaching & Consulting (70%)
+
+[164/465] Analyzing:
+  📍 Genuines Coaching & Consulting <-> Complete Renewal LLC
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Genuines Coaching & Consulting → Complete Renewal LLC (80%)
+     REFERRAL: Complete Renewal LLC → Genuines Coaching & Consulting (70%)
+
+[165/465] Analyzing:
+  📍 Genuines Coaching & Consulting <-> Connections to the Nations Llc
+  ✅ Found 2 valid relationship(s)
+     PARTNER: Genuines Coaching & Consulting → Connections to the Nations Llc (80%)
+     REFERRAL: Connections to the Nations Llc → Genuines Coaching & Consulting (70%)
+
+[166/465] Analyzing:
+  📍 Bluebird Health Partners <-> Enriquez Aesthetics
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Bluebird Health Partners → Enriquez Aesthetics (75%)
+     VENDOR: Enriquez Aesthetics → Bluebird Health Partners (65%)
+
+[167/465] Analyzing:
+  📍 Bluebird Health Partners <-> Tosh’s Urban Garden
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Bluebird Health Partners → Tosh’s Urban Garden (75%)
+     REFERRAL: Tosh’s Urban Garden → Bluebird Health Partners (70%)
+
+[168/465] Analyzing:
+  📍 Bluebird Health Partners <-> Celebrate & Smile International Steppers
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Bluebird Health Partners → Celebrate & Smile International Steppers (80%)
+     REFERRAL: Celebrate & Smile International Steppers → Bluebird Health Partners (70%)
+
+[169/465] Analyzing:
+  📍 Bluebird Health Partners <-> The Collective Om
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Bluebird Health Partners → The Collective Om (80%)
+     REFERRAL: The Collective Om → Bluebird Health Partners (70%)
+
+[170/465] Analyzing:
+  📍 Bluebird Health Partners <-> Communikate Design & Marketing
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Bluebird Health Partners → Communikate Design & Marketing (80%)
+     REFERRAL: Communikate Design & Marketing → Bluebird Health Partners (70%)
+
+[171/465] Analyzing:
+  📍 Bluebird Health Partners <-> We buy any house
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Bluebird Health Partners → We buy any house (75%)
+     REFERRAL: We buy any house → Bluebird Health Partners (70%)
+
+[172/465] Analyzing:
+  📍 Bluebird Health Partners <-> Jamz Trainings
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Bluebird Health Partners → Jamz Trainings (75%)
+     REFERRAL: Jamz Trainings → Bluebird Health Partners (70%)
+
+[173/465] Analyzing:
+  📍 Bluebird Health Partners <-> MyahnArt LLC
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Bluebird Health Partners → MyahnArt LLC (75%)
+     REFERRAL: MyahnArt LLC → Bluebird Health Partners (70%)
+
+[174/465] Analyzing:
+  📍 Bluebird Health Partners <-> Grayland
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Bluebird Health Partners → Grayland (70%)
+     REFERRAL: Grayland → Bluebird Health Partners (60%)
+
+[175/465] Analyzing:
+  📍 Bluebird Health Partners <-> Be Present Detalles
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Bluebird Health Partners → Be Present Detalles (75%)
+     REFERRAL: Be Present Detalles → Bluebird Health Partners (60%)
+
+[176/465] Analyzing:
+  📍 Bluebird Health Partners <-> Free Agents Inc
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Bluebird Health Partners → Free Agents Inc (80%)
+     REFERRAL: Free Agents Inc → Bluebird Health Partners (75%)
+
+[177/465] Analyzing:
+  📍 Bluebird Health Partners <-> WhitBits Cookies
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Bluebird Health Partners → WhitBits Cookies (75%)
+     VENDOR: WhitBits Cookies → Bluebird Health Partners (65%)
+
+[178/465] Analyzing:
+  📍 Bluebird Health Partners <-> Aspirations Behavioral Health Inc.
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Bluebird Health Partners → Aspirations Behavioral Health Inc. (80%)
+     REFERRAL: Aspirations Behavioral Health Inc. → Bluebird Health Partners (75%)
+
+[179/465] Analyzing:
+  📍 Bluebird Health Partners <-> The P-Way Solutions LLC
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Bluebird Health Partners → The P-Way Solutions LLC (70%)
+     REFERRAL: The P-Way Solutions LLC → Bluebird Health Partners (60%)
+
+[180/465] Analyzing:
+  📍 Bluebird Health Partners <-> Relax Relate & Release
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Bluebird Health Partners → Relax Relate & Release (75%)
+     REFERRAL: Relax Relate & Release → Bluebird Health Partners (70%)
+
+[181/465] Analyzing:
+  📍 Bluebird Health Partners <-> Genuines Coaching & Consulting
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Bluebird Health Partners → Genuines Coaching & Consulting (80%)
+     REFERRAL: Genuines Coaching & Consulting → Bluebird Health Partners (70%)
+
+[182/465] Analyzing:
+  📍 Bluebird Health Partners <-> Organize Design Create
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Bluebird Health Partners → Organize Design Create (80%)
+     VENDOR: Organize Design Create → Bluebird Health Partners (70%)
+
+[183/465] Analyzing:
+  📍 Bluebird Health Partners <-> Soulfitness Studio Health and wellness center
+  ✅ Found 2 valid relationship(s)
+     PARTNER: Bluebird Health Partners → Soulfitness Studio Health and wellness center (75%)
+     REFERRAL: Soulfitness Studio Health and wellness center → Bluebird Health Partners (60%)
+
+[184/465] Analyzing:
+  📍 Bluebird Health Partners <-> Simple Creations By T
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Bluebird Health Partners → Simple Creations By T (80%)
+     REFERRAL: Simple Creations By T → Bluebird Health Partners (70%)
+
+[185/465] Analyzing:
+  📍 Bluebird Health Partners <-> ALYS Always Love Yourself
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Bluebird Health Partners → ALYS Always Love Yourself (75%)
+     REFERRAL: ALYS Always Love Yourself → Bluebird Health Partners (65%)
+
+[186/465] Analyzing:
+  📍 Bluebird Health Partners <-> Big Rig Compliance Pros
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Bluebird Health Partners → Big Rig Compliance Pros (75%)
+     REFERRAL: Big Rig Compliance Pros → Bluebird Health Partners (60%)
+
+[187/465] Analyzing:
+  📍 Bluebird Health Partners <-> Noseniorleftbehindfl.org
+  ✅ Found 2 valid relationship(s)
+     PARTNER: Bluebird Health Partners → Noseniorleftbehindfl.org (75%)
+     REFERRAL: Noseniorleftbehindfl.org → Bluebird Health Partners (60%)
+
+[188/465] Analyzing:
+  📍 Bluebird Health Partners <-> Complete Renewal LLC
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Bluebird Health Partners → Complete Renewal LLC (80%)
+     COLLABORATION: Bluebird Health Partners → Complete Renewal LLC (70%)
+
+[189/465] Analyzing:
+  📍 Bluebird Health Partners <-> Connections to the Nations Llc
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Bluebird Health Partners → Connections to the Nations Llc (80%)
+     REFERRAL: Connections to the Nations Llc → Bluebird Health Partners (70%)
+
+[190/465] Analyzing:
+  📍 Enriquez Aesthetics <-> Tosh’s Urban Garden
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Enriquez Aesthetics → Tosh’s Urban Garden (80%)
+     REFERRAL: Tosh’s Urban Garden → Enriquez Aesthetics (70%)
+
+[191/465] Analyzing:
+  📍 Enriquez Aesthetics <-> Celebrate & Smile International Steppers
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Enriquez Aesthetics → Celebrate & Smile International Steppers (75%)
+     REFERRAL: Celebrate & Smile International Steppers → Enriquez Aesthetics (65%)
+
+[192/465] Analyzing:
+  📍 Enriquez Aesthetics <-> The Collective Om
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Enriquez Aesthetics → The Collective Om (80%)
+     COLLABORATION: The Collective Om → Enriquez Aesthetics (70%)
+
+[193/465] Analyzing:
+  📍 Enriquez Aesthetics <-> Communikate Design & Marketing
+  ✅ Found 2 valid relationship(s)
+     VENDOR: Enriquez Aesthetics → Communikate Design & Marketing (80%)
+     REFERRAL: Communikate Design & Marketing → Enriquez Aesthetics (70%)
+
+[194/465] Analyzing:
+  📍 Enriquez Aesthetics <-> We buy any house
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Enriquez Aesthetics → We buy any house (75%)
+     REFERRAL: We buy any house → Enriquez Aesthetics (70%)
+
+[195/465] Analyzing:
+  📍 Enriquez Aesthetics <-> Jamz Trainings
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Enriquez Aesthetics → Jamz Trainings (85%)
+     REFERRAL: Jamz Trainings → Enriquez Aesthetics (75%)
+
+[196/465] Analyzing:
+  📍 Enriquez Aesthetics <-> MyahnArt LLC
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Enriquez Aesthetics → MyahnArt LLC (80%)
+     REFERRAL: MyahnArt LLC → Enriquez Aesthetics (70%)
+
+[197/465] Analyzing:
+  📍 Enriquez Aesthetics <-> Grayland
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Enriquez Aesthetics → Grayland (70%)
+     REFERRAL: Grayland → Enriquez Aesthetics (60%)
+
+[198/465] Analyzing:
+  📍 Enriquez Aesthetics <-> Be Present Detalles
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Enriquez Aesthetics → Be Present Detalles (85%)
+     REFERRAL: Be Present Detalles → Enriquez Aesthetics (75%)
+
+[199/465] Analyzing:
+  📍 Enriquez Aesthetics <-> Free Agents Inc
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Enriquez Aesthetics → Free Agents Inc (70%)
+     REFERRAL: Free Agents Inc → Enriquez Aesthetics (65%)
+
+[200/465] Analyzing:
+  📍 Enriquez Aesthetics <-> WhitBits Cookies
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Enriquez Aesthetics → WhitBits Cookies (75%)
+     REFERRAL: WhitBits Cookies → Enriquez Aesthetics (60%)
+
+[201/465] Analyzing:
+  📍 Enriquez Aesthetics <-> Aspirations Behavioral Health Inc.
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Enriquez Aesthetics → Aspirations Behavioral Health Inc. (75%)
+     REFERRAL: Aspirations Behavioral Health Inc. → Enriquez Aesthetics (70%)
+
+[202/465] Analyzing:
+  📍 Enriquez Aesthetics <-> The P-Way Solutions LLC
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Enriquez Aesthetics → The P-Way Solutions LLC (75%)
+     REFERRAL: The P-Way Solutions LLC → Enriquez Aesthetics (70%)
+
+[203/465] Analyzing:
+  📍 Enriquez Aesthetics <-> Relax Relate & Release
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Enriquez Aesthetics → Relax Relate & Release (75%)
+     REFERRAL: Relax Relate & Release → Enriquez Aesthetics (70%)
+
+[204/465] Analyzing:
+  📍 Enriquez Aesthetics <-> Genuines Coaching & Consulting
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Enriquez Aesthetics → Genuines Coaching & Consulting (75%)
+     COLLABORATION: Genuines Coaching & Consulting → Enriquez Aesthetics (80%)
+
+[205/465] Analyzing:
+  📍 Enriquez Aesthetics <-> Organize Design Create
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Enriquez Aesthetics → Organize Design Create (85%)
+     REFERRAL: Organize Design Create → Enriquez Aesthetics (70%)
+
+[206/465] Analyzing:
+  📍 Enriquez Aesthetics <-> Soulfitness Studio Health and wellness center
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Enriquez Aesthetics → Soulfitness Studio Health and wellness center (75%)
+     REFERRAL: Soulfitness Studio Health and wellness center → Enriquez Aesthetics (70%)
+
+[207/465] Analyzing:
+  📍 Enriquez Aesthetics <-> Simple Creations By T
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Enriquez Aesthetics → Simple Creations By T (75%)
+     COLLABORATION: Simple Creations By T → Enriquez Aesthetics (70%)
+
+[208/465] Analyzing:
+  📍 Enriquez Aesthetics <-> ALYS Always Love Yourself
+  ✅ Found 2 valid relationship(s)
+     PARTNER: Enriquez Aesthetics → ALYS Always Love Yourself (80%)
+     REFERRAL: ALYS Always Love Yourself → Enriquez Aesthetics (70%)
+
+[209/465] Analyzing:
+  📍 Enriquez Aesthetics <-> Big Rig Compliance Pros
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Enriquez Aesthetics → Big Rig Compliance Pros (70%)
+     REFERRAL: Big Rig Compliance Pros → Enriquez Aesthetics (60%)
+
+[210/465] Analyzing:
+  📍 Enriquez Aesthetics <-> Noseniorleftbehindfl.org
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Enriquez Aesthetics → Noseniorleftbehindfl.org (80%)
+     REFERRAL: Noseniorleftbehindfl.org → Enriquez Aesthetics (70%)
+
+[211/465] Analyzing:
+  📍 Enriquez Aesthetics <-> Complete Renewal LLC
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Enriquez Aesthetics → Complete Renewal LLC (85%)
+     REFERRAL: Complete Renewal LLC → Enriquez Aesthetics (70%)
+
+[212/465] Analyzing:
+  📍 Enriquez Aesthetics <-> Connections to the Nations Llc
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Enriquez Aesthetics → Connections to the Nations Llc (75%)
+     REFERRAL: Connections to the Nations Llc → Enriquez Aesthetics (60%)
+
+[213/465] Analyzing:
+  📍 Tosh’s Urban Garden <-> Celebrate & Smile International Steppers
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Tosh’s Urban Garden → Celebrate & Smile International Steppers (75%)
+     REFERRAL: Celebrate & Smile International Steppers → Tosh’s Urban Garden (60%)
+
+[214/465] Analyzing:
+  📍 Tosh’s Urban Garden <-> The Collective Om
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Tosh’s Urban Garden → The Collective Om (80%)
+     REFERRAL: The Collective Om → Tosh’s Urban Garden (70%)
+
+[215/465] Analyzing:
+  📍 Tosh’s Urban Garden <-> Communikate Design & Marketing
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Tosh’s Urban Garden → Communikate Design & Marketing (85%)
+     REFERRAL: Communikate Design & Marketing → Tosh’s Urban Garden (75%)
+
+[216/465] Analyzing:
+  📍 Tosh’s Urban Garden <-> We buy any house
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Tosh’s Urban Garden → We buy any house (75%)
+     REFERRAL: We buy any house → Tosh’s Urban Garden (65%)
+
+[217/465] Analyzing:
+  📍 Tosh’s Urban Garden <-> Jamz Trainings
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Tosh’s Urban Garden → Jamz Trainings (80%)
+     REFERRAL: Jamz Trainings → Tosh’s Urban Garden (70%)
+
+[218/465] Analyzing:
+  📍 Tosh’s Urban Garden <-> MyahnArt LLC
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Tosh’s Urban Garden → MyahnArt LLC (80%)
+     REFERRAL: MyahnArt LLC → Tosh’s Urban Garden (70%)
+
+[219/465] Analyzing:
+  📍 Tosh’s Urban Garden <-> Grayland
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Tosh’s Urban Garden → Grayland (70%)
+     COLLABORATION: Tosh’s Urban Garden → Grayland (60%)
+
+[220/465] Analyzing:
+  📍 Tosh’s Urban Garden <-> Be Present Detalles
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Tosh’s Urban Garden → Be Present Detalles (80%)
+     REFERRAL: Be Present Detalles → Tosh’s Urban Garden (70%)
+
+[221/465] Analyzing:
+  📍 Tosh’s Urban Garden <-> Free Agents Inc
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Tosh’s Urban Garden → Free Agents Inc (75%)
+     COLLABORATION: Free Agents Inc → Tosh’s Urban Garden (80%)
+
+[222/465] Analyzing:
+  📍 Tosh’s Urban Garden <-> WhitBits Cookies
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Tosh’s Urban Garden → WhitBits Cookies (75%)
+     VENDOR: WhitBits Cookies → Tosh’s Urban Garden (60%)
+
+[223/465] Analyzing:
+  📍 Tosh’s Urban Garden <-> Aspirations Behavioral Health Inc.
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Tosh’s Urban Garden → Aspirations Behavioral Health Inc. (80%)
+     REFERRAL: Aspirations Behavioral Health Inc. → Tosh’s Urban Garden (75%)
+
+[224/465] Analyzing:
+  📍 Tosh’s Urban Garden <-> The P-Way Solutions LLC
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Tosh’s Urban Garden → The P-Way Solutions LLC (75%)
+     REFERRAL: The P-Way Solutions LLC → Tosh’s Urban Garden (65%)
+
+[225/465] Analyzing:
+  📍 Tosh’s Urban Garden <-> Relax Relate & Release
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Tosh’s Urban Garden → Relax Relate & Release (75%)
+     REFERRAL: Relax Relate & Release → Tosh’s Urban Garden (70%)
+
+[226/465] Analyzing:
+  📍 Tosh’s Urban Garden <-> Genuines Coaching & Consulting
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Tosh’s Urban Garden → Genuines Coaching & Consulting (85%)
+     REFERRAL: Genuines Coaching & Consulting → Tosh’s Urban Garden (70%)
+
+[227/465] Analyzing:
+  📍 Tosh’s Urban Garden <-> Organize Design Create
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Tosh’s Urban Garden → Organize Design Create (85%)
+     REFERRAL: Organize Design Create → Tosh’s Urban Garden (75%)
+
+[228/465] Analyzing:
+  📍 Tosh’s Urban Garden <-> Soulfitness Studio Health and wellness center
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Tosh’s Urban Garden → Soulfitness Studio Health and wellness center (85%)
+     VENDOR: Soulfitness Studio Health and wellness center → Tosh’s Urban Garden (70%)
+
+[229/465] Analyzing:
+  📍 Tosh’s Urban Garden <-> Simple Creations By T
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Tosh’s Urban Garden → Simple Creations By T (75%)
+     COLLABORATION: Tosh’s Urban Garden → Simple Creations By T (80%)
+
+[230/465] Analyzing:
+  📍 Tosh’s Urban Garden <-> ALYS Always Love Yourself
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Tosh’s Urban Garden → ALYS Always Love Yourself (85%)
+     REFERRAL: ALYS Always Love Yourself → Tosh’s Urban Garden (70%)
+
+[231/465] Analyzing:
+  📍 Tosh’s Urban Garden <-> Big Rig Compliance Pros
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Tosh’s Urban Garden → Big Rig Compliance Pros (80%)
+     REFERRAL: Big Rig Compliance Pros → Tosh’s Urban Garden (75%)
+
+[232/465] Analyzing:
+  📍 Tosh’s Urban Garden <-> Noseniorleftbehindfl.org
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Tosh’s Urban Garden → Noseniorleftbehindfl.org (75%)
+     REFERRAL: Noseniorleftbehindfl.org → Tosh’s Urban Garden (70%)
+
+[233/465] Analyzing:
+  📍 Tosh’s Urban Garden <-> Complete Renewal LLC
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Tosh’s Urban Garden → Complete Renewal LLC (80%)
+     REFERRAL: Complete Renewal LLC → Tosh’s Urban Garden (70%)
+
+[234/465] Analyzing:
+  📍 Tosh’s Urban Garden <-> Connections to the Nations Llc
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Tosh’s Urban Garden → Connections to the Nations Llc (85%)
+     REFERRAL: Connections to the Nations Llc → Tosh’s Urban Garden (70%)
+
+[235/465] Analyzing:
+  📍 Celebrate & Smile International Steppers <-> The Collective Om
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Celebrate & Smile International Steppers → The Collective Om (85%)
+     REFERRAL: The Collective Om → Celebrate & Smile International Steppers (70%)
+
+[236/465] Analyzing:
+  📍 Celebrate & Smile International Steppers <-> Communikate Design & Marketing
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Celebrate & Smile International Steppers → Communikate Design & Marketing (75%)
+     COLLABORATION: Communikate Design & Marketing → Celebrate & Smile International Steppers (80%)
+
+[237/465] Analyzing:
+  📍 Celebrate & Smile International Steppers <-> We buy any house
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Celebrate & Smile International Steppers → We buy any house (70%)
+     REFERRAL: We buy any house → Celebrate & Smile International Steppers (60%)
+
+[238/465] Analyzing:
+  📍 Celebrate & Smile International Steppers <-> Jamz Trainings
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Celebrate & Smile International Steppers → Jamz Trainings (85%)
+     REFERRAL: Jamz Trainings → Celebrate & Smile International Steppers (70%)
+
+[239/465] Analyzing:
+  📍 Celebrate & Smile International Steppers <-> MyahnArt LLC
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Celebrate & Smile International Steppers → MyahnArt LLC (85%)
+     REFERRAL: MyahnArt LLC → Celebrate & Smile International Steppers (70%)
+
+[240/465] Analyzing:
+  📍 Celebrate & Smile International Steppers <-> Grayland
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Celebrate & Smile International Steppers → Grayland (75%)
+     COLLABORATION: Celebrate & Smile International Steppers → Grayland (70%)
+
+[241/465] Analyzing:
+  📍 Celebrate & Smile International Steppers <-> Be Present Detalles
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Celebrate & Smile International Steppers → Be Present Detalles (80%)
+     REFERRAL: Be Present Detalles → Celebrate & Smile International Steppers (70%)
+
+[242/465] Analyzing:
+  📍 Celebrate & Smile International Steppers <-> Free Agents Inc
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Celebrate & Smile International Steppers → Free Agents Inc (85%)
+     REFERRAL: Free Agents Inc → Celebrate & Smile International Steppers (75%)
+
+[243/465] Analyzing:
+  📍 Celebrate & Smile International Steppers <-> WhitBits Cookies
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Celebrate & Smile International Steppers → WhitBits Cookies (80%)
+     VENDOR: WhitBits Cookies → Celebrate & Smile International Steppers (70%)
+
+[244/465] Analyzing:
+  📍 Celebrate & Smile International Steppers <-> Aspirations Behavioral Health Inc.
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Celebrate & Smile International Steppers → Aspirations Behavioral Health Inc. (85%)
+     REFERRAL: Aspirations Behavioral Health Inc. → Celebrate & Smile International Steppers (70%)
+
+[245/465] Analyzing:
+  📍 Celebrate & Smile International Steppers <-> The P-Way Solutions LLC
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Celebrate & Smile International Steppers → The P-Way Solutions LLC (85%)
+     REFERRAL: The P-Way Solutions LLC → Celebrate & Smile International Steppers (75%)
+
+[246/465] Analyzing:
+  📍 Celebrate & Smile International Steppers <-> Relax Relate & Release
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Celebrate & Smile International Steppers → Relax Relate & Release (85%)
+     REFERRAL: Relax Relate & Release → Celebrate & Smile International Steppers (70%)
+
+[247/465] Analyzing:
+  📍 Celebrate & Smile International Steppers <-> Genuines Coaching & Consulting
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Celebrate & Smile International Steppers → Genuines Coaching & Consulting (80%)
+     REFERRAL: Genuines Coaching & Consulting → Celebrate & Smile International Steppers (70%)
+
+[248/465] Analyzing:
+  📍 Celebrate & Smile International Steppers <-> Organize Design Create
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Celebrate & Smile International Steppers → Organize Design Create (70%)
+     COLLABORATION: Organize Design Create → Celebrate & Smile International Steppers (80%)
+
+[249/465] Analyzing:
+  📍 Celebrate & Smile International Steppers <-> Soulfitness Studio Health and wellness center
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Celebrate & Smile International Steppers → Soulfitness Studio Health and wellness center (85%)
+     REFERRAL: Soulfitness Studio Health and wellness center → Celebrate & Smile International Steppers (75%)
+
+[250/465] Analyzing:
+  📍 Celebrate & Smile International Steppers <-> Simple Creations By T
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Celebrate & Smile International Steppers → Simple Creations By T (85%)
+     REFERRAL: Simple Creations By T → Celebrate & Smile International Steppers (70%)
+
+[251/465] Analyzing:
+  📍 Celebrate & Smile International Steppers <-> ALYS Always Love Yourself
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Celebrate & Smile International Steppers → ALYS Always Love Yourself (80%)
+     REFERRAL: ALYS Always Love Yourself → Celebrate & Smile International Steppers (70%)
+
+[252/465] Analyzing:
+  📍 Celebrate & Smile International Steppers <-> Big Rig Compliance Pros
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Celebrate & Smile International Steppers → Big Rig Compliance Pros (70%)
+     REFERRAL: Big Rig Compliance Pros → Celebrate & Smile International Steppers (75%)
+
+[253/465] Analyzing:
+  📍 Celebrate & Smile International Steppers <-> Noseniorleftbehindfl.org
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Celebrate & Smile International Steppers → Noseniorleftbehindfl.org (80%)
+     REFERRAL: Noseniorleftbehindfl.org → Celebrate & Smile International Steppers (70%)
+
+[254/465] Analyzing:
+  📍 Celebrate & Smile International Steppers <-> Complete Renewal LLC
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Celebrate & Smile International Steppers → Complete Renewal LLC (85%)
+     REFERRAL: Complete Renewal LLC → Celebrate & Smile International Steppers (70%)
+
+[255/465] Analyzing:
+  📍 Celebrate & Smile International Steppers <-> Connections to the Nations Llc
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Celebrate & Smile International Steppers → Connections to the Nations Llc (85%)
+     REFERRAL: Connections to the Nations Llc → Celebrate & Smile International Steppers (70%)
+
+[256/465] Analyzing:
+  📍 The Collective Om <-> Communikate Design & Marketing
+  ✅ Found 2 valid relationship(s)
+     VENDOR: The Collective Om → Communikate Design & Marketing (75%)
+     REFERRAL: Communikate Design & Marketing → The Collective Om (70%)
+
+[257/465] Analyzing:
+  📍 The Collective Om <-> We buy any house
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: The Collective Om → We buy any house (70%)
+     REFERRAL: We buy any house → The Collective Om (60%)
+
+[258/465] Analyzing:
+  📍 The Collective Om <-> Jamz Trainings
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: The Collective Om → Jamz Trainings (75%)
+     COLLABORATION: Jamz Trainings → The Collective Om (70%)
+
+[259/465] Analyzing:
+  📍 The Collective Om <-> MyahnArt LLC
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: The Collective Om → MyahnArt LLC (85%)
+     REFERRAL: MyahnArt LLC → The Collective Om (75%)
+
+[260/465] Analyzing:
+  📍 The Collective Om <-> Grayland
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: The Collective Om → Grayland (70%)
+     REFERRAL: Grayland → The Collective Om (60%)
+
+[261/465] Analyzing:
+  📍 The Collective Om <-> Be Present Detalles
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: The Collective Om → Be Present Detalles (80%)
+     REFERRAL: Be Present Detalles → The Collective Om (70%)
+
+[262/465] Analyzing:
+  📍 The Collective Om <-> Free Agents Inc
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: The Collective Om → Free Agents Inc (70%)
+     REFERRAL: Free Agents Inc → The Collective Om (65%)
+
+[263/465] Analyzing:
+  📍 The Collective Om <-> WhitBits Cookies
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: The Collective Om → WhitBits Cookies (70%)
+     VENDOR: WhitBits Cookies → The Collective Om (60%)
+
+[264/465] Analyzing:
+  📍 The Collective Om <-> Aspirations Behavioral Health Inc.
+  ✅ Found 3 valid relationship(s)
+     REFERRAL: The Collective Om → Aspirations Behavioral Health Inc. (75%)
+     REFERRAL: Aspirations Behavioral Health Inc. → The Collective Om (70%)
+     COLLABORATION: The Collective Om → Aspirations Behavioral Health Inc. (65%)
+
+[265/465] Analyzing:
+  📍 The Collective Om <-> The P-Way Solutions LLC
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: The Collective Om → The P-Way Solutions LLC (75%)
+     REFERRAL: The P-Way Solutions LLC → The Collective Om (70%)
+
+[266/465] Analyzing:
+  📍 The Collective Om <-> Relax Relate & Release
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: The Collective Om → Relax Relate & Release (80%)
+     REFERRAL: Relax Relate & Release → The Collective Om (70%)
+
+[267/465] Analyzing:
+  📍 The Collective Om <-> Genuines Coaching & Consulting
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: The Collective Om → Genuines Coaching & Consulting (85%)
+     REFERRAL: Genuines Coaching & Consulting → The Collective Om (70%)
+
+[268/465] Analyzing:
+  📍 The Collective Om <-> Organize Design Create
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: The Collective Om → Organize Design Create (80%)
+     PARTNER: Organize Design Create → The Collective Om (75%)
+
+[269/465] Analyzing:
+  📍 The Collective Om <-> Soulfitness Studio Health and wellness center
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: The Collective Om → Soulfitness Studio Health and wellness center (80%)
+     REFERRAL: Soulfitness Studio Health and wellness center → The Collective Om (70%)
+
+[270/465] Analyzing:
+  📍 The Collective Om <-> Simple Creations By T
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: The Collective Om → Simple Creations By T (75%)
+     REFERRAL: Simple Creations By T → The Collective Om (65%)
+
+[271/465] Analyzing:
+  📍 The Collective Om <-> ALYS Always Love Yourself
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: The Collective Om → ALYS Always Love Yourself (75%)
+     COLLABORATION: The Collective Om → ALYS Always Love Yourself (80%)
+
+[272/465] Analyzing:
+  📍 The Collective Om <-> Big Rig Compliance Pros
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: The Collective Om → Big Rig Compliance Pros (75%)
+     REFERRAL: Big Rig Compliance Pros → The Collective Om (70%)
+
+[273/465] Analyzing:
+  📍 The Collective Om <-> Noseniorleftbehindfl.org
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: The Collective Om → Noseniorleftbehindfl.org (75%)
+     REFERRAL: Noseniorleftbehindfl.org → The Collective Om (60%)
+
+[274/465] Analyzing:
+  📍 The Collective Om <-> Complete Renewal LLC
+  ⚠️  Filtered out invalid self-relationship for Complete Renewal LLC
+  ⚠️  Filtered out invalid self-relationship for Complete Renewal LLC
+  ✅ Found 0 valid relationship(s)
+  ⚠️  Filtered out 2 invalid relationship(s)
+
+[275/465] Analyzing:
+  📍 The Collective Om <-> Connections to the Nations Llc
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: The Collective Om → Connections to the Nations Llc (75%)
+     VENDOR: Connections to the Nations Llc → The Collective Om (60%)
+
+[276/465] Analyzing:
+  📍 Communikate Design & Marketing <-> We buy any house
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Communikate Design & Marketing → We buy any house (80%)
+     VENDOR: We buy any house → Communikate Design & Marketing (70%)
+
+[277/465] Analyzing:
+  📍 Communikate Design & Marketing <-> Jamz Trainings
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Communikate Design & Marketing → Jamz Trainings (80%)
+     REFERRAL: Jamz Trainings → Communikate Design & Marketing (70%)
+
+[278/465] Analyzing:
+  📍 Communikate Design & Marketing <-> MyahnArt LLC
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Communikate Design & Marketing → MyahnArt LLC (75%)
+     VENDOR: MyahnArt LLC → Communikate Design & Marketing (70%)
+
+[279/465] Analyzing:
+  📍 Communikate Design & Marketing <-> Grayland
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Communikate Design & Marketing → Grayland (75%)
+     REFERRAL: Grayland → Communikate Design & Marketing (70%)
+
+[280/465] Analyzing:
+  📍 Communikate Design & Marketing <-> Be Present Detalles
+  ✅ Found 3 valid relationship(s)
+     VENDOR: Communikate Design & Marketing → Be Present Detalles (80%)
+     VENDOR: Be Present Detalles → Communikate Design & Marketing (75%)
+     COLLABORATION: Communikate Design & Marketing → Be Present Detalles (70%)
+
+[281/465] Analyzing:
+  📍 Communikate Design & Marketing <-> Free Agents Inc
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Communikate Design & Marketing → Free Agents Inc (80%)
+     VENDOR: Free Agents Inc → Communikate Design & Marketing (70%)
+
+[282/465] Analyzing:
+  📍 Communikate Design & Marketing <-> WhitBits Cookies
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Communikate Design & Marketing → WhitBits Cookies (80%)
+     VENDOR: WhitBits Cookies → Communikate Design & Marketing (70%)
+
+[283/465] Analyzing:
+  📍 Communikate Design & Marketing <-> Aspirations Behavioral Health Inc.
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Communikate Design & Marketing → Aspirations Behavioral Health Inc. (75%)
+     REFERRAL: Aspirations Behavioral Health Inc. → Communikate Design & Marketing (70%)
+
+[284/465] Analyzing:
+  📍 Communikate Design & Marketing <-> The P-Way Solutions LLC
+  ✅ Found 2 valid relationship(s)
+     VENDOR: Communikate Design & Marketing → The P-Way Solutions LLC (80%)
+     REFERRAL: The P-Way Solutions LLC → Communikate Design & Marketing (70%)
+
+[285/465] Analyzing:
+  📍 Communikate Design & Marketing <-> Relax Relate & Release
+  ✅ Found 1 valid relationship(s)
+     COLLABORATION: Communikate Design & Marketing → Relax Relate & Release (80%)
+
+[286/465] Analyzing:
+  📍 Communikate Design & Marketing <-> Genuines Coaching & Consulting
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Communikate Design & Marketing → Genuines Coaching & Consulting (80%)
+     REFERRAL: Genuines Coaching & Consulting → Communikate Design & Marketing (70%)
+
+[287/465] Analyzing:
+  📍 Communikate Design & Marketing <-> Organize Design Create
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Communikate Design & Marketing → Organize Design Create (85%)
+     REFERRAL: Organize Design Create → Communikate Design & Marketing (70%)
+
+[288/465] Analyzing:
+  📍 Communikate Design & Marketing <-> Soulfitness Studio Health and wellness center
+  ✅ Found 2 valid relationship(s)
+     VENDOR: Communikate Design & Marketing → Soulfitness Studio Health and wellness center (85%)
+     REFERRAL: Soulfitness Studio Health and wellness center → Communikate Design & Marketing (75%)
+
+[289/465] Analyzing:
+  📍 Communikate Design & Marketing <-> Simple Creations By T
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Communikate Design & Marketing → Simple Creations By T (75%)
+     COLLABORATION: Communikate Design & Marketing → Simple Creations By T (80%)
+
+[290/465] Analyzing:
+  📍 Communikate Design & Marketing <-> ALYS Always Love Yourself
+  ✅ Found 2 valid relationship(s)
+     VENDOR: Communikate Design & Marketing → ALYS Always Love Yourself (80%)
+     REFERRAL: ALYS Always Love Yourself → Communikate Design & Marketing (70%)
+
+[291/465] Analyzing:
+  📍 Communikate Design & Marketing <-> Big Rig Compliance Pros
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Communikate Design & Marketing → Big Rig Compliance Pros (75%)
+     VENDOR: Big Rig Compliance Pros → Communikate Design & Marketing (80%)
+
+[292/465] Analyzing:
+  📍 Communikate Design & Marketing <-> Noseniorleftbehindfl.org
+  ✅ Found 2 valid relationship(s)
+     VENDOR: Communikate Design & Marketing → Noseniorleftbehindfl.org (80%)
+     REFERRAL: Noseniorleftbehindfl.org → Communikate Design & Marketing (70%)
+
+[293/465] Analyzing:
+  📍 Communikate Design & Marketing <-> Complete Renewal LLC
+  ✅ Found 3 valid relationship(s)
+     VENDOR: Communikate Design & Marketing → Complete Renewal LLC (85%)
+     VENDOR: Complete Renewal LLC → Communikate Design & Marketing (75%)
+     COLLABORATION: Communikate Design & Marketing → Complete Renewal LLC (70%)
+
+[294/465] Analyzing:
+  📍 Communikate Design & Marketing <-> Connections to the Nations Llc
+  ✅ Found 2 valid relationship(s)
+     VENDOR: Communikate Design & Marketing → Connections to the Nations Llc (80%)
+     REFERRAL: Connections to the Nations Llc → Communikate Design & Marketing (70%)
+
+[295/465] Analyzing:
+  📍 We buy any house <-> Jamz Trainings
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: We buy any house → Jamz Trainings (80%)
+     REFERRAL: Jamz Trainings → We buy any house (70%)
+
+[296/465] Analyzing:
+  📍 We buy any house <-> MyahnArt LLC
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: We buy any house → MyahnArt LLC (85%)
+     REFERRAL: MyahnArt LLC → We buy any house (70%)
+
+[297/465] Analyzing:
+  📍 We buy any house <-> Grayland
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: We buy any house → Grayland (80%)
+     REFERRAL: Grayland → We buy any house (75%)
+
+[298/465] Analyzing:
+  📍 We buy any house <-> Be Present Detalles
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: We buy any house → Be Present Detalles (85%)
+     REFERRAL: Be Present Detalles → We buy any house (70%)
+
+[299/465] Analyzing:
+  📍 We buy any house <-> Free Agents Inc
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: We buy any house → Free Agents Inc (75%)
+     REFERRAL: Free Agents Inc → We buy any house (70%)
+
+[300/465] Analyzing:
+  📍 We buy any house <-> WhitBits Cookies
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: We buy any house → WhitBits Cookies (75%)
+     VENDOR: WhitBits Cookies → We buy any house (65%)
+
+[301/465] Analyzing:
+  📍 We buy any house <-> Aspirations Behavioral Health Inc.
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: We buy any house → Aspirations Behavioral Health Inc. (75%)
+     REFERRAL: Aspirations Behavioral Health Inc. → We buy any house (70%)
+
+[302/465] Analyzing:
+  📍 We buy any house <-> The P-Way Solutions LLC
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: We buy any house → The P-Way Solutions LLC (75%)
+     VENDOR: The P-Way Solutions LLC → We buy any house (65%)
+
+[303/465] Analyzing:
+  📍 We buy any house <-> Relax Relate & Release
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: We buy any house → Relax Relate & Release (75%)
+     REFERRAL: Relax Relate & Release → We buy any house (70%)
+
+[304/465] Analyzing:
+  📍 We buy any house <-> Genuines Coaching & Consulting
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: We buy any house → Genuines Coaching & Consulting (75%)
+     REFERRAL: Genuines Coaching & Consulting → We buy any house (65%)
+
+[305/465] Analyzing:
+  📍 We buy any house <-> Organize Design Create
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: We buy any house → Organize Design Create (80%)
+     VENDOR: Organize Design Create → We buy any house (70%)
+
+[306/465] Analyzing:
+  📍 We buy any house <-> Soulfitness Studio Health and wellness center
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: We buy any house → Soulfitness Studio Health and wellness center (75%)
+     REFERRAL: Soulfitness Studio Health and wellness center → We buy any house (60%)
+
+[307/465] Analyzing:
+  📍 We buy any house <-> Simple Creations By T
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: We buy any house → Simple Creations By T (80%)
+     REFERRAL: Simple Creations By T → We buy any house (75%)
+
+[308/465] Analyzing:
+  📍 We buy any house <-> ALYS Always Love Yourself
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: We buy any house → ALYS Always Love Yourself (75%)
+     REFERRAL: ALYS Always Love Yourself → We buy any house (70%)
+
+[309/465] Analyzing:
+  📍 We buy any house <-> Big Rig Compliance Pros
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: We buy any house → Big Rig Compliance Pros (75%)
+     REFERRAL: Big Rig Compliance Pros → We buy any house (70%)
+
+[310/465] Analyzing:
+  📍 We buy any house <-> Noseniorleftbehindfl.org
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: We buy any house → Noseniorleftbehindfl.org (75%)
+     REFERRAL: Noseniorleftbehindfl.org → We buy any house (70%)
+
+[311/465] Analyzing:
+  📍 We buy any house <-> Complete Renewal LLC
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: We buy any house → Complete Renewal LLC (75%)
+     REFERRAL: Complete Renewal LLC → We buy any house (70%)
+
+[312/465] Analyzing:
+  📍 We buy any house <-> Connections to the Nations Llc
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: We buy any house → Connections to the Nations Llc (80%)
+     COLLABORATION: Connections to the Nations Llc → We buy any house (70%)
+
+[313/465] Analyzing:
+  📍 Jamz Trainings <-> MyahnArt LLC
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Jamz Trainings → MyahnArt LLC (75%)
+     REFERRAL: MyahnArt LLC → Jamz Trainings (60%)
+
+[314/465] Analyzing:
+  📍 Jamz Trainings <-> Grayland
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Jamz Trainings → Grayland (75%)
+     REFERRAL: Grayland → Jamz Trainings (60%)
+
+[315/465] Analyzing:
+  📍 Jamz Trainings <-> Be Present Detalles
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Jamz Trainings → Be Present Detalles (85%)
+     REFERRAL: Be Present Detalles → Jamz Trainings (70%)
+
+[316/465] Analyzing:
+  📍 Jamz Trainings <-> Free Agents Inc
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Jamz Trainings → Free Agents Inc (75%)
+     REFERRAL: Free Agents Inc → Jamz Trainings (70%)
+
+[317/465] Analyzing:
+  📍 Jamz Trainings <-> WhitBits Cookies
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Jamz Trainings → WhitBits Cookies (75%)
+     COLLABORATION: WhitBits Cookies → Jamz Trainings (70%)
+
+[318/465] Analyzing:
+  📍 Jamz Trainings <-> Aspirations Behavioral Health Inc.
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Jamz Trainings → Aspirations Behavioral Health Inc. (80%)
+     REFERRAL: Aspirations Behavioral Health Inc. → Jamz Trainings (75%)
+
+[319/465] Analyzing:
+  📍 Jamz Trainings <-> The P-Way Solutions LLC
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Jamz Trainings → The P-Way Solutions LLC (80%)
+     REFERRAL: The P-Way Solutions LLC → Jamz Trainings (70%)
+
+[320/465] Analyzing:
+  📍 Jamz Trainings <-> Relax Relate & Release
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Jamz Trainings → Relax Relate & Release (80%)
+     REFERRAL: Relax Relate & Release → Jamz Trainings (70%)
+
+[321/465] Analyzing:
+  📍 Jamz Trainings <-> Genuines Coaching & Consulting
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Jamz Trainings → Genuines Coaching & Consulting (75%)
+     REFERRAL: Genuines Coaching & Consulting → Jamz Trainings (70%)
+
+[322/465] Analyzing:
+  📍 Jamz Trainings <-> Organize Design Create
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Jamz Trainings → Organize Design Create (85%)
+     REFERRAL: Organize Design Create → Jamz Trainings (75%)
+
+[323/465] Analyzing:
+  📍 Jamz Trainings <-> Soulfitness Studio Health and wellness center
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Jamz Trainings → Soulfitness Studio Health and wellness center (75%)
+     VENDOR: Soulfitness Studio Health and wellness center → Jamz Trainings (65%)
+
+[324/465] Analyzing:
+  📍 Jamz Trainings <-> Simple Creations By T
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Jamz Trainings → Simple Creations By T (75%)
+     VENDOR: Simple Creations By T → Jamz Trainings (65%)
+
+[325/465] Analyzing:
+  📍 Jamz Trainings <-> ALYS Always Love Yourself
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Jamz Trainings → ALYS Always Love Yourself (75%)
+     REFERRAL: ALYS Always Love Yourself → Jamz Trainings (70%)
+
+[326/465] Analyzing:
+  📍 Jamz Trainings <-> Big Rig Compliance Pros
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Jamz Trainings → Big Rig Compliance Pros (75%)
+     REFERRAL: Big Rig Compliance Pros → Jamz Trainings (70%)
+
+[327/465] Analyzing:
+  📍 Jamz Trainings <-> Noseniorleftbehindfl.org
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Jamz Trainings → Noseniorleftbehindfl.org (75%)
+     REFERRAL: Noseniorleftbehindfl.org → Jamz Trainings (70%)
+
+[328/465] Analyzing:
+  📍 Jamz Trainings <-> Complete Renewal LLC
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Jamz Trainings → Complete Renewal LLC (80%)
+     REFERRAL: Complete Renewal LLC → Jamz Trainings (70%)
+
+[329/465] Analyzing:
+  📍 Jamz Trainings <-> Connections to the Nations Llc
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Jamz Trainings → Connections to the Nations Llc (75%)
+     COLLABORATION: Connections to the Nations Llc → Jamz Trainings (80%)
+
+[330/465] Analyzing:
+  📍 MyahnArt LLC <-> Grayland
+  ✅ Found 2 valid relationship(s)
+     VENDOR: MyahnArt LLC → Grayland (80%)
+     REFERRAL: Grayland → MyahnArt LLC (70%)
+
+[331/465] Analyzing:
+  📍 MyahnArt LLC <-> Be Present Detalles
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: MyahnArt LLC → Be Present Detalles (85%)
+     REFERRAL: Be Present Detalles → MyahnArt LLC (70%)
+
+[332/465] Analyzing:
+  📍 MyahnArt LLC <-> Free Agents Inc
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: MyahnArt LLC → Free Agents Inc (75%)
+     COLLABORATION: MyahnArt LLC → Free Agents Inc (65%)
+
+[333/465] Analyzing:
+  📍 MyahnArt LLC <-> WhitBits Cookies
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: MyahnArt LLC → WhitBits Cookies (75%)
+     COLLABORATION: MyahnArt LLC → WhitBits Cookies (80%)
+
+[334/465] Analyzing:
+  📍 MyahnArt LLC <-> Aspirations Behavioral Health Inc.
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: MyahnArt LLC → Aspirations Behavioral Health Inc. (85%)
+     REFERRAL: Aspirations Behavioral Health Inc. → MyahnArt LLC (70%)
+
+[335/465] Analyzing:
+  📍 MyahnArt LLC <-> The P-Way Solutions LLC
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: MyahnArt LLC → The P-Way Solutions LLC (75%)
+     REFERRAL: The P-Way Solutions LLC → MyahnArt LLC (70%)
+
+[336/465] Analyzing:
+  📍 MyahnArt LLC <-> Relax Relate & Release
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: MyahnArt LLC → Relax Relate & Release (85%)
+     REFERRAL: Relax Relate & Release → MyahnArt LLC (70%)
+
+[337/465] Analyzing:
+  📍 MyahnArt LLC <-> Genuines Coaching & Consulting
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: MyahnArt LLC → Genuines Coaching & Consulting (80%)
+     REFERRAL: Genuines Coaching & Consulting → MyahnArt LLC (70%)
+
+[338/465] Analyzing:
+  📍 MyahnArt LLC <-> Organize Design Create
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: MyahnArt LLC → Organize Design Create (85%)
+     REFERRAL: Organize Design Create → MyahnArt LLC (70%)
+
+[339/465] Analyzing:
+  📍 MyahnArt LLC <-> Soulfitness Studio Health and wellness center
+  ✅ Found 2 valid relationship(s)
+     VENDOR: MyahnArt LLC → Soulfitness Studio Health and wellness center (80%)
+     VENDOR: Soulfitness Studio Health and wellness center → MyahnArt LLC (70%)
+
+[340/465] Analyzing:
+  📍 MyahnArt LLC <-> Simple Creations By T
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: MyahnArt LLC → Simple Creations By T (85%)
+     REFERRAL: Simple Creations By T → MyahnArt LLC (70%)
+
+[341/465] Analyzing:
+  📍 MyahnArt LLC <-> ALYS Always Love Yourself
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: MyahnArt LLC → ALYS Always Love Yourself (80%)
+     REFERRAL: ALYS Always Love Yourself → MyahnArt LLC (70%)
+
+[342/465] Analyzing:
+  📍 MyahnArt LLC <-> Big Rig Compliance Pros
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: MyahnArt LLC → Big Rig Compliance Pros (75%)
+     VENDOR: Big Rig Compliance Pros → MyahnArt LLC (65%)
+
+[343/465] Analyzing:
+  📍 MyahnArt LLC <-> Noseniorleftbehindfl.org
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: MyahnArt LLC → Noseniorleftbehindfl.org (85%)
+     REFERRAL: Noseniorleftbehindfl.org → MyahnArt LLC (70%)
+
+[344/465] Analyzing:
+  📍 MyahnArt LLC <-> Complete Renewal LLC
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: MyahnArt LLC → Complete Renewal LLC (85%)
+     REFERRAL: Complete Renewal LLC → MyahnArt LLC (70%)
+
+[345/465] Analyzing:
+  📍 MyahnArt LLC <-> Connections to the Nations Llc
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: MyahnArt LLC → Connections to the Nations Llc (85%)
+     REFERRAL: Connections to the Nations Llc → MyahnArt LLC (70%)
+
+[346/465] Analyzing:
+  📍 Grayland <-> Be Present Detalles
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Grayland → Be Present Detalles (80%)
+     REFERRAL: Be Present Detalles → Grayland (70%)
+
+[347/465] Analyzing:
+  📍 Grayland <-> Free Agents Inc
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Grayland → Free Agents Inc (80%)
+     REFERRAL: Free Agents Inc → Grayland (75%)
+
+[348/465] Analyzing:
+  📍 Grayland <-> WhitBits Cookies
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Grayland → WhitBits Cookies (75%)
+     REFERRAL: WhitBits Cookies → Grayland (70%)
+
+[349/465] Analyzing:
+  📍 Grayland <-> Aspirations Behavioral Health Inc.
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Grayland → Aspirations Behavioral Health Inc. (80%)
+     REFERRAL: Aspirations Behavioral Health Inc. → Grayland (70%)
+
+[350/465] Analyzing:
+  📍 Grayland <-> The P-Way Solutions LLC
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Grayland → The P-Way Solutions LLC (85%)
+     REFERRAL: The P-Way Solutions LLC → Grayland (75%)
+
+[351/465] Analyzing:
+  📍 Grayland <-> Relax Relate & Release
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Grayland → Relax Relate & Release (75%)
+     REFERRAL: Relax Relate & Release → Grayland (70%)
+
+[352/465] Analyzing:
+  📍 Grayland <-> Genuines Coaching & Consulting
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Grayland → Genuines Coaching & Consulting (75%)
+     VENDOR: Genuines Coaching & Consulting → Grayland (60%)
+
+[353/465] Analyzing:
+  📍 Grayland <-> Organize Design Create
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Grayland → Organize Design Create (75%)
+     VENDOR: Organize Design Create → Grayland (65%)
+
+[354/465] Analyzing:
+  📍 Grayland <-> Soulfitness Studio Health and wellness center
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Grayland → Soulfitness Studio Health and wellness center (75%)
+     VENDOR: Soulfitness Studio Health and wellness center → Grayland (70%)
+
+[355/465] Analyzing:
+  📍 Grayland <-> Simple Creations By T
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Grayland → Simple Creations By T (80%)
+     VENDOR: Simple Creations By T → Grayland (70%)
+
+[356/465] Analyzing:
+  📍 Grayland <-> ALYS Always Love Yourself
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Grayland → ALYS Always Love Yourself (75%)
+     VENDOR: ALYS Always Love Yourself → Grayland (65%)
+
+[357/465] Analyzing:
+  📍 Grayland <-> Big Rig Compliance Pros
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Grayland → Big Rig Compliance Pros (75%)
+     REFERRAL: Big Rig Compliance Pros → Grayland (70%)
+
+[358/465] Analyzing:
+  📍 Grayland <-> Noseniorleftbehindfl.org
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Grayland → Noseniorleftbehindfl.org (75%)
+     REFERRAL: Noseniorleftbehindfl.org → Grayland (65%)
+
+[359/465] Analyzing:
+  📍 Grayland <-> Complete Renewal LLC
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Grayland → Complete Renewal LLC (75%)
+     REFERRAL: Complete Renewal LLC → Grayland (60%)
+
+[360/465] Analyzing:
+  📍 Grayland <-> Connections to the Nations Llc
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Grayland → Connections to the Nations Llc (75%)
+     COLLABORATION: Connections to the Nations Llc → Grayland (80%)
+
+[361/465] Analyzing:
+  📍 Be Present Detalles <-> Free Agents Inc
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Be Present Detalles → Free Agents Inc (75%)
+     COLLABORATION: Be Present Detalles → Free Agents Inc (80%)
+
+[362/465] Analyzing:
+  📍 Be Present Detalles <-> WhitBits Cookies
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Be Present Detalles → WhitBits Cookies (85%)
+     REFERRAL: WhitBits Cookies → Be Present Detalles (70%)
+
+[363/465] Analyzing:
+  📍 Be Present Detalles <-> Aspirations Behavioral Health Inc.
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Be Present Detalles → Aspirations Behavioral Health Inc. (85%)
+     REFERRAL: Aspirations Behavioral Health Inc. → Be Present Detalles (70%)
+
+[364/465] Analyzing:
+  📍 Be Present Detalles <-> The P-Way Solutions LLC
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Be Present Detalles → The P-Way Solutions LLC (70%)
+     VENDOR: The P-Way Solutions LLC → Be Present Detalles (60%)
+
+[365/465] Analyzing:
+  📍 Be Present Detalles <-> Relax Relate & Release
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Be Present Detalles → Relax Relate & Release (80%)
+     REFERRAL: Relax Relate & Release → Be Present Detalles (70%)
+
+[366/465] Analyzing:
+  📍 Be Present Detalles <-> Genuines Coaching & Consulting
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Be Present Detalles → Genuines Coaching & Consulting (80%)
+     REFERRAL: Genuines Coaching & Consulting → Be Present Detalles (70%)
+
+[367/465] Analyzing:
+  📍 Be Present Detalles <-> Organize Design Create
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Be Present Detalles → Organize Design Create (85%)
+     REFERRAL: Organize Design Create → Be Present Detalles (70%)
+
+[368/465] Analyzing:
+  📍 Be Present Detalles <-> Soulfitness Studio Health and wellness center
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Be Present Detalles → Soulfitness Studio Health and wellness center (85%)
+     REFERRAL: Soulfitness Studio Health and wellness center → Be Present Detalles (70%)
+
+[369/465] Analyzing:
+  📍 Be Present Detalles <-> Simple Creations By T
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Be Present Detalles → Simple Creations By T (85%)
+     VENDOR: Simple Creations By T → Be Present Detalles (75%)
+
+[370/465] Analyzing:
+  📍 Be Present Detalles <-> ALYS Always Love Yourself
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Be Present Detalles → ALYS Always Love Yourself (70%)
+     COLLABORATION: ALYS Always Love Yourself → Be Present Detalles (80%)
+
+[371/465] Analyzing:
+  📍 Be Present Detalles <-> Big Rig Compliance Pros
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Be Present Detalles → Big Rig Compliance Pros (75%)
+     REFERRAL: Big Rig Compliance Pros → Be Present Detalles (70%)
+
+[372/465] Analyzing:
+  📍 Be Present Detalles <-> Noseniorleftbehindfl.org
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Be Present Detalles → Noseniorleftbehindfl.org (70%)
+     REFERRAL: Noseniorleftbehindfl.org → Be Present Detalles (65%)
+
+[373/465] Analyzing:
+  📍 Be Present Detalles <-> Complete Renewal LLC
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Be Present Detalles → Complete Renewal LLC (75%)
+     COLLABORATION: Complete Renewal LLC → Be Present Detalles (80%)
+
+[374/465] Analyzing:
+  📍 Be Present Detalles <-> Connections to the Nations Llc
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Be Present Detalles → Connections to the Nations Llc (80%)
+     REFERRAL: Connections to the Nations Llc → Be Present Detalles (70%)
+
+[375/465] Analyzing:
+  📍 Free Agents Inc <-> WhitBits Cookies
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Free Agents Inc → WhitBits Cookies (75%)
+     VENDOR: WhitBits Cookies → Free Agents Inc (60%)
+
+[376/465] Analyzing:
+  📍 Free Agents Inc <-> Aspirations Behavioral Health Inc.
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Free Agents Inc → Aspirations Behavioral Health Inc. (80%)
+     COLLABORATION: Free Agents Inc → Aspirations Behavioral Health Inc. (70%)
+
+[377/465] Analyzing:
+  📍 Free Agents Inc <-> The P-Way Solutions LLC
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Free Agents Inc → The P-Way Solutions LLC (75%)
+     VENDOR: The P-Way Solutions LLC → Free Agents Inc (65%)
+
+[378/465] Analyzing:
+  📍 Free Agents Inc <-> Relax Relate & Release
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Free Agents Inc → Relax Relate & Release (80%)
+     VENDOR: Relax Relate & Release → Free Agents Inc (70%)
+
+[379/465] Analyzing:
+  📍 Free Agents Inc <-> Genuines Coaching & Consulting
+  ✅ Found 3 valid relationship(s)
+     REFERRAL: Free Agents Inc → Genuines Coaching & Consulting (80%)
+     REFERRAL: Genuines Coaching & Consulting → Free Agents Inc (75%)
+     COLLABORATION: Free Agents Inc → Genuines Coaching & Consulting (65%)
+
+[380/465] Analyzing:
+  📍 Free Agents Inc <-> Organize Design Create
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Free Agents Inc → Organize Design Create (80%)
+     REFERRAL: Organize Design Create → Free Agents Inc (75%)
+
+[381/465] Analyzing:
+  📍 Free Agents Inc <-> Soulfitness Studio Health and wellness center
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Free Agents Inc → Soulfitness Studio Health and wellness center (75%)
+     REFERRAL: Soulfitness Studio Health and wellness center → Free Agents Inc (70%)
+
+[382/465] Analyzing:
+  📍 Free Agents Inc <-> Simple Creations By T
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Free Agents Inc → Simple Creations By T (75%)
+     VENDOR: Simple Creations By T → Free Agents Inc (60%)
+
+[383/465] Analyzing:
+  📍 Free Agents Inc <-> ALYS Always Love Yourself
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Free Agents Inc → ALYS Always Love Yourself (75%)
+     REFERRAL: ALYS Always Love Yourself → Free Agents Inc (70%)
+
+[384/465] Analyzing:
+  📍 Free Agents Inc <-> Big Rig Compliance Pros
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Free Agents Inc → Big Rig Compliance Pros (75%)
+     REFERRAL: Big Rig Compliance Pros → Free Agents Inc (65%)
+
+[385/465] Analyzing:
+  📍 Free Agents Inc <-> Noseniorleftbehindfl.org
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Free Agents Inc → Noseniorleftbehindfl.org (80%)
+     COLLABORATION: Free Agents Inc → Noseniorleftbehindfl.org (70%)
+
+[386/465] Analyzing:
+  📍 Free Agents Inc <-> Complete Renewal LLC
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Free Agents Inc → Complete Renewal LLC (75%)
+     COLLABORATION: Complete Renewal LLC → Free Agents Inc (80%)
+
+[387/465] Analyzing:
+  📍 Free Agents Inc <-> Connections to the Nations Llc
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Free Agents Inc → Connections to the Nations Llc (80%)
+     REFERRAL: Connections to the Nations Llc → Free Agents Inc (75%)
+
+[388/465] Analyzing:
+  📍 WhitBits Cookies <-> Aspirations Behavioral Health Inc.
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: WhitBits Cookies → Aspirations Behavioral Health Inc. (75%)
+     REFERRAL: Aspirations Behavioral Health Inc. → WhitBits Cookies (60%)
+
+[389/465] Analyzing:
+  📍 WhitBits Cookies <-> The P-Way Solutions LLC
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: WhitBits Cookies → The P-Way Solutions LLC (75%)
+     REFERRAL: The P-Way Solutions LLC → WhitBits Cookies (70%)
+
+[390/465] Analyzing:
+  📍 WhitBits Cookies <-> Relax Relate & Release
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: WhitBits Cookies → Relax Relate & Release (80%)
+     REFERRAL: Relax Relate & Release → WhitBits Cookies (70%)
+
+[391/465] Analyzing:
+  📍 WhitBits Cookies <-> Genuines Coaching & Consulting
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: WhitBits Cookies → Genuines Coaching & Consulting (75%)
+     REFERRAL: Genuines Coaching & Consulting → WhitBits Cookies (60%)
+
+[392/465] Analyzing:
+  📍 WhitBits Cookies <-> Organize Design Create
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: WhitBits Cookies → Organize Design Create (85%)
+     REFERRAL: Organize Design Create → WhitBits Cookies (75%)
+
+[393/465] Analyzing:
+  📍 WhitBits Cookies <-> Soulfitness Studio Health and wellness center
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: WhitBits Cookies → Soulfitness Studio Health and wellness center (85%)
+     REFERRAL: Soulfitness Studio Health and wellness center → WhitBits Cookies (70%)
+
+[394/465] Analyzing:
+  📍 WhitBits Cookies <-> Simple Creations By T
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: WhitBits Cookies → Simple Creations By T (85%)
+     VENDOR: Simple Creations By T → WhitBits Cookies (70%)
+
+[395/465] Analyzing:
+  📍 WhitBits Cookies <-> ALYS Always Love Yourself
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: WhitBits Cookies → ALYS Always Love Yourself (80%)
+     REFERRAL: ALYS Always Love Yourself → WhitBits Cookies (70%)
+
+[396/465] Analyzing:
+  📍 WhitBits Cookies <-> Big Rig Compliance Pros
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: WhitBits Cookies → Big Rig Compliance Pros (75%)
+     REFERRAL: Big Rig Compliance Pros → WhitBits Cookies (70%)
+
+[397/465] Analyzing:
+  📍 WhitBits Cookies <-> Noseniorleftbehindfl.org
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: WhitBits Cookies → Noseniorleftbehindfl.org (85%)
+     REFERRAL: Noseniorleftbehindfl.org → WhitBits Cookies (70%)
+
+[398/465] Analyzing:
+  📍 WhitBits Cookies <-> Complete Renewal LLC
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: WhitBits Cookies → Complete Renewal LLC (85%)
+     REFERRAL: Complete Renewal LLC → WhitBits Cookies (75%)
+
+[399/465] Analyzing:
+  📍 WhitBits Cookies <-> Connections to the Nations Llc
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: WhitBits Cookies → Connections to the Nations Llc (85%)
+     REFERRAL: Connections to the Nations Llc → WhitBits Cookies (70%)
+
+[400/465] Analyzing:
+  📍 Aspirations Behavioral Health Inc. <-> The P-Way Solutions LLC
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Aspirations Behavioral Health Inc. → The P-Way Solutions LLC (80%)
+     REFERRAL: The P-Way Solutions LLC → Aspirations Behavioral Health Inc. (70%)
+
+[401/465] Analyzing:
+  📍 Aspirations Behavioral Health Inc. <-> Relax Relate & Release
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Aspirations Behavioral Health Inc. → Relax Relate & Release (85%)
+     REFERRAL: Relax Relate & Release → Aspirations Behavioral Health Inc. (75%)
+
+[402/465] Analyzing:
+  📍 Aspirations Behavioral Health Inc. <-> Genuines Coaching & Consulting
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Aspirations Behavioral Health Inc. → Genuines Coaching & Consulting (75%)
+     REFERRAL: Genuines Coaching & Consulting → Aspirations Behavioral Health Inc. (70%)
+
+[403/465] Analyzing:
+  📍 Aspirations Behavioral Health Inc. <-> Organize Design Create
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Aspirations Behavioral Health Inc. → Organize Design Create (70%)
+     REFERRAL: Organize Design Create → Aspirations Behavioral Health Inc. (65%)
+
+[404/465] Analyzing:
+  📍 Aspirations Behavioral Health Inc. <-> Soulfitness Studio Health and wellness center
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Aspirations Behavioral Health Inc. → Soulfitness Studio Health and wellness center (80%)
+     REFERRAL: Soulfitness Studio Health and wellness center → Aspirations Behavioral Health Inc. (75%)
+
+[405/465] Analyzing:
+  📍 Aspirations Behavioral Health Inc. <-> Simple Creations By T
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Aspirations Behavioral Health Inc. → Simple Creations By T (75%)
+     COLLABORATION: Simple Creations By T → Aspirations Behavioral Health Inc. (80%)
+
+[406/465] Analyzing:
+  📍 Aspirations Behavioral Health Inc. <-> ALYS Always Love Yourself
+  ✅ Found 3 valid relationship(s)
+     REFERRAL: Aspirations Behavioral Health Inc. → ALYS Always Love Yourself (75%)
+     REFERRAL: ALYS Always Love Yourself → Aspirations Behavioral Health Inc. (70%)
+     COLLABORATION: Aspirations Behavioral Health Inc. → ALYS Always Love Yourself (65%)
+
+[407/465] Analyzing:
+  📍 Aspirations Behavioral Health Inc. <-> Big Rig Compliance Pros
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Aspirations Behavioral Health Inc. → Big Rig Compliance Pros (80%)
+     REFERRAL: Big Rig Compliance Pros → Aspirations Behavioral Health Inc. (70%)
+
+[408/465] Analyzing:
+  📍 Aspirations Behavioral Health Inc. <-> Noseniorleftbehindfl.org
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Aspirations Behavioral Health Inc. → Noseniorleftbehindfl.org (85%)
+     REFERRAL: Noseniorleftbehindfl.org → Aspirations Behavioral Health Inc. (75%)
+
+[409/465] Analyzing:
+  📍 Aspirations Behavioral Health Inc. <-> Complete Renewal LLC
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Aspirations Behavioral Health Inc. → Complete Renewal LLC (80%)
+     COLLABORATION: Complete Renewal LLC → Aspirations Behavioral Health Inc. (75%)
+
+[410/465] Analyzing:
+  📍 Aspirations Behavioral Health Inc. <-> Connections to the Nations Llc
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Aspirations Behavioral Health Inc. → Connections to the Nations Llc (80%)
+     COLLABORATION: Connections to the Nations Llc → Aspirations Behavioral Health Inc. (75%)
+
+[411/465] Analyzing:
+  📍 The P-Way Solutions LLC <-> Relax Relate & Release
+  ✅ Found 2 valid relationship(s)
+     VENDOR: The P-Way Solutions LLC → Relax Relate & Release (80%)
+     REFERRAL: Relax Relate & Release → The P-Way Solutions LLC (70%)
+
+[412/465] Analyzing:
+  📍 The P-Way Solutions LLC <-> Genuines Coaching & Consulting
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: The P-Way Solutions LLC → Genuines Coaching & Consulting (75%)
+     REFERRAL: Genuines Coaching & Consulting → The P-Way Solutions LLC (70%)
+
+[413/465] Analyzing:
+  📍 The P-Way Solutions LLC <-> Organize Design Create
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: The P-Way Solutions LLC → Organize Design Create (80%)
+     VENDOR: Organize Design Create → The P-Way Solutions LLC (70%)
+
+[414/465] Analyzing:
+  📍 The P-Way Solutions LLC <-> Soulfitness Studio Health and wellness center
+  ✅ Found 2 valid relationship(s)
+     VENDOR: The P-Way Solutions LLC → Soulfitness Studio Health and wellness center (80%)
+     REFERRAL: Soulfitness Studio Health and wellness center → The P-Way Solutions LLC (70%)
+
+[415/465] Analyzing:
+  📍 The P-Way Solutions LLC <-> Simple Creations By T
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: The P-Way Solutions LLC → Simple Creations By T (70%)
+     VENDOR: Simple Creations By T → The P-Way Solutions LLC (60%)
+
+[416/465] Analyzing:
+  📍 The P-Way Solutions LLC <-> ALYS Always Love Yourself
+  ✅ Found 2 valid relationship(s)
+     VENDOR: The P-Way Solutions LLC → ALYS Always Love Yourself (75%)
+     REFERRAL: ALYS Always Love Yourself → The P-Way Solutions LLC (65%)
+
+[417/465] Analyzing:
+  📍 The P-Way Solutions LLC <-> Big Rig Compliance Pros
+  ✅ Found 2 valid relationship(s)
+     VENDOR: The P-Way Solutions LLC → Big Rig Compliance Pros (70%)
+     VENDOR: Big Rig Compliance Pros → The P-Way Solutions LLC (60%)
+
+[418/465] Analyzing:
+  📍 The P-Way Solutions LLC <-> Noseniorleftbehindfl.org
+  ✅ Found 2 valid relationship(s)
+     VENDOR: The P-Way Solutions LLC → Noseniorleftbehindfl.org (75%)
+     REFERRAL: Noseniorleftbehindfl.org → The P-Way Solutions LLC (70%)
+
+[419/465] Analyzing:
+  📍 The P-Way Solutions LLC <-> Complete Renewal LLC
+  ✅ Found 2 valid relationship(s)
+     VENDOR: The P-Way Solutions LLC → Complete Renewal LLC (75%)
+     REFERRAL: Complete Renewal LLC → The P-Way Solutions LLC (70%)
+
+[420/465] Analyzing:
+  📍 The P-Way Solutions LLC <-> Connections to the Nations Llc
+  ✅ Found 2 valid relationship(s)
+     VENDOR: The P-Way Solutions LLC → Connections to the Nations Llc (85%)
+     REFERRAL: Connections to the Nations Llc → The P-Way Solutions LLC (70%)
+
+[421/465] Analyzing:
+  📍 Relax Relate & Release <-> Genuines Coaching & Consulting
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Relax Relate & Release → Genuines Coaching & Consulting (75%)
+     COLLABORATION: Genuines Coaching & Consulting → Relax Relate & Release (70%)
+
+[422/465] Analyzing:
+  📍 Relax Relate & Release <-> Organize Design Create
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Relax Relate & Release → Organize Design Create (80%)
+     REFERRAL: Organize Design Create → Relax Relate & Release (70%)
+
+[423/465] Analyzing:
+  📍 Relax Relate & Release <-> Soulfitness Studio Health and wellness center
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Relax Relate & Release → Soulfitness Studio Health and wellness center (75%)
+     REFERRAL: Soulfitness Studio Health and wellness center → Relax Relate & Release (65%)
+
+[424/465] Analyzing:
+  📍 Relax Relate & Release <-> Simple Creations By T
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Relax Relate & Release → Simple Creations By T (80%)
+     REFERRAL: Simple Creations By T → Relax Relate & Release (70%)
+
+[425/465] Analyzing:
+  📍 Relax Relate & Release <-> ALYS Always Love Yourself
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Relax Relate & Release → ALYS Always Love Yourself (75%)
+     REFERRAL: ALYS Always Love Yourself → Relax Relate & Release (65%)
+
+[426/465] Analyzing:
+  📍 Relax Relate & Release <-> Big Rig Compliance Pros
+  ✅ Found 1 valid relationship(s)
+     REFERRAL: Relax Relate & Release → Big Rig Compliance Pros (75%)
+
+[427/465] Analyzing:
+  📍 Relax Relate & Release <-> Noseniorleftbehindfl.org
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Relax Relate & Release → Noseniorleftbehindfl.org (80%)
+     REFERRAL: Noseniorleftbehindfl.org → Relax Relate & Release (75%)
+
+[428/465] Analyzing:
+  📍 Relax Relate & Release <-> Complete Renewal LLC
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Relax Relate & Release → Complete Renewal LLC (70%)
+     REFERRAL: Complete Renewal LLC → Relax Relate & Release (70%)
+
+[429/465] Analyzing:
+  📍 Relax Relate & Release <-> Connections to the Nations Llc
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Relax Relate & Release → Connections to the Nations Llc (80%)
+     REFERRAL: Connections to the Nations Llc → Relax Relate & Release (70%)
+
+[430/465] Analyzing:
+  📍 Genuines Coaching & Consulting <-> Organize Design Create
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Genuines Coaching & Consulting → Organize Design Create (80%)
+     REFERRAL: Organize Design Create → Genuines Coaching & Consulting (70%)
+
+[431/465] Analyzing:
+  📍 Genuines Coaching & Consulting <-> Soulfitness Studio Health and wellness center
+  ✅ Found 2 valid relationship(s)
+     PARTNER: Genuines Coaching & Consulting → Soulfitness Studio Health and wellness center (80%)
+     REFERRAL: Soulfitness Studio Health and wellness center → Genuines Coaching & Consulting (70%)
+
+[432/465] Analyzing:
+  📍 Genuines Coaching & Consulting <-> Simple Creations By T
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Genuines Coaching & Consulting → Simple Creations By T (75%)
+     REFERRAL: Simple Creations By T → Genuines Coaching & Consulting (60%)
+
+[433/465] Analyzing:
+  📍 Genuines Coaching & Consulting <-> ALYS Always Love Yourself
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Genuines Coaching & Consulting → ALYS Always Love Yourself (80%)
+     REFERRAL: ALYS Always Love Yourself → Genuines Coaching & Consulting (75%)
+
+[434/465] Analyzing:
+  📍 Genuines Coaching & Consulting <-> Big Rig Compliance Pros
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Genuines Coaching & Consulting → Big Rig Compliance Pros (75%)
+     REFERRAL: Big Rig Compliance Pros → Genuines Coaching & Consulting (60%)
+
+[435/465] Analyzing:
+  📍 Genuines Coaching & Consulting <-> Noseniorleftbehindfl.org
+  ✅ Found 2 valid relationship(s)
+     PARTNER: Genuines Coaching & Consulting → Noseniorleftbehindfl.org (75%)
+     REFERRAL: Noseniorleftbehindfl.org → Genuines Coaching & Consulting (80%)
+
+[436/465] Analyzing:
+  📍 Genuines Coaching & Consulting <-> Complete Renewal LLC
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Genuines Coaching & Consulting → Complete Renewal LLC (85%)
+     REFERRAL: Complete Renewal LLC → Genuines Coaching & Consulting (75%)
+
+[437/465] Analyzing:
+  📍 Genuines Coaching & Consulting <-> Connections to the Nations Llc
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Genuines Coaching & Consulting → Connections to the Nations Llc (85%)
+     REFERRAL: Connections to the Nations Llc → Genuines Coaching & Consulting (70%)
+
+[438/465] Analyzing:
+  📍 Organize Design Create <-> Soulfitness Studio Health and wellness center
+  ✅ Found 2 valid relationship(s)
+     VENDOR: Organize Design Create → Soulfitness Studio Health and wellness center (80%)
+     REFERRAL: Soulfitness Studio Health and wellness center → Organize Design Create (70%)
+
+[439/465] Analyzing:
+  📍 Organize Design Create <-> Simple Creations By T
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Organize Design Create → Simple Creations By T (85%)
+     REFERRAL: Simple Creations By T → Organize Design Create (70%)
+
+[440/465] Analyzing:
+  📍 Organize Design Create <-> ALYS Always Love Yourself
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Organize Design Create → ALYS Always Love Yourself (80%)
+     REFERRAL: ALYS Always Love Yourself → Organize Design Create (75%)
+
+[441/465] Analyzing:
+  📍 Organize Design Create <-> Big Rig Compliance Pros
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Organize Design Create → Big Rig Compliance Pros (80%)
+     VENDOR: Big Rig Compliance Pros → Organize Design Create (70%)
+
+[442/465] Analyzing:
+  📍 Organize Design Create <-> Noseniorleftbehindfl.org
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Organize Design Create → Noseniorleftbehindfl.org (75%)
+     COLLABORATION: Organize Design Create → Noseniorleftbehindfl.org (65%)
+
+[443/465] Analyzing:
+  📍 Organize Design Create <-> Complete Renewal LLC
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Organize Design Create → Complete Renewal LLC (80%)
+     REFERRAL: Complete Renewal LLC → Organize Design Create (70%)
+
+[444/465] Analyzing:
+  📍 Organize Design Create <-> Connections to the Nations Llc
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Organize Design Create → Connections to the Nations Llc (85%)
+     REFERRAL: Connections to the Nations Llc → Organize Design Create (70%)
+
+[445/465] Analyzing:
+  📍 Soulfitness Studio Health and wellness center <-> Simple Creations By T
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Soulfitness Studio Health and wellness center → Simple Creations By T (85%)
+     REFERRAL: Simple Creations By T → Soulfitness Studio Health and wellness center (70%)
+
+[446/465] Analyzing:
+  📍 Soulfitness Studio Health and wellness center <-> ALYS Always Love Yourself
+  ✅ Found 2 valid relationship(s)
+     PARTNER: Soulfitness Studio Health and wellness center → ALYS Always Love Yourself (80%)
+     REFERRAL: ALYS Always Love Yourself → Soulfitness Studio Health and wellness center (70%)
+
+[447/465] Analyzing:
+  📍 Soulfitness Studio Health and wellness center <-> Big Rig Compliance Pros
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Soulfitness Studio Health and wellness center → Big Rig Compliance Pros (75%)
+     REFERRAL: Big Rig Compliance Pros → Soulfitness Studio Health and wellness center (70%)
+
+[448/465] Analyzing:
+  📍 Soulfitness Studio Health and wellness center <-> Noseniorleftbehindfl.org
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Soulfitness Studio Health and wellness center → Noseniorleftbehindfl.org (75%)
+     REFERRAL: Noseniorleftbehindfl.org → Soulfitness Studio Health and wellness center (70%)
+
+[449/465] Analyzing:
+  📍 Soulfitness Studio Health and wellness center <-> Complete Renewal LLC
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Soulfitness Studio Health and wellness center → Complete Renewal LLC (85%)
+     REFERRAL: Complete Renewal LLC → Soulfitness Studio Health and wellness center (75%)
+
+[450/465] Analyzing:
+  📍 Soulfitness Studio Health and wellness center <-> Connections to the Nations Llc
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Soulfitness Studio Health and wellness center → Connections to the Nations Llc (75%)
+     REFERRAL: Connections to the Nations Llc → Soulfitness Studio Health and wellness center (65%)
+
+[451/465] Analyzing:
+  📍 Simple Creations By T <-> ALYS Always Love Yourself
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Simple Creations By T → ALYS Always Love Yourself (75%)
+     REFERRAL: ALYS Always Love Yourself → Simple Creations By T (60%)
+
+[452/465] Analyzing:
+  📍 Simple Creations By T <-> Big Rig Compliance Pros
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Simple Creations By T → Big Rig Compliance Pros (80%)
+     REFERRAL: Big Rig Compliance Pros → Simple Creations By T (75%)
+
+[453/465] Analyzing:
+  📍 Simple Creations By T <-> Noseniorleftbehindfl.org
+  ✅ Found 2 valid relationship(s)
+     PARTNER: Simple Creations By T → Noseniorleftbehindfl.org (80%)
+     REFERRAL: Noseniorleftbehindfl.org → Simple Creations By T (70%)
+
+[454/465] Analyzing:
+  📍 Simple Creations By T <-> Complete Renewal LLC
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Simple Creations By T → Complete Renewal LLC (80%)
+     REFERRAL: Complete Renewal LLC → Simple Creations By T (75%)
+
+[455/465] Analyzing:
+  📍 Simple Creations By T <-> Connections to the Nations Llc
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Simple Creations By T → Connections to the Nations Llc (85%)
+     REFERRAL: Connections to the Nations Llc → Simple Creations By T (70%)
+
+[456/465] Analyzing:
+  📍 ALYS Always Love Yourself <-> Big Rig Compliance Pros
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: ALYS Always Love Yourself → Big Rig Compliance Pros (75%)
+     REFERRAL: Big Rig Compliance Pros → ALYS Always Love Yourself (70%)
+
+[457/465] Analyzing:
+  📍 ALYS Always Love Yourself <-> Noseniorleftbehindfl.org
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: ALYS Always Love Yourself → Noseniorleftbehindfl.org (75%)
+     REFERRAL: Noseniorleftbehindfl.org → ALYS Always Love Yourself (70%)
+
+[458/465] Analyzing:
+  📍 ALYS Always Love Yourself <-> Complete Renewal LLC
+  ✅ Found 2 valid relationship(s)
+     PARTNER: ALYS Always Love Yourself → Complete Renewal LLC (80%)
+     REFERRAL: Complete Renewal LLC → ALYS Always Love Yourself (70%)
+
+[459/465] Analyzing:
+  📍 ALYS Always Love Yourself <-> Connections to the Nations Llc
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: ALYS Always Love Yourself → Connections to the Nations Llc (80%)
+     REFERRAL: Connections to the Nations Llc → ALYS Always Love Yourself (70%)
+
+[460/465] Analyzing:
+  📍 Big Rig Compliance Pros <-> Noseniorleftbehindfl.org
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Big Rig Compliance Pros → Noseniorleftbehindfl.org (75%)
+     REFERRAL: Noseniorleftbehindfl.org → Big Rig Compliance Pros (70%)
+
+[461/465] Analyzing:
+  📍 Big Rig Compliance Pros <-> Complete Renewal LLC
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Big Rig Compliance Pros → Complete Renewal LLC (80%)
+     REFERRAL: Complete Renewal LLC → Big Rig Compliance Pros (70%)
+
+[462/465] Analyzing:
+  📍 Big Rig Compliance Pros <-> Connections to the Nations Llc
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Big Rig Compliance Pros → Connections to the Nations Llc (75%)
+     COLLABORATION: Connections to the Nations Llc → Big Rig Compliance Pros (80%)
+
+[463/465] Analyzing:
+  📍 Noseniorleftbehindfl.org <-> Complete Renewal LLC
+  ✅ Found 2 valid relationship(s)
+     REFERRAL: Noseniorleftbehindfl.org → Complete Renewal LLC (70%)
+     COLLABORATION: Complete Renewal LLC → Noseniorleftbehindfl.org (65%)
+
+[464/465] Analyzing:
+  📍 Noseniorleftbehindfl.org <-> Connections to the Nations Llc
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Noseniorleftbehindfl.org → Connections to the Nations Llc (85%)
+     REFERRAL: Connections to the Nations Llc → Noseniorleftbehindfl.org (70%)
+
+[465/465] Analyzing:
+  📍 Complete Renewal LLC <-> Connections to the Nations Llc
+  ✅ Found 2 valid relationship(s)
+     COLLABORATION: Complete Renewal LLC → Connections to the Nations Llc (85%)
+     REFERRAL: Connections to the Nations Llc → Complete Renewal LLC (70%)
+
+💾 Step 3: Saving results...
+
+==================================================
+📈 Analysis Complete!
+
+✅ Businesses analyzed: 31
+✅ Pairs evaluated: 465
+✅ Relationships found: 920
+✅ Duration: 6168.36s
+✅ Avg confidence: 73.8%
+
+📊 Relationship Types:
+   collaboration: 219
+   referral: 577
+   vendor: 97
+   partner: 27
+
+✨ Data saved to:
+   /Users/Vladimir_Bichev/projects/jax-bridges-graph/data/businesses.json
+   /Users/Vladimir_Bichev/projects/jax-bridges-graph/data/relationships.json
+
+🎉 Ready to visualize! Run: npm run dev
+
