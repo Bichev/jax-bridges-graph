@@ -261,7 +261,7 @@ function App() {
                 Powered by <span className="text-gradient font-semibold">Vladimir Bichev</span>
               </p>
               <p className="text-xs text-jax-gray-600 mt-1">
-                Building AI solutions 🍞
+                Building AI solutions and baking bread 🍞
               </p>
             </div>
           </div>
