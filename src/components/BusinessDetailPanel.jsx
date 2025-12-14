@@ -66,8 +66,9 @@ const enrichRelationshipsWithReverse = (businessId, businessRelationships, allRe
 
 /**
  * Business detail panel showing relationships and opportunities
+ * @param {boolean} isMobile - Whether the view is mobile
  */
-const BusinessDetailPanel = ({ business, relationships, businesses, onClose, onWidthChange }) => {
+const BusinessDetailPanel = ({ business, relationships, businesses, onClose, onWidthChange, isMobile = false }) => {
   const [panelWidth, setPanelWidth] = useState(600); // Default width - increased for bidirectional view
   const [isResizing, setIsResizing] = useState(false);
   const [showExportSuccess, setShowExportSuccess] = useState(false);
@@ -595,26 +596,36 @@ const BusinessDetailPanel = ({ business, relationships, businesses, onClose, onW
   return (
     <div 
       ref={panelRef}
-      className="fixed inset-y-0 right-0 bg-jax-navy border-l border-jax-gray-800 shadow-2xl z-50 overflow-y-auto animate-slide-left"
-      style={{ width: window.innerWidth < 768 ? '100%' : `${panelWidth}px` }}
+      data-detail-panel
+      className={`
+        fixed bg-jax-navy border-l border-jax-gray-800 shadow-2xl z-50 overflow-y-auto
+        ${isMobile 
+          ? 'inset-0 top-[73px] pb-20 animate-slide-up' 
+          : 'inset-y-0 right-0 animate-slide-left'
+        }
+      `}
+      style={{ width: isMobile ? '100%' : `${panelWidth}px` }}
     >
-      {/* Resize Handle - Fixed position so it doesn't scroll away */}
-      <div
-        className="hidden md:block fixed left-0 top-0 bottom-0 w-1 hover:w-2 bg-jax-cyan/20 hover:bg-jax-cyan cursor-ew-resize transition-all z-[60]"
-        onMouseDown={handleResizeStart}
-        style={{ 
-          boxShadow: isResizing ? '0 0 10px rgba(0, 217, 255, 0.5)' : 'none',
-          left: `calc(100vw - ${panelWidth}px)`
-        }}
-      />
-      <div className="sticky top-0 bg-jax-navy/95 backdrop-blur-sm border-b border-jax-gray-800 z-50 pt-20 md:pt-0">
+      {/* Resize Handle - Desktop only */}
+      {!isMobile && (
+        <div
+          className="hidden md:block fixed left-0 top-0 bottom-0 w-1 hover:w-2 bg-jax-cyan/20 hover:bg-jax-cyan cursor-ew-resize transition-all z-[60]"
+          onMouseDown={handleResizeStart}
+          style={{ 
+            boxShadow: isResizing ? '0 0 10px rgba(0, 217, 255, 0.5)' : 'none',
+            left: `calc(100vw - ${panelWidth}px)`
+          }}
+        />
+      )}
+      
+      <div className={`sticky top-0 bg-jax-navy/95 backdrop-blur-sm border-b border-jax-gray-800 z-50 ${isMobile ? '' : 'pt-20 md:pt-0'}`}>
         {/* Header */}
-        <div className="flex items-center justify-between p-6">
-          <h2 className="text-xl font-bold text-white">Business Details</h2>
+        <div className="flex items-center justify-between p-4 md:p-6">
+          <h2 className="text-lg md:text-xl font-bold text-white">Business Details</h2>
           <div className="flex items-center gap-2">
             <button
               onClick={handleExportToPDF}
-              className="flex items-center gap-2 px-4 py-2 bg-jax-cyan hover:bg-jax-cyan/80 text-jax-navy font-semibold rounded-lg transition-colors"
+              className="flex items-center gap-2 px-3 md:px-4 py-2 bg-jax-cyan hover:bg-jax-cyan/80 text-jax-navy font-semibold rounded-lg transition-colors text-sm"
               aria-label="Save to PDF"
               title="Export business analysis to PDF"
             >
@@ -655,9 +666,9 @@ const BusinessDetailPanel = ({ business, relationships, businesses, onClose, onW
         )}
       </div>
       
-      <div className="p-6 space-y-6">
+      <div className="p-4 md:p-6 space-y-4 md:space-y-6">
         {/* Business Info Card */}
-        <div className="card p-6 space-y-4">
+        <div className="card p-4 md:p-6 space-y-4">
           <div>
             <h3 className="text-2xl font-bold text-white mb-2">{business.name}</h3>
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-jax-cyan/10 border border-jax-cyan/30 rounded-full">
