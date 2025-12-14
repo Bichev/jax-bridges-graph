@@ -75,6 +75,7 @@ export const ANIMATION_DURATION = {
 export const FILTER_OPTIONS = {
   minConfidence: 50,
   maxConfidence: 100,
-  defaultConfidence: 60
+  defaultConfidence: 75,
+  defaultTypes: ['vendor', 'partner'] // Default selected relationship types
 };
 

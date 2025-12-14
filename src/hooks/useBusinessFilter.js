@@ -8,7 +8,7 @@ import { FILTER_OPTIONS } from '../utils/constants';
 const useBusinessFilter = () => {
   const [filters, setFilters] = useState({
     minConfidence: FILTER_OPTIONS.defaultConfidence,
-    selectedTypes: [],
+    selectedTypes: FILTER_OPTIONS.defaultTypes || [],
     selectedIndustries: [],
     searchQuery: ''
   });
@@ -52,7 +52,7 @@ const useBusinessFilter = () => {
   const resetFilters = useCallback(() => {
     setFilters({
       minConfidence: FILTER_OPTIONS.defaultConfidence,
-      selectedTypes: [],
+      selectedTypes: FILTER_OPTIONS.defaultTypes || [],
       selectedIndustries: [],
       searchQuery: ''
     });
