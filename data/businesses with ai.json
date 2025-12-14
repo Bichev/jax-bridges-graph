@@ -1,5 +1,20 @@
 [
   {
+    "id": "fe7ad7de-43f7-4b78-9d45-99dfff96d359",
+    "name": "JAX AI Agency",
+    "contact_name": "Vladimir Bichev",
+    "description": "Software Technology and AI Consulting",
+    "website": "https://jaxaiagency.com/",
+    "target_market": "Small and mid-sized businesses in Jacksonville and the Southeast (insurance, real estate, logistics, marketing agencies, fitness, and restaurants) that want to modernize operations with AI agents, automation tools, and custom AI services.",
+    "current_needs": "Early client partnerships to co-create pilot projects, marketing visibility in Jacksonville, and introductions to local businesses that want to explore AI adoption.",
+    "contact_email": "hi@jaxaiagency.com",
+    "contact_phone": "",
+    "linkedin": "linkedin.com/in/bichev",
+    "fun_fact": "Every week I bake Sourdough bread for my family!",
+    "industry": "Technology",
+    "services": "Software Technology and AI Consulting"
+  },
+  {
     "id": "c39aa8c1-b505-4f42-8762-13a9702854f5",
     "name": "JPO Logistics LLC",
     "contact_name": "Paulette Orr",
